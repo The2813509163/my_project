@@ -1,0 +1,802 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college mathematics.\nLet V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?\nA. ST = 0\nB. ST = T\nC. ST = TS\nD. ST - TS is the identity map of V onto itself.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?\nA. 2\nB. 2 - e^-2\nC. 2 + e^-2\nD. 2 + e^-4\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be a real 2x2 matrix. Which of the following statements must be true?\nI. All of the entries of A^2 are nonnegative.\nII. The determinant of A^2 is nonnegative.\nIII. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.\nA. I only\nB. II only\nC. III only\nD. II and III only\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)\nA. -11\nB. 0\nC. 11\nD. 33/2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \\in A}?\nA. -5\nB. -4\nC. -3\nD. -2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following is NOT a group?\nA. The integers under addition\nB. The nonzero integers under multiplication\nC. The nonzero real numbers under multiplication\nD. The complex numbers under addition\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. The integers under addition\nB. The nonzero integers under multiplication\nC. The nonzero real numbers under multiplication\nD. The complex numbers under addition\n\nThe answer is:\n\\[ \\boxed{A} \\]",
+        "gold": "B"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college mathematics.\nLet V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?\nA. ST = 0\nB. ST = T\nC. ST = TS\nD. ST - TS is the identity map of V onto itself.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?\nA. 2\nB. 2 - e^-2\nC. 2 + e^-2\nD. 2 + e^-4\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be a real 2x2 matrix. Which of the following statements must be true?\nI. All of the entries of A^2 are nonnegative.\nII. The determinant of A^2 is nonnegative.\nIII. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.\nA. I only\nB. II only\nC. III only\nD. II and III only\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)\nA. -11\nB. 0\nC. 11\nD. 33/2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \\in A}?\nA. -5\nB. -4\nC. -3\nD. -2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let x and y be positive integers such that 3x + 7y is divisible by 11. Which of the following must also be divisible by 11?\nA. 4x + 6y\nB. x + y + 5\nC. 9x + 4y\nD. 4x - 9y\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. 4x + 6y\nB. x + y + 5\nC. 9x + 4y\nD. 4x - 9y\nAnswer:",
+        "gold": "D"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college mathematics.\nLet V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?\nA. ST = 0\nB. ST = T\nC. ST = TS\nD. ST - TS is the identity map of V onto itself.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?\nA. 2\nB. 2 - e^-2\nC. 2 + e^-2\nD. 2 + e^-4\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be a real 2x2 matrix. Which of the following statements must be true?\nI. All of the entries of A^2 are nonnegative.\nII. The determinant of A^2 is nonnegative.\nIII. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.\nA. I only\nB. II only\nC. III only\nD. II and III only\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)\nA. -11\nB. 0\nC. 11\nD. 33/2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \\in A}?\nA. -5\nB. -4\nC. -3\nD. -2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "What is the minimum value of the expression x + 4z as a function defined on R^3, subject to the constraint x^2 + y^2 + z^2 <= 2?\nA. 0\nB. -2\nC. -sqrt(34)\nD. -sqrt(35)\nAnswer: \n"
+            }
+        ],
+        "prediction": "The minimum value of the expression x + 4z as a function defined on R^3, subject to the constraint x^2 + y^2 + z^2 <= 2, is -sqrt(34).\n\nThe answer is:\n\\[ \\boxed{-\\sqrt{34}} \\]",
+        "gold": "C"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college mathematics.\nLet V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?\nA. ST = 0\nB. ST = T\nC. ST = TS\nD. ST - TS is the identity map of V onto itself.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?\nA. 2\nB. 2 - e^-2\nC. 2 + e^-2\nD. 2 + e^-4\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be a real 2x2 matrix. Which of the following statements must be true?\nI. All of the entries of A^2 are nonnegative.\nII. The determinant of A^2 is nonnegative.\nIII. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.\nA. I only\nB. II only\nC. III only\nD. II and III only\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)\nA. -11\nB. 0\nC. 11\nD. 33/2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \\in A}?\nA. -5\nB. -4\nC. -3\nD. -2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let R be a ring and let U and V be (two-sided) ideals of R. Which of the following must also be ideals of R ?\nI. {u + v : u \\in and v \\in V}\nII. {uv : u \\in U and v \\in V}\nIII. {x : x \\in U and x \\in V}\nA. II only\nB. III only\nC. I and II only\nD. I and III only\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. II only\nB. III only\nC. I and II only\nD. I and III only\nAnswer:",
+        "gold": "D"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college mathematics.\nLet V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?\nA. ST = 0\nB. ST = T\nC. ST = TS\nD. ST - TS is the identity map of V onto itself.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?\nA. 2\nB. 2 - e^-2\nC. 2 + e^-2\nD. 2 + e^-4\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be a real 2x2 matrix. Which of the following statements must be true?\nI. All of the entries of A^2 are nonnegative.\nII. The determinant of A^2 is nonnegative.\nIII. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.\nA. I only\nB. II only\nC. III only\nD. II and III only\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)\nA. -11\nB. 0\nC. 11\nD. 33/2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \\in A}?\nA. -5\nB. -4\nC. -3\nD. -2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The region bounded by the x-axis and the function f(x) = x/(1 + x^3) is rotated about the x-axis. What is the volume of the solid generated?\nA. π/3\nB. π/4\nC. π\nD. 2π\nAnswer: \n"
+            }
+        ],
+        "prediction": "The volume of the solid generated is the volume of the region bounded by the x-axis and the function f(x) = x/(1 + x^3) rotated about the x-axis. This is equal to the volume of the region bounded by the x-axis and the curve y = x/(1 + x^3) rotated about the x-axis.\n\nTo find this volume, we can use the method of disks. We can rotate the curve y = x/(1 + x^3) about the x-axis by an angle of 90 degrees, and then integrate the area of the disk with respect to x.\n\nThe area of the disk is given by the formula A = πr^2, where r is the radius of the disk. In this case, the radius of the disk is the distance from the x-axis to the curve y = x/(1 + x^3).\n\nTo find this distance, we can use the formula for the distance from a point to a curve. This is given by the formula:\n\nd = √((x - x1)^2 + (y - y1)^2)\n\nwhere (x1, y1) is the point on the curve and (x, y) is the point on the disk.\n\nIn this case, the point on the curve is (0, 0), and the point on the disk is (x, x/(1 + x^3)). Therefore, the distance from the x-axis to the curve is:\n\nd = √((x - 0)^2 + (x/(1 + x^3) - 0)^2) = √(x^2 + x^2/(1 + x^3)^2)\n\nNow, we can integrate the area of the disk with respect to x to find the volume of the solid:\n\nV = ∫[0, 1] πd dx = π∫[0, 1] √(x^2 + x^2/(1 + x^3)^2) dx\n\nTo evaluate this integral, we can use the substitution x = t^3, which gives dx = 3t^2 dt. This gives:\n\nV = π∫[0, 1] √(t^6 + t^6/(1 + t^6)^2) 3t^2 dt\n\nEvaluating this integral, we get:\n\nV = π∫[0, 1] √(t^6 + t^6/(1 + t^6)^2",
+        "gold": "A"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college mathematics.\nLet V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?\nA. ST = 0\nB. ST = T\nC. ST = TS\nD. ST - TS is the identity map of V onto itself.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?\nA. 2\nB. 2 - e^-2\nC. 2 + e^-2\nD. 2 + e^-4\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be a real 2x2 matrix. Which of the following statements must be true?\nI. All of the entries of A^2 are nonnegative.\nII. The determinant of A^2 is nonnegative.\nIII. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.\nA. I only\nB. II only\nC. III only\nD. II and III only\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)\nA. -11\nB. 0\nC. 11\nD. 33/2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \\in A}?\nA. -5\nB. -4\nC. -3\nD. -2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose today is Wednesday. What day of the week will it be 10^(10^(10)) days from now?\nA. Sunday\nB. Monday\nC. Tuesday\nD. Wednesday\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. Sunday\nB. Monday\nC. Tuesday\nD. Wednesday\nAnswer:",
+        "gold": "A"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college mathematics.\nLet V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?\nA. ST = 0\nB. ST = T\nC. ST = TS\nD. ST - TS is the identity map of V onto itself.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?\nA. 2\nB. 2 - e^-2\nC. 2 + e^-2\nD. 2 + e^-4\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be a real 2x2 matrix. Which of the following statements must be true?\nI. All of the entries of A^2 are nonnegative.\nII. The determinant of A^2 is nonnegative.\nIII. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.\nA. I only\nB. II only\nC. III only\nD. II and III only\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)\nA. -11\nB. 0\nC. 11\nD. 33/2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \\in A}?\nA. -5\nB. -4\nC. -3\nD. -2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Water drips out of a hole at the vertex of an upside down cone at a rate of 3 cm^3 per minute. The\ncone’s height and radius are 2 cm and 1 cm, respectively. At what rate does the height of the water change\nwhen the water level is half a centimeter below the top of the cone? The volume of a cone is V = (π/3)*r^2*h,\nwhere r is the radius and h is the height of the cone.\nA. −48/π cm/min\nB. −4/(3π) cm/min\nC. −8/(3π) cm/min\nD. −16/(3π) cm/min\nAnswer: \n"
+            }
+        ],
+        "prediction": "B",
+        "gold": "D"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college mathematics.\nLet V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?\nA. ST = 0\nB. ST = T\nC. ST = TS\nD. ST - TS is the identity map of V onto itself.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?\nA. 2\nB. 2 - e^-2\nC. 2 + e^-2\nD. 2 + e^-4\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be a real 2x2 matrix. Which of the following statements must be true?\nI. All of the entries of A^2 are nonnegative.\nII. The determinant of A^2 is nonnegative.\nIII. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.\nA. I only\nB. II only\nC. III only\nD. II and III only\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)\nA. -11\nB. 0\nC. 11\nD. 33/2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \\in A}?\nA. -5\nB. -4\nC. -3\nD. -2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider the system of linear equations\nw + 3x + 2y + 2z = 0\nw + 4x + y = 0\n3w + 5x + 10 y + 14z = 0\n2w + 5x + 5y + 6z = 0\nwith solutions of the form (w, x, y, z), where w x, y, and z are real. Which of the following statements is FALSE?\nA. The system is consistent.\nB. The system has infinitely many solutions.\nC. The sum of any two solutions is a solution.\nD. Every solution is a scalar multiple of (-5, 1, 1, 0).\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. The system is consistent.\nB. The system has infinitely many solutions.\nC. The sum of any two solutions is a solution.\nD. Every solution is a scalar multiple of (-5, 1, 1, 0).\nAnswer: D",
+        "gold": "D"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college mathematics.\nLet V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?\nA. ST = 0\nB. ST = T\nC. ST = TS\nD. ST - TS is the identity map of V onto itself.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?\nA. 2\nB. 2 - e^-2\nC. 2 + e^-2\nD. 2 + e^-4\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be a real 2x2 matrix. Which of the following statements must be true?\nI. All of the entries of A^2 are nonnegative.\nII. The determinant of A^2 is nonnegative.\nIII. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.\nA. I only\nB. II only\nC. III only\nD. II and III only\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)\nA. -11\nB. 0\nC. 11\nD. 33/2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \\in A}?\nA. -5\nB. -4\nC. -3\nD. -2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "If c > 0 and f(x) = e^x - cx for all real numbers x, then the minimum value of f is\nA. f(c)\nB. f(e^c)\nC. f(1/c)\nD. f(log c)\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. f(c) = e^c - c^2\nB. f(e^c) = e^(e^c) - e^c\nC. f(1/c) = e^(1/c) - c\nD. f(log c) = e^(log c) - c log c\nAnswer:",
+        "gold": "D"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college mathematics.\nLet V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?\nA. ST = 0\nB. ST = T\nC. ST = TS\nD. ST - TS is the identity map of V onto itself.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?\nA. 2\nB. 2 - e^-2\nC. 2 + e^-2\nD. 2 + e^-4\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be a real 2x2 matrix. Which of the following statements must be true?\nI. All of the entries of A^2 are nonnegative.\nII. The determinant of A^2 is nonnegative.\nIII. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.\nA. I only\nB. II only\nC. III only\nD. II and III only\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)\nA. -11\nB. 0\nC. 11\nD. 33/2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \\in A}?\nA. -5\nB. -4\nC. -3\nD. -2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose A is a 3 × 3 matrix such that det(A − λI) = −λ^3 + 3λ^2 + λ − 3, where I is the 3 × 3 identity matrix. Which of the following are TRUE of A?\nI. The trace of A is 3.\nII. The determinate of A is −3.\nIII. The matrix A has eigenvalues −3 and 1.\nA. I only\nB. II only\nC. III only\nD. I and II only\nAnswer: \n"
+            }
+        ],
+        "prediction": "I. The trace of A is 3.\nII. The determinate of A is −3.\nIII. The matrix A has eigenvalues −3 and 1.\nA. I only\nB. II only\nC. III only\nD. I and II only\nAnswer:",
+        "gold": "D"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college mathematics.\nLet V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?\nA. ST = 0\nB. ST = T\nC. ST = TS\nD. ST - TS is the identity map of V onto itself.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?\nA. 2\nB. 2 - e^-2\nC. 2 + e^-2\nD. 2 + e^-4\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be a real 2x2 matrix. Which of the following statements must be true?\nI. All of the entries of A^2 are nonnegative.\nII. The determinant of A^2 is nonnegative.\nIII. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.\nA. I only\nB. II only\nC. III only\nD. II and III only\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)\nA. -11\nB. 0\nC. 11\nD. 33/2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \\in A}?\nA. -5\nB. -4\nC. -3\nD. -2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let y = f(x) be a solution of the differential equation x dy + (y - xe^x) dx = 0 such that y = 0 when x = 1. What is the value of f(2)?\nA. 1/(2e)\nB. 1/e\nC. e^2/2\nD. 2e\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. 1/(2e)\nB. 1/e\nC. e^2/2\nD. 2e\nAnswer:",
+        "gold": "C"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college mathematics.\nLet V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?\nA. ST = 0\nB. ST = T\nC. ST = TS\nD. ST - TS is the identity map of V onto itself.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?\nA. 2\nB. 2 - e^-2\nC. 2 + e^-2\nD. 2 + e^-4\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be a real 2x2 matrix. Which of the following statements must be true?\nI. All of the entries of A^2 are nonnegative.\nII. The determinant of A^2 is nonnegative.\nIII. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.\nA. I only\nB. II only\nC. III only\nD. II and III only\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)\nA. -11\nB. 0\nC. 11\nD. 33/2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \\in A}?\nA. -5\nB. -4\nC. -3\nD. -2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A fair coin is to be tossed 100 times, with each toss resulting in a head or a tail. If H is the total number of heads and T is the total number of tails, which of the following events has the greatest probability?\nA. H = 50\nB. T >= 60\nC. 51 <= H <= 55\nD. H >= 48 and T >= 48\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. H = 50\nB. T >= 60\nC. 51 <= H <= 55\nD. H >= 48 and T >= 48\nAnswer: A",
+        "gold": "D"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college mathematics.\nLet V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?\nA. ST = 0\nB. ST = T\nC. ST = TS\nD. ST - TS is the identity map of V onto itself.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?\nA. 2\nB. 2 - e^-2\nC. 2 + e^-2\nD. 2 + e^-4\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be a real 2x2 matrix. Which of the following statements must be true?\nI. All of the entries of A^2 are nonnegative.\nII. The determinant of A^2 is nonnegative.\nIII. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.\nA. I only\nB. II only\nC. III only\nD. II and III only\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)\nA. -11\nB. 0\nC. 11\nD. 33/2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \\in A}?\nA. -5\nB. -4\nC. -3\nD. -2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Statement 1 | Suppose f : [a, b] is a function and suppose f has a local maximum. f'(x) must exist and equal 0? Statement 2 | There exist non-constant continuous maps from R to Q.\nA. True, True\nB. True, False\nC. False, True\nD. False, False\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. True, True\nB. False, True\nC. False, True\nD. False, False\n\nAnswer: $\\boxed{A}$",
+        "gold": "D"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college mathematics.\nLet V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?\nA. ST = 0\nB. ST = T\nC. ST = TS\nD. ST - TS is the identity map of V onto itself.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?\nA. 2\nB. 2 - e^-2\nC. 2 + e^-2\nD. 2 + e^-4\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be a real 2x2 matrix. Which of the following statements must be true?\nI. All of the entries of A^2 are nonnegative.\nII. The determinant of A^2 is nonnegative.\nIII. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.\nA. I only\nB. II only\nC. III only\nD. II and III only\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)\nA. -11\nB. 0\nC. 11\nD. 33/2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \\in A}?\nA. -5\nB. -4\nC. -3\nD. -2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let I != A != -I, where I is the identity matrix and A is a real 2 x 2 matrix. If A = A^(-1), then the trace of A is\nA. 2\nB. 1\nC. 0\nD. -1\nAnswer: \n"
+            }
+        ],
+        "prediction": "I. The trace of A is 7 + 12 = 19, so A is not the identity matrix.\nII. The determinant of A is 7(12) - 12(7) = 0, so A is not invertible.\nIII. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.\nD. The determinant of A^2 is 7^2(12^2) - 12^2(7^2) = 0, so A^2 has two distinct eigenvalues.\nAnswer: D\nThe final answer is: $\\boxed{D}$",
+        "gold": "C"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college mathematics.\nLet V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?\nA. ST = 0\nB. ST = T\nC. ST = TS\nD. ST - TS is the identity map of V onto itself.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?\nA. 2\nB. 2 - e^-2\nC. 2 + e^-2\nD. 2 + e^-4\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be a real 2x2 matrix. Which of the following statements must be true?\nI. All of the entries of A^2 are nonnegative.\nII. The determinant of A^2 is nonnegative.\nIII. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.\nA. I only\nB. II only\nC. III only\nD. II and III only\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)\nA. -11\nB. 0\nC. 11\nD. 33/2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \\in A}?\nA. -5\nB. -4\nC. -3\nD. -2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A total of x feet of fencing is to form three sides of a level rectangular yard. What is the maximum possible area of the yard, in terms of x ?\nA. x^2/9\nB. x^2/8\nC. x^2/4\nD. x^2\nAnswer: \n"
+            }
+        ],
+        "prediction": "The perimeter of the yard is $x + 2y + 2z = x + 2y + 2z$, where $y$ and $z$ are the lengths of the two sides of the yard that are not fenced. The area of the yard is $xy + yz + xz$. We can express $y + z$ in terms of $x$ and $y$ and $z$ using the perimeter equation. We can then express $xy + yz + xz$ in terms of $x$ and $y$ and $z$ using the expression for $y + z$.\n\nThe maximum possible area of the yard is obtained when $y = z$. In this case, the perimeter equation becomes $x + 2y + 2y = x + 4y$, so $y = z = x/4$. The area of the yard is then $xy + yz + xz = xy + y^2 + x^2/2$. This expression is maximized when $y = z = x/4$, so the maximum possible area of the yard is $x^2/16$.\n\nThe answer is:\n\\[ \\boxed{\\frac{x^2}{16}} \\]",
+        "gold": "B"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college mathematics.\nLet V be the set of all real polynomials p(x). Let transformations T, S be defined on V by T:p(x) -> xp(x) and S:p(x) -> p'(x) = d/dx p(x), and interpret (ST)(p(x)) as S(T(p(x))). Which of the following is true?\nA. ST = 0\nB. ST = T\nC. ST = TS\nD. ST - TS is the identity map of V onto itself.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A tank initially contains a salt solution of 3 grams of salt dissolved in 100 liters of water. A salt solution containing 0.02 grams of salt per liter of water is sprayed into the tank at a rate of 4 liters per minute. The sprayed solution is continually mixed with the salt solution in the tank, and the mixture flows out of the tank at a rate of 4 liters per minute. If the mixing is instantaneous, how many grams of salt are in the tank after 100 minutes have elapsed?\nA. 2\nB. 2 - e^-2\nC. 2 + e^-2\nD. 2 + e^-4\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be a real 2x2 matrix. Which of the following statements must be true?\nI. All of the entries of A^2 are nonnegative.\nII. The determinant of A^2 is nonnegative.\nIII. If A has two distinct eigenvalues, then A^2 has two distinct eigenvalues.\nA. I only\nB. II only\nC. III only\nD. II and III only\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose that f(1 + x) = f(x) for all real x. If f is a polynomial and f(5) = 11, then f(15/2)\nA. -11\nB. 0\nC. 11\nD. 33/2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Let A be the set of all ordered pairs of integers (m, n) such that 7m + 12n = 22. What is the greatest negative number in the set B = {m + n : (m, n) \\in A}?\nA. -5\nB. -4\nC. -3\nD. -2\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Statement 1 | If A is connected, the closure of A must be connected. Statement 2 | Every continuous function f : (0, 1) → (0, 1) has a fixed point.\nA. True, True\nB. True, False\nC. False, True\nD. False, False\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. True, True\nB. False, True\nC. False, True\nD. False, False\n\nAnswer: $\\boxed{A}$",
+        "gold": "B"
+    }
+}

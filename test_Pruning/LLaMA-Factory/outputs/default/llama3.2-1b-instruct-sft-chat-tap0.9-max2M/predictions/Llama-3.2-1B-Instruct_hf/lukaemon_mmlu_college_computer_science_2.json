@@ -1,0 +1,802 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college computer science.\nWhich of the following regular expressions is equivalent to (describes the same set of strings as) (a* + b)*(c + d)?\nA. a*(c + d)+ b(c + d)\nB. a*(c + d)* + b(c + d)*\nC. a*(c + d)+ b*(c + d)\nD. (a + b)*c +(a + b)*d\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A certain pipelined RISC machine has 8 general-purpose registers R0, R1, . . . , R7 and supports the following operations.\nADD Rs1, Rs2, Rd Add Rs1 to Rs2 and put the sum in Rd\nMUL Rs1, Rs2, Rd Multiply Rs1 by Rs2 and put the product in Rd\nAn operation normally takes one cycle; however, an operation takes two cycles if it produces a result required by the immediately following operation in an operation sequence. Consider the expression AB + ABC + BC, where variables A, B, C are located in registers R0, R1, R2. If the contents of these three registers must not be modified, what is the minimum number of clock cycles required for an operation sequence that computes the value of AB + ABC + BC?\nA. 5\nB. 6\nC. 7\nD. 8\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The Singleton design pattern is used to guarantee that only a single instance of a class may be instantiated. Which of the following is (are) true of this design pattern?\nI. The Singleton class has a static factory method to provide its instance.\nII. The Singleton class can be a subclass of another class.\nIII. The Singleton class has a private constructor.\nA. I only\nB. II only\nC. III only\nD. I, II, and III\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A compiler generates code for the following assignment statement.\nG := (A + B) * C - (D + E) * F\nThe target machine has a single accumulator and a single-address instruction set consisting of instructions load, store, add, subtract, and multiply. For the arithmetic operations, the left operand is taken from the accumulator and the result appears in the accumulator. The smallest possible number of instructions in the resulting code is\nA. 5\nB. 6\nC. 7\nD. 9\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider a computer design in which multiple processors, each with a private cache memory, share global memory using a single bus. This bus is the critical system resource. Each processor can execute one instruction every 500 nanoseconds as long as memory references are satisfied by its local cache. When a cache miss occurs, the processor is delayed for an additional 2,000 nanoseconds. During half of this additional delay, the bus is dedicated to serving the cache miss. During the other half, the processor cannot continue, but the bus is free to service requests from other processors. On average, each instruction requires 2 memory references. On average, cache misses occur on 1 percent of references. What proportion of the capacity of the bus would a single processor consume, ignoring delays due to competition from other processors?\nA. 1/50\nB. 1/27\nC. 1/25\nD. 2/27\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Bob writes down a number between 1 and 1,000. Mary must identify that number by asking \"yes/no\" questions of Bob. Mary knows that Bob always tells the truth. If Mary uses an optimal strategy, then she will determine the answer at the end of exactly how many questions in the worst case?\nA. 1,000\nB. 999\nC. 500\nD. 10\nAnswer: \n"
+            }
+        ],
+        "prediction": "B",
+        "gold": "D"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college computer science.\nWhich of the following regular expressions is equivalent to (describes the same set of strings as) (a* + b)*(c + d)?\nA. a*(c + d)+ b(c + d)\nB. a*(c + d)* + b(c + d)*\nC. a*(c + d)+ b*(c + d)\nD. (a + b)*c +(a + b)*d\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A certain pipelined RISC machine has 8 general-purpose registers R0, R1, . . . , R7 and supports the following operations.\nADD Rs1, Rs2, Rd Add Rs1 to Rs2 and put the sum in Rd\nMUL Rs1, Rs2, Rd Multiply Rs1 by Rs2 and put the product in Rd\nAn operation normally takes one cycle; however, an operation takes two cycles if it produces a result required by the immediately following operation in an operation sequence. Consider the expression AB + ABC + BC, where variables A, B, C are located in registers R0, R1, R2. If the contents of these three registers must not be modified, what is the minimum number of clock cycles required for an operation sequence that computes the value of AB + ABC + BC?\nA. 5\nB. 6\nC. 7\nD. 8\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The Singleton design pattern is used to guarantee that only a single instance of a class may be instantiated. Which of the following is (are) true of this design pattern?\nI. The Singleton class has a static factory method to provide its instance.\nII. The Singleton class can be a subclass of another class.\nIII. The Singleton class has a private constructor.\nA. I only\nB. II only\nC. III only\nD. I, II, and III\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A compiler generates code for the following assignment statement.\nG := (A + B) * C - (D + E) * F\nThe target machine has a single accumulator and a single-address instruction set consisting of instructions load, store, add, subtract, and multiply. For the arithmetic operations, the left operand is taken from the accumulator and the result appears in the accumulator. The smallest possible number of instructions in the resulting code is\nA. 5\nB. 6\nC. 7\nD. 9\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider a computer design in which multiple processors, each with a private cache memory, share global memory using a single bus. This bus is the critical system resource. Each processor can execute one instruction every 500 nanoseconds as long as memory references are satisfied by its local cache. When a cache miss occurs, the processor is delayed for an additional 2,000 nanoseconds. During half of this additional delay, the bus is dedicated to serving the cache miss. During the other half, the processor cannot continue, but the bus is free to service requests from other processors. On average, each instruction requires 2 memory references. On average, cache misses occur on 1 percent of references. What proportion of the capacity of the bus would a single processor consume, ignoring delays due to competition from other processors?\nA. 1/50\nB. 1/27\nC. 1/25\nD. 2/27\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following is (are) true about virtual memory systems that use pages?\nI. The virtual address space can be larger than the amount of physical memory.\nII. Programs must be resident in main memory throughout their execution.\nIII. Pages correspond to semantic characteristics of the program.\nA. I only\nB. II only\nC. I and II\nD. I and III\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. I only\nB. II only\nC. I and II\nD. I and III\n\nAnswer: $\\boxed{A}$",
+        "gold": "A"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college computer science.\nWhich of the following regular expressions is equivalent to (describes the same set of strings as) (a* + b)*(c + d)?\nA. a*(c + d)+ b(c + d)\nB. a*(c + d)* + b(c + d)*\nC. a*(c + d)+ b*(c + d)\nD. (a + b)*c +(a + b)*d\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A certain pipelined RISC machine has 8 general-purpose registers R0, R1, . . . , R7 and supports the following operations.\nADD Rs1, Rs2, Rd Add Rs1 to Rs2 and put the sum in Rd\nMUL Rs1, Rs2, Rd Multiply Rs1 by Rs2 and put the product in Rd\nAn operation normally takes one cycle; however, an operation takes two cycles if it produces a result required by the immediately following operation in an operation sequence. Consider the expression AB + ABC + BC, where variables A, B, C are located in registers R0, R1, R2. If the contents of these three registers must not be modified, what is the minimum number of clock cycles required for an operation sequence that computes the value of AB + ABC + BC?\nA. 5\nB. 6\nC. 7\nD. 8\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The Singleton design pattern is used to guarantee that only a single instance of a class may be instantiated. Which of the following is (are) true of this design pattern?\nI. The Singleton class has a static factory method to provide its instance.\nII. The Singleton class can be a subclass of another class.\nIII. The Singleton class has a private constructor.\nA. I only\nB. II only\nC. III only\nD. I, II, and III\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A compiler generates code for the following assignment statement.\nG := (A + B) * C - (D + E) * F\nThe target machine has a single accumulator and a single-address instruction set consisting of instructions load, store, add, subtract, and multiply. For the arithmetic operations, the left operand is taken from the accumulator and the result appears in the accumulator. The smallest possible number of instructions in the resulting code is\nA. 5\nB. 6\nC. 7\nD. 9\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider a computer design in which multiple processors, each with a private cache memory, share global memory using a single bus. This bus is the critical system resource. Each processor can execute one instruction every 500 nanoseconds as long as memory references are satisfied by its local cache. When a cache miss occurs, the processor is delayed for an additional 2,000 nanoseconds. During half of this additional delay, the bus is dedicated to serving the cache miss. During the other half, the processor cannot continue, but the bus is free to service requests from other processors. On average, each instruction requires 2 memory references. On average, cache misses occur on 1 percent of references. What proportion of the capacity of the bus would a single processor consume, ignoring delays due to competition from other processors?\nA. 1/50\nB. 1/27\nC. 1/25\nD. 2/27\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following is usually NOT represented in a subroutine's activation record frame for a stack-based programming language?\nA. Values of local variables\nB. A heap area\nC. The return address\nD. Stack pointer for the calling activation record\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. Values of local variables\nB. A heap area\nC. The return address\nD. Stack pointer for the calling activation record\n\nThe correct answer is B. The return address is the value that the operating system will return to the caller, which is the result of the last operation performed by the current function. This value is usually not represented in the activation record frame, which is the list of values that the system will return to the caller.\n\nThe answer is:\n\\[ \\boxed{B} \\]",
+        "gold": "B"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college computer science.\nWhich of the following regular expressions is equivalent to (describes the same set of strings as) (a* + b)*(c + d)?\nA. a*(c + d)+ b(c + d)\nB. a*(c + d)* + b(c + d)*\nC. a*(c + d)+ b*(c + d)\nD. (a + b)*c +(a + b)*d\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A certain pipelined RISC machine has 8 general-purpose registers R0, R1, . . . , R7 and supports the following operations.\nADD Rs1, Rs2, Rd Add Rs1 to Rs2 and put the sum in Rd\nMUL Rs1, Rs2, Rd Multiply Rs1 by Rs2 and put the product in Rd\nAn operation normally takes one cycle; however, an operation takes two cycles if it produces a result required by the immediately following operation in an operation sequence. Consider the expression AB + ABC + BC, where variables A, B, C are located in registers R0, R1, R2. If the contents of these three registers must not be modified, what is the minimum number of clock cycles required for an operation sequence that computes the value of AB + ABC + BC?\nA. 5\nB. 6\nC. 7\nD. 8\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The Singleton design pattern is used to guarantee that only a single instance of a class may be instantiated. Which of the following is (are) true of this design pattern?\nI. The Singleton class has a static factory method to provide its instance.\nII. The Singleton class can be a subclass of another class.\nIII. The Singleton class has a private constructor.\nA. I only\nB. II only\nC. III only\nD. I, II, and III\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A compiler generates code for the following assignment statement.\nG := (A + B) * C - (D + E) * F\nThe target machine has a single accumulator and a single-address instruction set consisting of instructions load, store, add, subtract, and multiply. For the arithmetic operations, the left operand is taken from the accumulator and the result appears in the accumulator. The smallest possible number of instructions in the resulting code is\nA. 5\nB. 6\nC. 7\nD. 9\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider a computer design in which multiple processors, each with a private cache memory, share global memory using a single bus. This bus is the critical system resource. Each processor can execute one instruction every 500 nanoseconds as long as memory references are satisfied by its local cache. When a cache miss occurs, the processor is delayed for an additional 2,000 nanoseconds. During half of this additional delay, the bus is dedicated to serving the cache miss. During the other half, the processor cannot continue, but the bus is free to service requests from other processors. On average, each instruction requires 2 memory references. On average, cache misses occur on 1 percent of references. What proportion of the capacity of the bus would a single processor consume, ignoring delays due to competition from other processors?\nA. 1/50\nB. 1/27\nC. 1/25\nD. 2/27\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following statements about a remote procedure call is true?\nA. It is used to call procedures with addresses that are farther than 2^16 bytes away.\nB. It cannot return a value.\nC. It cannot pass parameters by reference.\nD. It cannot call procedures implemented in a different language.\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. It is used to call procedures with addresses that are farther than 2^16 bytes away.\nB. It cannot return a value.\nC. It cannot pass parameters by reference.\nD. It cannot call procedures implemented in a different language.\n\nThe correct answer is:\n\\[ \\boxed{A} \\]",
+        "gold": "C"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college computer science.\nWhich of the following regular expressions is equivalent to (describes the same set of strings as) (a* + b)*(c + d)?\nA. a*(c + d)+ b(c + d)\nB. a*(c + d)* + b(c + d)*\nC. a*(c + d)+ b*(c + d)\nD. (a + b)*c +(a + b)*d\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A certain pipelined RISC machine has 8 general-purpose registers R0, R1, . . . , R7 and supports the following operations.\nADD Rs1, Rs2, Rd Add Rs1 to Rs2 and put the sum in Rd\nMUL Rs1, Rs2, Rd Multiply Rs1 by Rs2 and put the product in Rd\nAn operation normally takes one cycle; however, an operation takes two cycles if it produces a result required by the immediately following operation in an operation sequence. Consider the expression AB + ABC + BC, where variables A, B, C are located in registers R0, R1, R2. If the contents of these three registers must not be modified, what is the minimum number of clock cycles required for an operation sequence that computes the value of AB + ABC + BC?\nA. 5\nB. 6\nC. 7\nD. 8\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The Singleton design pattern is used to guarantee that only a single instance of a class may be instantiated. Which of the following is (are) true of this design pattern?\nI. The Singleton class has a static factory method to provide its instance.\nII. The Singleton class can be a subclass of another class.\nIII. The Singleton class has a private constructor.\nA. I only\nB. II only\nC. III only\nD. I, II, and III\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A compiler generates code for the following assignment statement.\nG := (A + B) * C - (D + E) * F\nThe target machine has a single accumulator and a single-address instruction set consisting of instructions load, store, add, subtract, and multiply. For the arithmetic operations, the left operand is taken from the accumulator and the result appears in the accumulator. The smallest possible number of instructions in the resulting code is\nA. 5\nB. 6\nC. 7\nD. 9\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider a computer design in which multiple processors, each with a private cache memory, share global memory using a single bus. This bus is the critical system resource. Each processor can execute one instruction every 500 nanoseconds as long as memory references are satisfied by its local cache. When a cache miss occurs, the processor is delayed for an additional 2,000 nanoseconds. During half of this additional delay, the bus is dedicated to serving the cache miss. During the other half, the processor cannot continue, but the bus is free to service requests from other processors. On average, each instruction requires 2 memory references. On average, cache misses occur on 1 percent of references. What proportion of the capacity of the bus would a single processor consume, ignoring delays due to competition from other processors?\nA. 1/50\nB. 1/27\nC. 1/25\nD. 2/27\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Of the following sorting algorithms, which has a running time that is LEAST dependent on the initial ordering of the input?\nA. Insertion sort\nB. Quicksort\nC. Merge sort\nD. Selection sort\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. Insertion sort\nB. Quicksort\nC. Merge sort\nD. Selection sort\n\nInsertion sort has the slowest running time among all sorting algorithms, as it requires a single pass through the input to sort it. This is because it has to sort the entire input, which is the most time-consuming operation.\n\nThe answer is:\n\\[ \\boxed{A} \\]",
+        "gold": "C"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college computer science.\nWhich of the following regular expressions is equivalent to (describes the same set of strings as) (a* + b)*(c + d)?\nA. a*(c + d)+ b(c + d)\nB. a*(c + d)* + b(c + d)*\nC. a*(c + d)+ b*(c + d)\nD. (a + b)*c +(a + b)*d\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A certain pipelined RISC machine has 8 general-purpose registers R0, R1, . . . , R7 and supports the following operations.\nADD Rs1, Rs2, Rd Add Rs1 to Rs2 and put the sum in Rd\nMUL Rs1, Rs2, Rd Multiply Rs1 by Rs2 and put the product in Rd\nAn operation normally takes one cycle; however, an operation takes two cycles if it produces a result required by the immediately following operation in an operation sequence. Consider the expression AB + ABC + BC, where variables A, B, C are located in registers R0, R1, R2. If the contents of these three registers must not be modified, what is the minimum number of clock cycles required for an operation sequence that computes the value of AB + ABC + BC?\nA. 5\nB. 6\nC. 7\nD. 8\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The Singleton design pattern is used to guarantee that only a single instance of a class may be instantiated. Which of the following is (are) true of this design pattern?\nI. The Singleton class has a static factory method to provide its instance.\nII. The Singleton class can be a subclass of another class.\nIII. The Singleton class has a private constructor.\nA. I only\nB. II only\nC. III only\nD. I, II, and III\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A compiler generates code for the following assignment statement.\nG := (A + B) * C - (D + E) * F\nThe target machine has a single accumulator and a single-address instruction set consisting of instructions load, store, add, subtract, and multiply. For the arithmetic operations, the left operand is taken from the accumulator and the result appears in the accumulator. The smallest possible number of instructions in the resulting code is\nA. 5\nB. 6\nC. 7\nD. 9\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider a computer design in which multiple processors, each with a private cache memory, share global memory using a single bus. This bus is the critical system resource. Each processor can execute one instruction every 500 nanoseconds as long as memory references are satisfied by its local cache. When a cache miss occurs, the processor is delayed for an additional 2,000 nanoseconds. During half of this additional delay, the bus is dedicated to serving the cache miss. During the other half, the processor cannot continue, but the bus is free to service requests from other processors. On average, each instruction requires 2 memory references. On average, cache misses occur on 1 percent of references. What proportion of the capacity of the bus would a single processor consume, ignoring delays due to competition from other processors?\nA. 1/50\nB. 1/27\nC. 1/25\nD. 2/27\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A particular parallel program computation requires 100 seconds when executed on a single processor. If 40 percent of this computation is \"inherently sequential\" (i.e., will not benefit from additional processors), then the theoretically best possible elapsed times for this program running with 2 and 4 processors, respectively, are\nA. 20 and 10 seconds\nB. 30 and 15 seconds\nC. 50 and 25 seconds\nD. 70 and 55 seconds\nAnswer: \n"
+            }
+        ],
+        "prediction": "B",
+        "gold": "D"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college computer science.\nWhich of the following regular expressions is equivalent to (describes the same set of strings as) (a* + b)*(c + d)?\nA. a*(c + d)+ b(c + d)\nB. a*(c + d)* + b(c + d)*\nC. a*(c + d)+ b*(c + d)\nD. (a + b)*c +(a + b)*d\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A certain pipelined RISC machine has 8 general-purpose registers R0, R1, . . . , R7 and supports the following operations.\nADD Rs1, Rs2, Rd Add Rs1 to Rs2 and put the sum in Rd\nMUL Rs1, Rs2, Rd Multiply Rs1 by Rs2 and put the product in Rd\nAn operation normally takes one cycle; however, an operation takes two cycles if it produces a result required by the immediately following operation in an operation sequence. Consider the expression AB + ABC + BC, where variables A, B, C are located in registers R0, R1, R2. If the contents of these three registers must not be modified, what is the minimum number of clock cycles required for an operation sequence that computes the value of AB + ABC + BC?\nA. 5\nB. 6\nC. 7\nD. 8\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The Singleton design pattern is used to guarantee that only a single instance of a class may be instantiated. Which of the following is (are) true of this design pattern?\nI. The Singleton class has a static factory method to provide its instance.\nII. The Singleton class can be a subclass of another class.\nIII. The Singleton class has a private constructor.\nA. I only\nB. II only\nC. III only\nD. I, II, and III\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A compiler generates code for the following assignment statement.\nG := (A + B) * C - (D + E) * F\nThe target machine has a single accumulator and a single-address instruction set consisting of instructions load, store, add, subtract, and multiply. For the arithmetic operations, the left operand is taken from the accumulator and the result appears in the accumulator. The smallest possible number of instructions in the resulting code is\nA. 5\nB. 6\nC. 7\nD. 9\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider a computer design in which multiple processors, each with a private cache memory, share global memory using a single bus. This bus is the critical system resource. Each processor can execute one instruction every 500 nanoseconds as long as memory references are satisfied by its local cache. When a cache miss occurs, the processor is delayed for an additional 2,000 nanoseconds. During half of this additional delay, the bus is dedicated to serving the cache miss. During the other half, the processor cannot continue, but the bus is free to service requests from other processors. On average, each instruction requires 2 memory references. On average, cache misses occur on 1 percent of references. What proportion of the capacity of the bus would a single processor consume, ignoring delays due to competition from other processors?\nA. 1/50\nB. 1/27\nC. 1/25\nD. 2/27\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider the representation of six-bit numbers by two's complement, one's complement, or by sign and magnitude. In which representation is there overflow from the addition of the integers 011000 and 011000?\nA. Two's complement only\nB. Sign and magnitude and one's complement only\nC. Two's complement and one's complement only\nD. All three representations\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. Two's complement only\nB. Sign and magnitude and one's complement only\nC. Two's complement and one's complement only\nD. All three representations\n\nAnswer: $\\boxed{A}$",
+        "gold": "D"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college computer science.\nWhich of the following regular expressions is equivalent to (describes the same set of strings as) (a* + b)*(c + d)?\nA. a*(c + d)+ b(c + d)\nB. a*(c + d)* + b(c + d)*\nC. a*(c + d)+ b*(c + d)\nD. (a + b)*c +(a + b)*d\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A certain pipelined RISC machine has 8 general-purpose registers R0, R1, . . . , R7 and supports the following operations.\nADD Rs1, Rs2, Rd Add Rs1 to Rs2 and put the sum in Rd\nMUL Rs1, Rs2, Rd Multiply Rs1 by Rs2 and put the product in Rd\nAn operation normally takes one cycle; however, an operation takes two cycles if it produces a result required by the immediately following operation in an operation sequence. Consider the expression AB + ABC + BC, where variables A, B, C are located in registers R0, R1, R2. If the contents of these three registers must not be modified, what is the minimum number of clock cycles required for an operation sequence that computes the value of AB + ABC + BC?\nA. 5\nB. 6\nC. 7\nD. 8\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The Singleton design pattern is used to guarantee that only a single instance of a class may be instantiated. Which of the following is (are) true of this design pattern?\nI. The Singleton class has a static factory method to provide its instance.\nII. The Singleton class can be a subclass of another class.\nIII. The Singleton class has a private constructor.\nA. I only\nB. II only\nC. III only\nD. I, II, and III\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A compiler generates code for the following assignment statement.\nG := (A + B) * C - (D + E) * F\nThe target machine has a single accumulator and a single-address instruction set consisting of instructions load, store, add, subtract, and multiply. For the arithmetic operations, the left operand is taken from the accumulator and the result appears in the accumulator. The smallest possible number of instructions in the resulting code is\nA. 5\nB. 6\nC. 7\nD. 9\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider a computer design in which multiple processors, each with a private cache memory, share global memory using a single bus. This bus is the critical system resource. Each processor can execute one instruction every 500 nanoseconds as long as memory references are satisfied by its local cache. When a cache miss occurs, the processor is delayed for an additional 2,000 nanoseconds. During half of this additional delay, the bus is dedicated to serving the cache miss. During the other half, the processor cannot continue, but the bus is free to service requests from other processors. On average, each instruction requires 2 memory references. On average, cache misses occur on 1 percent of references. What proportion of the capacity of the bus would a single processor consume, ignoring delays due to competition from other processors?\nA. 1/50\nB. 1/27\nC. 1/25\nD. 2/27\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Of the following, which best characterizes computers that use memory-mapped I/O?\nA. The computer provides special instructions for manipulating I/O ports.\nB. I/O ports are placed at addresses on the bus and are accessed just like other memory locations.\nC. To perform an I/O operation, it is sufficient to place the data in an address register and call the channel to perform the operation.\nD. Ports are referenced only by memory-mapped instructions of the computer and are located at hardwired memory locations.\nAnswer: \n"
+            }
+        ],
+        "prediction": "B",
+        "gold": "B"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college computer science.\nWhich of the following regular expressions is equivalent to (describes the same set of strings as) (a* + b)*(c + d)?\nA. a*(c + d)+ b(c + d)\nB. a*(c + d)* + b(c + d)*\nC. a*(c + d)+ b*(c + d)\nD. (a + b)*c +(a + b)*d\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A certain pipelined RISC machine has 8 general-purpose registers R0, R1, . . . , R7 and supports the following operations.\nADD Rs1, Rs2, Rd Add Rs1 to Rs2 and put the sum in Rd\nMUL Rs1, Rs2, Rd Multiply Rs1 by Rs2 and put the product in Rd\nAn operation normally takes one cycle; however, an operation takes two cycles if it produces a result required by the immediately following operation in an operation sequence. Consider the expression AB + ABC + BC, where variables A, B, C are located in registers R0, R1, R2. If the contents of these three registers must not be modified, what is the minimum number of clock cycles required for an operation sequence that computes the value of AB + ABC + BC?\nA. 5\nB. 6\nC. 7\nD. 8\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The Singleton design pattern is used to guarantee that only a single instance of a class may be instantiated. Which of the following is (are) true of this design pattern?\nI. The Singleton class has a static factory method to provide its instance.\nII. The Singleton class can be a subclass of another class.\nIII. The Singleton class has a private constructor.\nA. I only\nB. II only\nC. III only\nD. I, II, and III\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A compiler generates code for the following assignment statement.\nG := (A + B) * C - (D + E) * F\nThe target machine has a single accumulator and a single-address instruction set consisting of instructions load, store, add, subtract, and multiply. For the arithmetic operations, the left operand is taken from the accumulator and the result appears in the accumulator. The smallest possible number of instructions in the resulting code is\nA. 5\nB. 6\nC. 7\nD. 9\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider a computer design in which multiple processors, each with a private cache memory, share global memory using a single bus. This bus is the critical system resource. Each processor can execute one instruction every 500 nanoseconds as long as memory references are satisfied by its local cache. When a cache miss occurs, the processor is delayed for an additional 2,000 nanoseconds. During half of this additional delay, the bus is dedicated to serving the cache miss. During the other half, the processor cannot continue, but the bus is free to service requests from other processors. On average, each instruction requires 2 memory references. On average, cache misses occur on 1 percent of references. What proportion of the capacity of the bus would a single processor consume, ignoring delays due to competition from other processors?\nA. 1/50\nB. 1/27\nC. 1/25\nD. 2/27\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Many cryptographic protocols base their security on assumptions about the computational difficulty of integer factorization. Integer factorization serves this purpose because we believe that\nA. integer multiplication is a function whose inverse, factorization, remains difficult for a large class of inputs\nB. P = NP\nC. even if P = NP, integer factorization is still likely not to be polynomial-time computable\nD. testing primality is computationally intractable\nAnswer: \n"
+            }
+        ],
+        "prediction": "B",
+        "gold": "A"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college computer science.\nWhich of the following regular expressions is equivalent to (describes the same set of strings as) (a* + b)*(c + d)?\nA. a*(c + d)+ b(c + d)\nB. a*(c + d)* + b(c + d)*\nC. a*(c + d)+ b*(c + d)\nD. (a + b)*c +(a + b)*d\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A certain pipelined RISC machine has 8 general-purpose registers R0, R1, . . . , R7 and supports the following operations.\nADD Rs1, Rs2, Rd Add Rs1 to Rs2 and put the sum in Rd\nMUL Rs1, Rs2, Rd Multiply Rs1 by Rs2 and put the product in Rd\nAn operation normally takes one cycle; however, an operation takes two cycles if it produces a result required by the immediately following operation in an operation sequence. Consider the expression AB + ABC + BC, where variables A, B, C are located in registers R0, R1, R2. If the contents of these three registers must not be modified, what is the minimum number of clock cycles required for an operation sequence that computes the value of AB + ABC + BC?\nA. 5\nB. 6\nC. 7\nD. 8\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The Singleton design pattern is used to guarantee that only a single instance of a class may be instantiated. Which of the following is (are) true of this design pattern?\nI. The Singleton class has a static factory method to provide its instance.\nII. The Singleton class can be a subclass of another class.\nIII. The Singleton class has a private constructor.\nA. I only\nB. II only\nC. III only\nD. I, II, and III\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A compiler generates code for the following assignment statement.\nG := (A + B) * C - (D + E) * F\nThe target machine has a single accumulator and a single-address instruction set consisting of instructions load, store, add, subtract, and multiply. For the arithmetic operations, the left operand is taken from the accumulator and the result appears in the accumulator. The smallest possible number of instructions in the resulting code is\nA. 5\nB. 6\nC. 7\nD. 9\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider a computer design in which multiple processors, each with a private cache memory, share global memory using a single bus. This bus is the critical system resource. Each processor can execute one instruction every 500 nanoseconds as long as memory references are satisfied by its local cache. When a cache miss occurs, the processor is delayed for an additional 2,000 nanoseconds. During half of this additional delay, the bus is dedicated to serving the cache miss. During the other half, the processor cannot continue, but the bus is free to service requests from other processors. On average, each instruction requires 2 memory references. On average, cache misses occur on 1 percent of references. What proportion of the capacity of the bus would a single processor consume, ignoring delays due to competition from other processors?\nA. 1/50\nB. 1/27\nC. 1/25\nD. 2/27\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets of bit strings CANNOT be described with a regular expression?\nA. All bit strings whose number of zeros is a multiple of five\nB. All bit strings starting with a zero and ending with a one\nC. All bit strings with an even number of zeros\nD. All bit strings with more ones than zeros\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. All bit strings whose number of zeros is a multiple of five.\nB. All bit strings starting with a zero and ending with a one.\nC. All bit strings with an even number of zeros.\nD. All bit strings with more ones than zeros.\n\nThe answer is:\n\\[ \\boxed{\\text{A}} \\]",
+        "gold": "D"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college computer science.\nWhich of the following regular expressions is equivalent to (describes the same set of strings as) (a* + b)*(c + d)?\nA. a*(c + d)+ b(c + d)\nB. a*(c + d)* + b(c + d)*\nC. a*(c + d)+ b*(c + d)\nD. (a + b)*c +(a + b)*d\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A certain pipelined RISC machine has 8 general-purpose registers R0, R1, . . . , R7 and supports the following operations.\nADD Rs1, Rs2, Rd Add Rs1 to Rs2 and put the sum in Rd\nMUL Rs1, Rs2, Rd Multiply Rs1 by Rs2 and put the product in Rd\nAn operation normally takes one cycle; however, an operation takes two cycles if it produces a result required by the immediately following operation in an operation sequence. Consider the expression AB + ABC + BC, where variables A, B, C are located in registers R0, R1, R2. If the contents of these three registers must not be modified, what is the minimum number of clock cycles required for an operation sequence that computes the value of AB + ABC + BC?\nA. 5\nB. 6\nC. 7\nD. 8\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The Singleton design pattern is used to guarantee that only a single instance of a class may be instantiated. Which of the following is (are) true of this design pattern?\nI. The Singleton class has a static factory method to provide its instance.\nII. The Singleton class can be a subclass of another class.\nIII. The Singleton class has a private constructor.\nA. I only\nB. II only\nC. III only\nD. I, II, and III\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A compiler generates code for the following assignment statement.\nG := (A + B) * C - (D + E) * F\nThe target machine has a single accumulator and a single-address instruction set consisting of instructions load, store, add, subtract, and multiply. For the arithmetic operations, the left operand is taken from the accumulator and the result appears in the accumulator. The smallest possible number of instructions in the resulting code is\nA. 5\nB. 6\nC. 7\nD. 9\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider a computer design in which multiple processors, each with a private cache memory, share global memory using a single bus. This bus is the critical system resource. Each processor can execute one instruction every 500 nanoseconds as long as memory references are satisfied by its local cache. When a cache miss occurs, the processor is delayed for an additional 2,000 nanoseconds. During half of this additional delay, the bus is dedicated to serving the cache miss. During the other half, the processor cannot continue, but the bus is free to service requests from other processors. On average, each instruction requires 2 memory references. On average, cache misses occur on 1 percent of references. What proportion of the capacity of the bus would a single processor consume, ignoring delays due to competition from other processors?\nA. 1/50\nB. 1/27\nC. 1/25\nD. 2/27\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following conditions can be expressed by a Boolean formula in the Boolean variables p_1, p_2, p_3, p_4 and the connectives ∧,∨ (without ¬)?\nI. At least three of p_1, p_2, p_3, p_4 are true.\nII. Exactly three of p_1, p_2, p_3, p_4 are true.\nIII. An even number of p_1, p_2, p_3, p_4 are true.\nA. I only\nB. II only\nC. III only\nD. I and III\nAnswer: \n"
+            }
+        ],
+        "prediction": "I. At least three of p_1, p_2, p_3, p_4 are true.\nII. Exactly three of p_1, p_2, p_3, p_4 are true.\nIII. An even number of p_1, p_2, p_3, p_4 are true.\nD. I, II, and III\nAnswer:",
+        "gold": "A"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college computer science.\nWhich of the following regular expressions is equivalent to (describes the same set of strings as) (a* + b)*(c + d)?\nA. a*(c + d)+ b(c + d)\nB. a*(c + d)* + b(c + d)*\nC. a*(c + d)+ b*(c + d)\nD. (a + b)*c +(a + b)*d\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A certain pipelined RISC machine has 8 general-purpose registers R0, R1, . . . , R7 and supports the following operations.\nADD Rs1, Rs2, Rd Add Rs1 to Rs2 and put the sum in Rd\nMUL Rs1, Rs2, Rd Multiply Rs1 by Rs2 and put the product in Rd\nAn operation normally takes one cycle; however, an operation takes two cycles if it produces a result required by the immediately following operation in an operation sequence. Consider the expression AB + ABC + BC, where variables A, B, C are located in registers R0, R1, R2. If the contents of these three registers must not be modified, what is the minimum number of clock cycles required for an operation sequence that computes the value of AB + ABC + BC?\nA. 5\nB. 6\nC. 7\nD. 8\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The Singleton design pattern is used to guarantee that only a single instance of a class may be instantiated. Which of the following is (are) true of this design pattern?\nI. The Singleton class has a static factory method to provide its instance.\nII. The Singleton class can be a subclass of another class.\nIII. The Singleton class has a private constructor.\nA. I only\nB. II only\nC. III only\nD. I, II, and III\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A compiler generates code for the following assignment statement.\nG := (A + B) * C - (D + E) * F\nThe target machine has a single accumulator and a single-address instruction set consisting of instructions load, store, add, subtract, and multiply. For the arithmetic operations, the left operand is taken from the accumulator and the result appears in the accumulator. The smallest possible number of instructions in the resulting code is\nA. 5\nB. 6\nC. 7\nD. 9\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider a computer design in which multiple processors, each with a private cache memory, share global memory using a single bus. This bus is the critical system resource. Each processor can execute one instruction every 500 nanoseconds as long as memory references are satisfied by its local cache. When a cache miss occurs, the processor is delayed for an additional 2,000 nanoseconds. During half of this additional delay, the bus is dedicated to serving the cache miss. During the other half, the processor cannot continue, but the bus is free to service requests from other processors. On average, each instruction requires 2 memory references. On average, cache misses occur on 1 percent of references. What proportion of the capacity of the bus would a single processor consume, ignoring delays due to competition from other processors?\nA. 1/50\nB. 1/27\nC. 1/25\nD. 2/27\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Two alternatives for interconnecting a set of processors with bidirectional links are (1) the fully interconnected network, in which each processor is directly connected to every other processor, and (2) the ring network, in which each processor is connected to two other processors. The worst-case path length for a network is the maximum, over all pairs of nodes in the network, of the minimum length paths (measured in number of links) between the nodes. For each type of interconnection of n processors, a figure of merit can be formed as the product of the number of links required for the network times the worst-case path length connecting any two processors. The ratio of this figure of merit for the fully interconnected network compared to that of the ring network, for even n > 2, is\nA. 1/(n^2)\nB. 1/(n(n-1))\nC. 1/n\nD. (n-1)/n\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. 1/(n^2)\nB. 1/(n(n-1))\nC. 1/n\nD. (n-1)/n\n\nAnswer: A",
+        "gold": "D"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college computer science.\nWhich of the following regular expressions is equivalent to (describes the same set of strings as) (a* + b)*(c + d)?\nA. a*(c + d)+ b(c + d)\nB. a*(c + d)* + b(c + d)*\nC. a*(c + d)+ b*(c + d)\nD. (a + b)*c +(a + b)*d\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A certain pipelined RISC machine has 8 general-purpose registers R0, R1, . . . , R7 and supports the following operations.\nADD Rs1, Rs2, Rd Add Rs1 to Rs2 and put the sum in Rd\nMUL Rs1, Rs2, Rd Multiply Rs1 by Rs2 and put the product in Rd\nAn operation normally takes one cycle; however, an operation takes two cycles if it produces a result required by the immediately following operation in an operation sequence. Consider the expression AB + ABC + BC, where variables A, B, C are located in registers R0, R1, R2. If the contents of these three registers must not be modified, what is the minimum number of clock cycles required for an operation sequence that computes the value of AB + ABC + BC?\nA. 5\nB. 6\nC. 7\nD. 8\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The Singleton design pattern is used to guarantee that only a single instance of a class may be instantiated. Which of the following is (are) true of this design pattern?\nI. The Singleton class has a static factory method to provide its instance.\nII. The Singleton class can be a subclass of another class.\nIII. The Singleton class has a private constructor.\nA. I only\nB. II only\nC. III only\nD. I, II, and III\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A compiler generates code for the following assignment statement.\nG := (A + B) * C - (D + E) * F\nThe target machine has a single accumulator and a single-address instruction set consisting of instructions load, store, add, subtract, and multiply. For the arithmetic operations, the left operand is taken from the accumulator and the result appears in the accumulator. The smallest possible number of instructions in the resulting code is\nA. 5\nB. 6\nC. 7\nD. 9\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider a computer design in which multiple processors, each with a private cache memory, share global memory using a single bus. This bus is the critical system resource. Each processor can execute one instruction every 500 nanoseconds as long as memory references are satisfied by its local cache. When a cache miss occurs, the processor is delayed for an additional 2,000 nanoseconds. During half of this additional delay, the bus is dedicated to serving the cache miss. During the other half, the processor cannot continue, but the bus is free to service requests from other processors. On average, each instruction requires 2 memory references. On average, cache misses occur on 1 percent of references. What proportion of the capacity of the bus would a single processor consume, ignoring delays due to competition from other processors?\nA. 1/50\nB. 1/27\nC. 1/25\nD. 2/27\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "For a connected, undirected graph G = (V, E), which of the following must be true?\nI. Σ_{v∈V} degree(v) is even.\nII. |E| ≥ |V| − 1\nIII. G has at least one vertex with degree 1.\nA. I only\nB. II only\nC. III only\nD. I and II\nAnswer: \n"
+            }
+        ],
+        "prediction": "I. Σ_{v∈V} degree(v) is even.\nII. |E| ≥ |V| − 1\nIII. G has at least one vertex with degree 1.\nA. I only\nB. II only\nC. III only\nD. I and II\nAnswer:",
+        "gold": "D"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college computer science.\nWhich of the following regular expressions is equivalent to (describes the same set of strings as) (a* + b)*(c + d)?\nA. a*(c + d)+ b(c + d)\nB. a*(c + d)* + b(c + d)*\nC. a*(c + d)+ b*(c + d)\nD. (a + b)*c +(a + b)*d\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A certain pipelined RISC machine has 8 general-purpose registers R0, R1, . . . , R7 and supports the following operations.\nADD Rs1, Rs2, Rd Add Rs1 to Rs2 and put the sum in Rd\nMUL Rs1, Rs2, Rd Multiply Rs1 by Rs2 and put the product in Rd\nAn operation normally takes one cycle; however, an operation takes two cycles if it produces a result required by the immediately following operation in an operation sequence. Consider the expression AB + ABC + BC, where variables A, B, C are located in registers R0, R1, R2. If the contents of these three registers must not be modified, what is the minimum number of clock cycles required for an operation sequence that computes the value of AB + ABC + BC?\nA. 5\nB. 6\nC. 7\nD. 8\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The Singleton design pattern is used to guarantee that only a single instance of a class may be instantiated. Which of the following is (are) true of this design pattern?\nI. The Singleton class has a static factory method to provide its instance.\nII. The Singleton class can be a subclass of another class.\nIII. The Singleton class has a private constructor.\nA. I only\nB. II only\nC. III only\nD. I, II, and III\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A compiler generates code for the following assignment statement.\nG := (A + B) * C - (D + E) * F\nThe target machine has a single accumulator and a single-address instruction set consisting of instructions load, store, add, subtract, and multiply. For the arithmetic operations, the left operand is taken from the accumulator and the result appears in the accumulator. The smallest possible number of instructions in the resulting code is\nA. 5\nB. 6\nC. 7\nD. 9\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider a computer design in which multiple processors, each with a private cache memory, share global memory using a single bus. This bus is the critical system resource. Each processor can execute one instruction every 500 nanoseconds as long as memory references are satisfied by its local cache. When a cache miss occurs, the processor is delayed for an additional 2,000 nanoseconds. During half of this additional delay, the bus is dedicated to serving the cache miss. During the other half, the processor cannot continue, but the bus is free to service requests from other processors. On average, each instruction requires 2 memory references. On average, cache misses occur on 1 percent of references. What proportion of the capacity of the bus would a single processor consume, ignoring delays due to competition from other processors?\nA. 1/50\nB. 1/27\nC. 1/25\nD. 2/27\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "In multiprogrammed systems it is advantageous if some programs such as editors and compilers can be shared by several users. Which of the following must be true of multiprogrammed systems in order that a single copy of a program can be shared by several users?\nI. The program is a macro.\nII. The program is recursive.\nIII. The program is reentrant.\nA. I only\nB. II only\nC. III only\nD. II and III only\nAnswer: \n"
+            }
+        ],
+        "prediction": "D",
+        "gold": "C"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college computer science.\nWhich of the following regular expressions is equivalent to (describes the same set of strings as) (a* + b)*(c + d)?\nA. a*(c + d)+ b(c + d)\nB. a*(c + d)* + b(c + d)*\nC. a*(c + d)+ b*(c + d)\nD. (a + b)*c +(a + b)*d\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A certain pipelined RISC machine has 8 general-purpose registers R0, R1, . . . , R7 and supports the following operations.\nADD Rs1, Rs2, Rd Add Rs1 to Rs2 and put the sum in Rd\nMUL Rs1, Rs2, Rd Multiply Rs1 by Rs2 and put the product in Rd\nAn operation normally takes one cycle; however, an operation takes two cycles if it produces a result required by the immediately following operation in an operation sequence. Consider the expression AB + ABC + BC, where variables A, B, C are located in registers R0, R1, R2. If the contents of these three registers must not be modified, what is the minimum number of clock cycles required for an operation sequence that computes the value of AB + ABC + BC?\nA. 5\nB. 6\nC. 7\nD. 8\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The Singleton design pattern is used to guarantee that only a single instance of a class may be instantiated. Which of the following is (are) true of this design pattern?\nI. The Singleton class has a static factory method to provide its instance.\nII. The Singleton class can be a subclass of another class.\nIII. The Singleton class has a private constructor.\nA. I only\nB. II only\nC. III only\nD. I, II, and III\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A compiler generates code for the following assignment statement.\nG := (A + B) * C - (D + E) * F\nThe target machine has a single accumulator and a single-address instruction set consisting of instructions load, store, add, subtract, and multiply. For the arithmetic operations, the left operand is taken from the accumulator and the result appears in the accumulator. The smallest possible number of instructions in the resulting code is\nA. 5\nB. 6\nC. 7\nD. 9\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider a computer design in which multiple processors, each with a private cache memory, share global memory using a single bus. This bus is the critical system resource. Each processor can execute one instruction every 500 nanoseconds as long as memory references are satisfied by its local cache. When a cache miss occurs, the processor is delayed for an additional 2,000 nanoseconds. During half of this additional delay, the bus is dedicated to serving the cache miss. During the other half, the processor cannot continue, but the bus is free to service requests from other processors. On average, each instruction requires 2 memory references. On average, cache misses occur on 1 percent of references. What proportion of the capacity of the bus would a single processor consume, ignoring delays due to competition from other processors?\nA. 1/50\nB. 1/27\nC. 1/25\nD. 2/27\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following decimal numbers has an exact representation in binary notation?\nA. 0.1\nB. 0.2\nC. 0.3\nD. 0.5\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. 0.1\nB. 0.2\nC. 0.3\nD. 0.5\n\nThe decimal number 0.5 has an exact representation in binary notation as 0.1010101.\n\nThe answer is:\n\\[ \\boxed{D} \\]",
+        "gold": "D"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about college computer science.\nWhich of the following regular expressions is equivalent to (describes the same set of strings as) (a* + b)*(c + d)?\nA. a*(c + d)+ b(c + d)\nB. a*(c + d)* + b(c + d)*\nC. a*(c + d)+ b*(c + d)\nD. (a + b)*c +(a + b)*d\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A certain pipelined RISC machine has 8 general-purpose registers R0, R1, . . . , R7 and supports the following operations.\nADD Rs1, Rs2, Rd Add Rs1 to Rs2 and put the sum in Rd\nMUL Rs1, Rs2, Rd Multiply Rs1 by Rs2 and put the product in Rd\nAn operation normally takes one cycle; however, an operation takes two cycles if it produces a result required by the immediately following operation in an operation sequence. Consider the expression AB + ABC + BC, where variables A, B, C are located in registers R0, R1, R2. If the contents of these three registers must not be modified, what is the minimum number of clock cycles required for an operation sequence that computes the value of AB + ABC + BC?\nA. 5\nB. 6\nC. 7\nD. 8\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The Singleton design pattern is used to guarantee that only a single instance of a class may be instantiated. Which of the following is (are) true of this design pattern?\nI. The Singleton class has a static factory method to provide its instance.\nII. The Singleton class can be a subclass of another class.\nIII. The Singleton class has a private constructor.\nA. I only\nB. II only\nC. III only\nD. I, II, and III\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A compiler generates code for the following assignment statement.\nG := (A + B) * C - (D + E) * F\nThe target machine has a single accumulator and a single-address instruction set consisting of instructions load, store, add, subtract, and multiply. For the arithmetic operations, the left operand is taken from the accumulator and the result appears in the accumulator. The smallest possible number of instructions in the resulting code is\nA. 5\nB. 6\nC. 7\nD. 9\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Consider a computer design in which multiple processors, each with a private cache memory, share global memory using a single bus. This bus is the critical system resource. Each processor can execute one instruction every 500 nanoseconds as long as memory references are satisfied by its local cache. When a cache miss occurs, the processor is delayed for an additional 2,000 nanoseconds. During half of this additional delay, the bus is dedicated to serving the cache miss. During the other half, the processor cannot continue, but the bus is free to service requests from other processors. On average, each instruction requires 2 memory references. On average, cache misses occur on 1 percent of references. What proportion of the capacity of the bus would a single processor consume, ignoring delays due to competition from other processors?\nA. 1/50\nB. 1/27\nC. 1/25\nD. 2/27\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Function signatures describe the types of the arguments to a function as well as the return value of the function. For instance, the addition function on reals has a signature of\nadd : real x real -> real\nsince it takes two real numbers and returns a real number. But, for a language that allows functions as return values, addition could be considered to have the signature\nadd : real -> (real -> real)\nwhich means that add takes a single real (the first operand) and returns a new function that itself takes a single real (the second operand) and returns a real (the result). This process of reducing a function with multiple arguments to a function with fewer arguments is called currying. Which of the following is correct?\nA. Currying can be applied to any function to the point where it has exactly one input argument.\nB. Currying cannot be applied to functions of more than two arguments.\nC. Currying cannot be applied to functions that return functions as arguments.\nD. Currying cannot be applied w functions that haw arguments that are functions.\nAnswer: \n"
+            }
+        ],
+        "prediction": "A",
+        "gold": "A"
+    }
+}

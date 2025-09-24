@@ -1,0 +1,67 @@
+07/24 10:01:54 - OpenCompass - INFO - ./data/ARC/ARC-c/ARC-Challenge-Dev.jsonl does not exist!Start Download data automatically!If you have downloaded the data before,You can specific `COMPASS_DATA_CACHE` to avoid downloading~
+Downloading http://opencompass.oss-cn-shanghai.aliyuncs.com/datasets/data/ARC.zip to /home/kris/.cache/opencompass/data/ARC.zip
+Traceback (most recent call last):
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/http/client.py", line 1283, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/http/client.py", line 1329, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/http/client.py", line 942, in connect
+    self.sock = self._create_connection(
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/socket.py", line 836, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/socket.py", line 967, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/tasks/openicl_eval.py", line 481, in <module>
+    inferencer.run()
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/tasks/openicl_eval.py", line 86, in run
+    self._score()
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/tasks/openicl_eval.py", line 89, in _score
+    test_set = build_dataset_from_cfg(self.dataset_cfg).test
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/utils/build.py", line 12, in build_dataset_from_cfg
+    return LOAD_DATASET.build(dataset_cfg)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/mmengine/registry/registry.py", line 570, in build
+    return self.build_func(cfg, *args, **kwargs, registry=self)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/mmengine/registry/build_functions.py", line 121, in build_from_cfg
+    obj = obj_cls(**args)  # type: ignore
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/datasets/base.py", line 17, in __init__
+    dataset = self.load(**kwargs)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/datasets/arc.py", line 18, in load
+    path = get_data_path(path)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/utils/datasets.py", line 52, in get_data_path
+    return download_dataset(local_path, cache_dir)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/utils/datasets.py", line 98, in download_dataset
+    download_and_extract_archive(
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/utils/fileio.py", line 521, in download_and_extract_archive
+    download_url(url, download_root, filename, md5)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/utils/fileio.py", line 450, in download_url
+    raise e
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/utils/fileio.py", line 442, in download_url
+    download_url_to_file(url, fpath)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/utils/fileio.py", line 370, in download_url_to_file
+    u = urllib.request.urlopen(req)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/urllib/request.py", line 1377, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>

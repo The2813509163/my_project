@@ -1,0 +1,110 @@
+06/26 22:57:39 - OpenCompass - INFO - Task [Llama-3.2-1B-Instruct_hf/gsm8k_2,Llama-3.2-1B-Instruct_hf/math_2,Llama-3.2-1B-Instruct_hf/svamp_2,Llama-3.2-1B-Instruct_hf/piqa_2,Llama-3.2-1B-Instruct_hf/siqa_2,Llama-3.2-1B-Instruct_hf/squad2.0_2,Llama-3.2-1B-Instruct_hf/ARC-c_2,Llama-3.2-1B-Instruct_hf/ARC-e_2]
+INFO 06-26 22:57:41 [importing.py:53] Triton module has been replaced with a placeholder.
+INFO 06-26 22:57:41 [__init__.py:239] Automatically detected platform cuda.
+06/26 22:57:43 - OpenCompass - WARNING - pad_token_id is not set for the tokenizer.
+06/26 22:57:43 - OpenCompass - WARNING - Using eos_token_id 128009 as pad_token_id.
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /data/kris/shared_data/models/Llama-3.2-1B-Instruct and are newly initialized: ['model.HIO_A_Emb', 'model.HIO_B_Emb', 'model.HSM_mask_proxy', 'model.layers.0.HIO_A_Attn', 'model.layers.0.HIO_A_MLP', 'model.layers.0.HIO_B_Attn', 'model.layers.0.HIO_B_MLP', 'model.layers.0.mlp.HIO_A_down_proj', 'model.layers.0.mlp.HIO_B_down_proj', 'model.layers.0.mlp.HSM_mask_proxy', 'model.layers.1.HIO_A_Attn', 'model.layers.1.HIO_A_MLP', 'model.layers.1.HIO_B_Attn', 'model.layers.1.HIO_B_MLP', 'model.layers.1.mlp.HIO_A_down_proj', 'model.layers.1.mlp.HIO_B_down_proj', 'model.layers.1.mlp.HSM_mask_proxy', 'model.layers.10.HIO_A_Attn', 'model.layers.10.HIO_A_MLP', 'model.layers.10.HIO_B_Attn', 'model.layers.10.HIO_B_MLP', 'model.layers.10.mlp.HIO_A_down_proj', 'model.layers.10.mlp.HIO_B_down_proj', 'model.layers.10.mlp.HSM_mask_proxy', 'model.layers.11.HIO_A_Attn', 'model.layers.11.HIO_A_MLP', 'model.layers.11.HIO_B_Attn', 'model.layers.11.HIO_B_MLP', 'model.layers.11.mlp.HIO_A_down_proj', 'model.layers.11.mlp.HIO_B_down_proj', 'model.layers.11.mlp.HSM_mask_proxy', 'model.layers.12.HIO_A_Attn', 'model.layers.12.HIO_A_MLP', 'model.layers.12.HIO_B_Attn', 'model.layers.12.HIO_B_MLP', 'model.layers.12.mlp.HIO_A_down_proj', 'model.layers.12.mlp.HIO_B_down_proj', 'model.layers.12.mlp.HSM_mask_proxy', 'model.layers.13.HIO_A_Attn', 'model.layers.13.HIO_A_MLP', 'model.layers.13.HIO_B_Attn', 'model.layers.13.HIO_B_MLP', 'model.layers.13.mlp.HIO_A_down_proj', 'model.layers.13.mlp.HIO_B_down_proj', 'model.layers.13.mlp.HSM_mask_proxy', 'model.layers.14.HIO_A_Attn', 'model.layers.14.HIO_A_MLP', 'model.layers.14.HIO_B_Attn', 'model.layers.14.HIO_B_MLP', 'model.layers.14.mlp.HIO_A_down_proj', 'model.layers.14.mlp.HIO_B_down_proj', 'model.layers.14.mlp.HSM_mask_proxy', 'model.layers.15.HIO_A_Attn', 'model.layers.15.HIO_A_MLP', 'model.layers.15.HIO_B_Attn', 'model.layers.15.HIO_B_MLP', 'model.layers.15.mlp.HIO_A_down_proj', 'model.layers.15.mlp.HIO_B_down_proj', 'model.layers.15.mlp.HSM_mask_proxy', 'model.layers.2.HIO_A_Attn', 'model.layers.2.HIO_A_MLP', 'model.layers.2.HIO_B_Attn', 'model.layers.2.HIO_B_MLP', 'model.layers.2.mlp.HIO_A_down_proj', 'model.layers.2.mlp.HIO_B_down_proj', 'model.layers.2.mlp.HSM_mask_proxy', 'model.layers.3.HIO_A_Attn', 'model.layers.3.HIO_A_MLP', 'model.layers.3.HIO_B_Attn', 'model.layers.3.HIO_B_MLP', 'model.layers.3.mlp.HIO_A_down_proj', 'model.layers.3.mlp.HIO_B_down_proj', 'model.layers.3.mlp.HSM_mask_proxy', 'model.layers.4.HIO_A_Attn', 'model.layers.4.HIO_A_MLP', 'model.layers.4.HIO_B_Attn', 'model.layers.4.HIO_B_MLP', 'model.layers.4.mlp.HIO_A_down_proj', 'model.layers.4.mlp.HIO_B_down_proj', 'model.layers.4.mlp.HSM_mask_proxy', 'model.layers.5.HIO_A_Attn', 'model.layers.5.HIO_A_MLP', 'model.layers.5.HIO_B_Attn', 'model.layers.5.HIO_B_MLP', 'model.layers.5.mlp.HIO_A_down_proj', 'model.layers.5.mlp.HIO_B_down_proj', 'model.layers.5.mlp.HSM_mask_proxy', 'model.layers.6.HIO_A_Attn', 'model.layers.6.HIO_A_MLP', 'model.layers.6.HIO_B_Attn', 'model.layers.6.HIO_B_MLP', 'model.layers.6.mlp.HIO_A_down_proj', 'model.layers.6.mlp.HIO_B_down_proj', 'model.layers.6.mlp.HSM_mask_proxy', 'model.layers.7.HIO_A_Attn', 'model.layers.7.HIO_A_MLP', 'model.layers.7.HIO_B_Attn', 'model.layers.7.HIO_B_MLP', 'model.layers.7.mlp.HIO_A_down_proj', 'model.layers.7.mlp.HIO_B_down_proj', 'model.layers.7.mlp.HSM_mask_proxy', 'model.layers.8.HIO_A_Attn', 'model.layers.8.HIO_A_MLP', 'model.layers.8.HIO_B_Attn', 'model.layers.8.HIO_B_MLP', 'model.layers.8.mlp.HIO_A_down_proj', 'model.layers.8.mlp.HIO_B_down_proj', 'model.layers.8.mlp.HSM_mask_proxy', 'model.layers.9.HIO_A_Attn', 'model.layers.9.HIO_A_MLP', 'model.layers.9.HIO_B_Attn', 'model.layers.9.HIO_B_MLP', 'model.layers.9.mlp.HIO_A_down_proj', 'model.layers.9.mlp.HIO_B_down_proj', 'model.layers.9.mlp.HSM_mask_proxy']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+06/26 22:58:04 - OpenCompass - INFO - using stop words: ['<|eom_id|>', '<|end_of_text|>', '<|eot_id|>']
+06/26 22:58:05 - OpenCompass - INFO - Try to load the data from /data/kris/shared_data/datasets/NLP/opencompass/./data/gsm8k/
+gsm8k_2 train 7473
+gsm8k_2 test 1319
+06/26 22:58:06 - OpenCompass - INFO - Start inferencing [Llama-3.2-1B-Instruct_hf/gsm8k_2]
+[2025-06-26 22:58:06,111] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2025-06-26 22:58:06,111] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/11 [00:00<?, ?it/s]06/26 22:58:06 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/26 22:58:06 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7003d7f7e5f0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+/home/kris/workspace/qianxuzhen/Pruning-LLMs/thirdparty/transformers-4.51.1/src/transformers/generation/configuration_utils.py:631: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/kris/workspace/qianxuzhen/Pruning-LLMs/thirdparty/transformers-4.51.1/src/transformers/generation/configuration_utils.py:636: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+  9%|▉         | 1/11 [01:03<10:32, 63.25s/it]06/26 22:59:09 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/26 22:59:09 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7003d7f7e710>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 18%|█▊        | 2/11 [01:31<06:21, 42.38s/it]06/26 22:59:37 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/26 22:59:37 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7003d7f7eb30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 27%|██▋       | 3/11 [02:12<05:34, 41.83s/it]06/26 23:00:18 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/26 23:00:18 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7003d7f7eb60>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 36%|███▋      | 4/11 [02:45<04:29, 38.55s/it]06/26 23:00:51 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/26 23:00:51 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7003d7ff8df0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 45%|████▌     | 5/11 [03:20<03:42, 37.16s/it]06/26 23:01:26 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/26 23:01:26 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7003d7ff8d90>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 55%|█████▍    | 6/11 [04:23<03:49, 45.87s/it]06/26 23:02:29 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/26 23:02:29 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7003d7ff9240>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 64%|██████▎   | 7/11 [04:52<02:41, 40.43s/it]06/26 23:02:58 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/26 23:02:58 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7003d7ff9480>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 73%|███████▎  | 8/11 [05:54<02:22, 47.48s/it]06/26 23:04:01 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/26 23:04:01 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7003d7ff9d50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 82%|████████▏ | 9/11 [06:20<01:21, 40.73s/it]06/26 23:04:27 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/26 23:04:27 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7003d7f7e410>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 91%|█████████ | 10/11 [06:32<00:31, 31.76s/it]06/26 23:04:38 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/26 23:04:38 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7003d7f7e920>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+100%|██████████| 11/11 [06:42<00:00, 24.98s/it]100%|██████████| 11/11 [06:42<00:00, 36.56s/it]
+06/26 23:04:48 - OpenCompass - INFO - Try to load the data from /data/kris/shared_data/datasets/NLP/opencompass/./data/math/
+math_2 test 5000
+math_2 train 5000
+06/26 23:04:48 - OpenCompass - INFO - Start inferencing [Llama-3.2-1B-Instruct_hf/math_2]
+[2025-06-26 23:04:48,627] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2025-06-26 23:04:48,627] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/40 [00:00<?, ?it/s]06/26 23:04:48 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/26 23:04:48 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7003dbb59cf0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  2%|▎         | 1/40 [00:24<15:38, 24.05s/it]06/26 23:05:12 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/26 23:05:12 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7003dbb5a560>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  2%|▎         | 1/40 [00:24<15:55, 24.50s/it]
+Traceback (most recent call last):
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/tasks/openicl_infer.py", line 161, in <module>
+    inferencer.run()
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/tasks/openicl_infer.py", line 89, in run
+    self._inference()
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/tasks/openicl_infer.py", line 134, in _inference
+    inferencer.inference(retriever,
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/openicl/icl_inferencer/icl_gen_inferencer.py", line 153, in inference
+    results = self.model.generate_from_template(
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/models/base.py", line 201, in generate_from_template
+    return self.generate(inputs, max_out_len=max_out_len, **kwargs)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/models/huggingface_above_v4_33.py", line 481, in generate
+    outputs = self.model.generate(**tokens, **generation_kwargs)
+  File "/home/kris/workspace/qianxuzhen/Pruning-LLMs/thirdparty/peft-0.15.1/src/peft/peft_model.py", line 1874, in generate
+    outputs = self.base_model.generate(*args, **kwargs)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/kris/workspace/qianxuzhen/Pruning-LLMs/thirdparty/transformers-4.51.1/src/transformers/generation/utils.py", line 2463, in generate
+    result = self._sample(
+  File "/home/kris/workspace/qianxuzhen/Pruning-LLMs/thirdparty/transformers-4.51.1/src/transformers/generation/utils.py", line 3429, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/kris/workspace/qianxuzhen/Pruning-LLMs/thirdparty/transformers-4.51.1/src/transformers/utils/generic.py", line 965, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/home/kris/workspace/qianxuzhen/Pruning-LLMs/thirdparty/transformers-4.51.1/src/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+  File "/home/kris/workspace/qianxuzhen/Pruning-LLMs/thirdparty/transformers-4.51.1/src/transformers/models/llama/modeling_llama.py", line 1148, in forward
+    outputs: BaseModelOutputWithPast = self.model(
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/kris/workspace/qianxuzhen/Pruning-LLMs/thirdparty/transformers-4.51.1/src/transformers/utils/generic.py", line 965, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/home/kris/workspace/qianxuzhen/Pruning-LLMs/thirdparty/transformers-4.51.1/src/transformers/models/llama/modeling_llama.py", line 894, in forward
+    layer_outputs = decoder_layer(
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/kris/workspace/qianxuzhen/Pruning-LLMs/thirdparty/transformers-4.51.1/src/transformers/models/llama/modeling_llama.py", line 593, in forward
+    hidden_states, pruning_interm_loss = self.mlp(hidden_states)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/kris/workspace/qianxuzhen/Pruning-LLMs/thirdparty/transformers-4.51.1/src/transformers/models/llama/modeling_llama.py", line 229, in forward
+    down_proj = self.down_proj(
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/kris/workspace/qianxuzhen/Pruning-LLMs/thirdparty/peft-0.15.1/src/peft/tuners/lora/layer.py", line 727, in forward
+    result = result + lora_B(lora_A(dropout(x))) * scaling
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 118.00 MiB. GPU 0 has a total capacity of 79.25 GiB of which 104.31 MiB is free. Process 1140446 has 72.22 GiB memory in use. Process 1190448 has 1.06 GiB memory in use. Including non-PyTorch memory, this process has 5.74 GiB memory in use. Of the allocated memory 5.02 GiB is allocated by PyTorch, and 225.50 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

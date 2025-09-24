@@ -1,0 +1,1352 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The mean Law School Aptitude Test (LSAT) score for applicants to a particular law school is 650 with a standard deviation of 45. Suppose that only applicants with scores above 700 are considered. What percentage of the applicants considered have scores below 740? (Assume the scores are normally distributed.)\nA. 13.3%\nB. 17.1%\nC. 82.9%\nD. 86.7%\nAnswer: \n"
+            }
+        ],
+        "prediction": "The question is asking for the percentage of applicants with scores below 740. Since the scores are normally distributed, we can use the z-score formula to find the percentage of applicants with scores below 740.\n\nLet X be the score of an applicant. Then, we can write:\n\\[ \\frac{X - 700}{45} = z \\]\n\nWe want to find the percentage of applicants with scores below 740, which is equivalent to finding the area to the left of z = 0.\n\nUsing a standard normal distribution table, we can find the z-score corresponding to a score of 740:\n\\[ z = \\frac{740 - 700}{45} = \\frac{40}{45} = 0.88 \\]\n\nNow, we can find the area to the left of z = 0 using a standard normal distribution table:\n\\[ P(Z < 0.88) = 0.25 \\]\n\nSo, the percentage of applicants with scores below 740 is 25%.\n\nThe answer is:\n\\[ \\boxed{D} \\]",
+        "gold": "C"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "On the same test, Mary and Pam scored at the 64th and 56th percentiles, respectively. Which of the following is a true statement?\nA. Mary scored eight more points than Pam.\nB. Mary's score is 8% higher than Pam's.\nC. Eight percent of those who took the test scored between Pam and Mary.\nD. Thirty-six people scored higher than both Mary and Pam.\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. Mary scored eight more points than Pam.\nB. Mary's score is 8% higher than Pam's.\nC. Eight percent of those who took the test scored between Pam and Mary.\nD. Thirty-six people scored higher than both Mary and Pam.\n\nAnswer: A",
+        "gold": "C"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A study looked at medical records of about 23,000 patients, mostly in Asia. They found that patients who drank at least three cups of green tea per day had a much lower incidence of depression. In an American newspaper article about this study, which of the following statements should not be made?\nA. It is possible that people who drink green tea also tend to have healthier lifestyles than those who don't.\nB. It is possible that people who drink green tea also tend to have a more positive outlook on life than those who don't.\nC. Because this is observational data, the association between drinking green tea and a lower incidence of depression is not an indication of a causal relationship.\nD. People who want to avoid depression should consider drinking green tea on a daily basis.\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. It is possible that people who drink green tea also tend to have healthier lifestyles than those who don't.\nB. It is possible that people who drink green tea also tend to have a more positive outlook on life than those who don't.\nC. Because this is observational data, the association between drinking green tea and a lower incidence of depression is not an indication of a causal relationship.\nD. People who want to avoid depression should consider drinking green tea on a daily basis.\n\nThe answer is:\n\\[ \\boxed{C} \\]",
+        "gold": "D"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A researcher planning a survey of school principals in a particular state has lists of the school principals employed in each of the 125 school districts. The procedure is to obtain a random sample of principals from each of the districts rather than grouping all the lists together and obtaining a sample from the entire group. Which of the following is a correct conclusion?\nA. This is a simple random sample obtained in an easier and less costly manner than procedures involving sampling from the entire population of principals.\nB. This is a cluster sample in which the population was divided into heterogeneous groups called clusters.\nC. This is an example of systematic sampling, which gives a reasonable sample as long as the original order of the list is not related to the variables under consideration.\nD. This is a stratified sample, which may give comparative information that a simple random sample wouldn't give.\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. This is a simple random sample obtained in an easier and less costly manner than procedures involving sampling from the entire population of principals.\nB. This is a cluster sample in which the population was divided into heterogeneous groups called clusters.\nC. This is an example of systematic sampling, which gives a reasonable sample as long as the original order of the list is not related to the variables under consideration.\nD. This is a stratified sample, which may give comparative information that a simple random sample wouldn't give.\n\nAnswer: A",
+        "gold": "D"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "In an experiment, the control group should receive\nA. treatment opposite that given the experimental group.\nB. the same treatment given the experimental group without knowing they are receiving the treatment.\nC. a procedure identical to that given the experimental group except for receiving the treatment under examination.\nD. a procedure identical to that given the experimental group except for a random decision on receiving the treatment under examination.\nAnswer: \n"
+            }
+        ],
+        "prediction": "D",
+        "gold": "C"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Tina’s science fair project was to estimate the mean amount of chemicals in her city’s water supply. At first, she had decided to use a random sample of 15 observations. But her teacher asked her to take 35 observations. The mean and standard deviation from 35 observations turned out to be approximately the same as those from 15 observations. Is there any advantage in using 35 observations instead of 15 observations?\nA. There is no advantage. Because the mean and the standard deviation are about the same, the confidence interval computed using 35 observations should be approximately the same as that computed using 15 observations.\nB. There is no advantage. In fact, the 20 extra observations will increase the likelihood of error.\nC. There is no advantage. Because she took 35 observations instead of 15 observations, the confidence interval using 35 observations will be wider than that using 15 observations.\nD. There is some advantage. Because she took 35 observations instead of 15 observations, the confidence interval using 35 observations will be narrower than that using 15 observations.\nAnswer: \n"
+            }
+        ],
+        "prediction": "D",
+        "gold": "D"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The total cholesterol level in a large population of people is strongly skewed right with a mean of 210 mg/dL and a standard deviation of 15 mg/dL. If random samples of size 16 are repeatedly drawn from this population, which of the following appropriately describes the sampling distribution of these sample means?\nA. The shape is unknown with a mean of 210 and a standard deviation of 15.\nB. The shape is somewhat skewed right with a mean of 210 and a standard deviation of 3.75.\nC. The shape is approximately normal with a mean of 210 and a standard deviation of 15.\nD. The shape is approximately normal with a mean of 210 and a standard deviation of 3.75.\nAnswer: \n"
+            }
+        ],
+        "prediction": "D",
+        "gold": "B"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "An experiment is conducted in which the response variable is the average gain in participants' performance in the long jump. A two-sample t-test with a 5% level of significance will be used to analyze the results. If all else is kept the same, which of the following descriptions of a possible change in procedure is true?\nA. Change from equal size treatment groups to very different size treatment groups would increase the power of the test.\nB. Change from a 5% significance level to a 1% significance level would increase the power of the test.\nC. Taking more careful measurements to reduce variability in the response would increase the power of the test.\nD. Increasing the sample size would reduce the probability of a Type I error.\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. Change from equal size treatment groups to very different size treatment groups would increase the power of the test.\nB. Change from a 5% significance level to a 1% significance level would increase the power of the test.\nC. Taking more careful measurements to reduce variability in the response would increase the power of the test.\nD. Increasing the sample size would reduce the probability of a Type I error.\n\nThe answer is:\n\\[ \\boxed{\\text{A}} \\]",
+        "gold": "C"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "An assembly line machine is supposed to turn out ball bearings with a diameter of 1.25 centimeters. Each morning the first 30 bearings produced are pulled and measured. If their mean diameter is under 1.23 centimeters or over 1.27 centimeters, the machinery is stopped and an engineer is called to make adjustments before production is resumed. The quality control procedure may be viewed as a hypothesis test with the null hypothesis H0: μ = 1.25 and the alternative hypothesis Ha: μ ≠ 1.25. The engineer is asked to make adjustments when the null hypothesis is rejected. In test terminology, what would a Type II error result in?\nA. A warranted halt in production to adjust the machinery\nB. An unnecessary stoppage of the production process\nC. Continued production of wrong size ball bearings\nD. Continued production of proper size ball bearings\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. A warranted halt in production to adjust the machinery.\nB. An unnecessary stoppage of the production process.\nC. Continued production of wrong size ball bearings.\nD. Continued production of proper size ball bearings.\n\nAnswer: A",
+        "gold": "C"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "We are interested in the proportion p of people who are unemployed in a large city. Eight percent of a simple random sample of 500 people are unemployed. What is the midpoint for a 95% confidence interval estimate of p?\nA. 0.012\nB. 0.025\nC. 0.475\nD. None of the above.\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. 0.012\nB. 0.025\nC. 0.475\nD. None of the above.\n\nThe answer is:\n\\[ \\boxed{0.012} \\]",
+        "gold": "D"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "An insurance company wishes to study the number of years drivers in a large city go between automobile accidents. They plan to obtain and analyze the data from a sample of drivers. Which of the following is a true statement?\nA. A reasonable time-and-cost-saving procedure would be to use systematic sampling on an available list of all AAA (Automobile Association of America) members in the city.\nB. A reasonable time-and-cost-saving procedure would be to randomly choose families and include all drivers in each of these families in the sample.\nC. To determine the mean number of years between accidents, randomness in choosing a sample of drivers is not important as long as the sample size is very large.\nD. None of the above are true statements.\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. A reasonable time-and-cost-saving procedure would be to use systematic sampling on an available list of all AAA (Automobile Association of America) members in the city.\nB. A reasonable time-and-cost-saving procedure would be to randomly choose families and include all drivers in each of these families in the sample.\nC. To determine the mean number of years between accidents, randomness in choosing a sample of drivers is not important as long as the sample size is very large.\nD. None of the above are true statements.\n\nAnswer: A\n\\[ \\boxed{A} \\]",
+        "gold": "D"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following is the central limit theorem?\nA. No matter how the population is distributed, as the sample size increases, the mean of the sample means becomes closer to the mean of the population.\nB. No matter how the population is distributed, as the sample size increases, the standard deviation of the sample means becomes closer to the standard deviation of the population divided by the square root of the sample size.\nC. If the population is normally distributed, then as the sample size increases, the sampling distribution of the sample mean becomes closer to a normal distribution.\nD. The central limit theorem refers to something else.\nAnswer: \n"
+            }
+        ],
+        "prediction": "D",
+        "gold": "D"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A manufacturer of ready-bake cake mixes is interested in designing an experiment to test the effects of four different temperature levels (300, 325, 350, and 375F), two different types of pans (glass and metal), and three different types of ovens (gas, electric, and microwave) on the texture of its cakes, in all combinations. Which of the following below is the best description of the design of the necessary experiment?\nA. A completely randomized design with nine treatment groups\nB. A completely randomized design with 24 treatment groups\nC. A randomized block design, blocked on temperature, with six treatment groups\nD. A randomized block design, blocked on type of pan, with 12 treatment groups\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. A completely randomized design with nine treatment groups\nB. A completely randomized design with 24 treatment groups\nC. A randomized block design, blocked on temperature, with six treatment groups\nD. A randomized block design, blocked on type of pan, with 12 treatment groups\n\nAnswer: A",
+        "gold": "B"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A study is made to determine whether more hours of academic studying leads to higher point scoring by basketball players. In surveying 50 basketball players, it is noted that the 25 who claim to study the most hours have a higher point average than the 25 who study less. Based on this study, the coach begins requiring the players to spend more time studying. Which of the following is a correct statement?\nA. While this study may have its faults, it still does prove causation.\nB. There could well be a confounding variable responsible for the seeming relationship.\nC. While this is a controlled experiment, the conclusion of the coach is not justified.\nD. To get the athletes to study more, it would be more meaningful to have them put in more practice time on the court to boost their point averages, as higher point averages seem to be associated with more study time.\nAnswer: \n"
+            }
+        ],
+        "prediction": "D",
+        "gold": "B"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Biologists around the world have increased efforts at conservation. Monitoring wildlife populations is important so that appropriate management efforts can be implemented, but such monitoring is often difficult. One study found a cheap and easy way to estimate the number of nesting sites of terns (a type of seabird) by monitoring the number of calls heard per minute. More calls happen when there are more birds, as one would expect. In fact, it turned out that the number of calls explained 71% of the variation in the abundance of nests between breeding sites. Which of the following statements is correct about the correlation between the number of calls and the abundance of nests?\nA. The correlation coefficient is -0.71.\nB. The correlation coefficient is 0.71.\nC. The correlation coefficient is -0.84.\nD. The correlation coefficient is 0.84.\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. The number of calls explained 71% of the variation in the abundance of nests between breeding sites. This is a classic example of a 71% correlation, which is a characteristic of a Poisson distribution. The answer is A.\n\nThe answer is:\n\\[ \\boxed{A} \\]",
+        "gold": "D"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A company has 1000 employees evenly distributed throughout five assembly plants. A sample of 30 employees is to be chosen as follows. Each of the five managers will be asked to place the 200 time cards of their respective employees in a bag, shake them up, and randomly draw out six names. The six names from each plant will be put together to make up the sample. Will this method result in a simple random sample of the 1000 employees?\nA. Yes, because every employee has the same chance of being selected.\nB. Yes, because every plant is equally represented.\nC. Yes, because this is an example of stratified sampling, which is a special case of simple random sampling.\nD. No, because not every group of 30 employees has the same chance of being selected.\nAnswer: \n"
+            }
+        ],
+        "prediction": "D",
+        "gold": "D"
+    },
+    "16": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A doctor hopes that a new surgery technique will shorten the recovery time compared to the standard technique. To test this, he designed an experiment in which patients who required this type of surgery were randomly assigned to the standard technique or the new technique. Then the mean recovery time for each treatment group was compared. Assuming conditions for inference were met, which analysis should be used?\nA. A t-test for a mean.\nB. A t-test for a difference in means.\nC. A z-test for a mean.\nD. A z-test for a difference in means.\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. A t-test for a mean.\nB. A t-test for a difference in means.\nC. A z-test for a mean.\nD. A z-test for a difference in means.\n\nAnswer: A, B, C, D",
+        "gold": "B"
+    },
+    "17": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A researcher plans a study to examine long-term confidence in the U.S. economy among the adult population. She obtains a simple random sample of 30 adults as they leave a Wall Street office building one weekday afternoon. All but two of the adults agree to participate in the survey. Which of the following conclusions is correct?\nA. Proper use of chance as evidenced by the simple random sample makes this a well-designed survey.\nB. The high response rate makes this a well-designed survey.\nC. Selection bias makes this a poorly designed survey.\nD. A voluntary response study like this gives too much emphasis to persons with strong opinions.\nAnswer: \n"
+            }
+        ],
+        "prediction": "D",
+        "gold": "C"
+    },
+    "18": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "To study the effect of music on piecework output at a clothing manufacturer, two experimental treatments are planned: day-long classical music for one group versus day-long light rock music for another. Which one of the following groups would serve best as a control for this study?\nA. A third group for which no music is played\nB. A third group that randomly hears either classical or light rock music each day\nC. A third group that hears day-long R & B music\nD. A third group that hears classical music every morning and light rock every afternoon\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. A third group for which no music is played.\nB. A third group that randomly hears either classical or light rock music each day.\nC. A third group that hears day-long R & B music.\nD. A third group that hears classical music every morning and light rock every afternoon.\n\nThe answer is:\n\\[ \\boxed{B} \\]",
+        "gold": "A"
+    },
+    "19": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "During the years 1886 through 2000 there were an average of 8.7 tropical cyclones per year, of which an average of 5.1 became hurricanes. Assuming that the probability of any cyclone becoming a hurricane is independent of what happens to any other cyclone, if there are five cyclones in one year, what is the probability that at least three become hurricanes?\nA. 0.313\nB. 0.345\nC. 0.586\nD. 0.658\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. 0.313\nB. 0.345\nC. 0.586\nD. 0.658\nAnswer:",
+        "gold": "D"
+    },
+    "20": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A chi-squared test of independence is to be performed on a 3 × 4 contingency table. How many degrees of freedom does this test have?\nA. 6\nB. 8\nC. 10\nD. 11\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. 6\nB. 8\nC. 10\nD. 11\n\nAnswer: $\\boxed{6}$",
+        "gold": "A"
+    },
+    "21": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "At a large hospital, the durations of emergency room visits, from check-in to discharge, are approximately normally distributed with a mean of 167 minutes and a standard deviation of 76 minutes. Which interval, to the nearest minute, contains the middle 80% of durations?\nA. 15 minutes to 319 minutes\nB. 53 minutes to 281 minutes\nC. 70 minutes to 264 minutes\nD. 91 minutes to 243 minutes\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. 15 minutes to 319 minutes\nB. 53 minutes to 281 minutes\nC. 70 minutes to 264 minutes\nD. 91 minutes to 243 minutes\n\nThe middle 80% of durations fall in interval B, which is 53 minutes to 281 minutes.\n\nAnswer: $\\boxed{B}$",
+        "gold": "C"
+    },
+    "22": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "The relation between studying time (in hours) and grade on a final exam (0-100) in a random sample of students in math class was found to be Grade = 50.25 + 10.2 (h) How will a student’s grade be affected if she studies for two hours?\nA. Her grade will go up by 40.05 points.\nB. Her grade will go up by 20.4 points.\nC. Her grade will remain unchanged.\nD. Her grade will down by 10.2 points.\nAnswer: \n"
+            }
+        ],
+        "prediction": "D",
+        "gold": "B"
+    },
+    "23": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A producer of skin care products has created a new formula for its cream to cure acne. To compare the effectiveness of the new cream to that of the old cream, it conducted a double-blind randomized experiment. Volunteers with acne tried the old formula on one side of their face and the new formula on the other, and which side got which formula was determined randomly. The response variable was the difference in the number of pimples (old formula - new formula). Which is the correct significance test to perform?\nA. A two-proportion z-test\nB. A two-sample t-test\nC. A matched pairs t-test\nD. A chi-square test of independence\nAnswer: \n"
+            }
+        ],
+        "prediction": "D",
+        "gold": "C"
+    },
+    "24": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A pharmaceutical company wants to test a new cholesterol-reducing drug against the previous drug. It does not anticipate much association between cholesterol level and gender, but it does anticipate an association between cholesterol level and the amount of exercise a person gets. For a randomized block design, it should:\nA. Block on gender because it is not associated with cholesterol level.\nB. Block on gender because males and females are different.\nC. Block on the type of drug because it may be associated with cholesterol level.\nD. Block on exercise level because it is associated with cholesterol level.\nAnswer: \n"
+            }
+        ],
+        "prediction": "D",
+        "gold": "D"
+    },
+    "25": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "An experiment is to be conducted to determine whether taking fish oil capsules or garlic capsules has more of an effect on cholesterol levels. In past studies it was noted that daily exercise intensity (low, moderate, high) is associated with cholesterol level, but average sleep length (< 5, 5 - 8, > 8 hours) is not associated with cholesterol level. This experiment should be done\nA. by blocking on exercise intensity\nB. by blocking on sleep length\nC. by blocking on cholesterol level\nD. by blocking on capsule type\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. by blocking on exercise intensity\nB. by blocking on sleep length\nC. by blocking on cholesterol level\nD. by blocking on capsule type\n\nAnswer:",
+        "gold": "A"
+    },
+    "26": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about high school statistics.\nWhich of the following is a correct statement about correlation?\nA. If the slope of the regression line is exactly 1, then the correlation is exactly 1.\nB. If the correlation is 0, then the slope of the regression line is undefined.\nC. Switching which variable is called x and which is called y changes the sign of the correlation.\nD. The correlation r is equal to the slope of the regression line when z-scores for the y-variable are plotted against z-scores for the x-variable.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose X and Y are random variables with E(X) = 37, var(X) = 5, E(Y) = 62, and var(Y) = 12. What are the expected value and variance of the random variable X + Y?\nA. E(X + Y) = 99, var(X + Y) = 8.5\nB. E(X + Y) = 99, var(X + Y) = 13\nC. E(X + Y) = 99, var(X + Y) = 17\nD. There is insufficient information to answer this question.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "After a frost warning was issued, the owner of a large orange grove asked his workers to spray all his trees with water. The water was supposed to freeze and form a protective covering of ice around the orange blossom. Nevertheless, the owner suspected that some trees suffered considerable damage due to the frost. To estimate the proportion of trees that suffered more than 50 percent damage due to the frost, he took a random sample of 100 trees from his grove. What is the response variable in this experiment?\nA. The proportion of trees that suffered more than 50 percent damage due to frost.\nB. The number of trees affected by the frost.\nC. The number of trees sampled from the grove.\nD. For each sampled tree, whether it suffered more than 50 percent damage or at most 50 percent damage.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A new smartwatch is manufactured in one part of a factory, then secured for shipping in another, independent part of the factory. The weight of the smartwatch has a mean of 62 grams and a standard deviation of 1.0 grams. The weight of the packaging (box, user's guide, bubble wrap, etc.) has a mean of 456 grams and a standard deviation of 6 grams. Together, the distribution of the weight of the smartwatch and its packaging would have the following mean and standard deviation:\nA. Mean 518 grams; standard deviation 7.0 grams\nB. Mean 518 grams; standard deviation 3.5 grams\nC. Mean 518 grams; standard deviation 6.1 grams\nD. Mean 394 grams; standard deviation 6.1 grams\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following sets has the smallest standard deviation? Which has the largest?\nI: {1,2,3}\nII: {-10,10}\nIII: {100}\n\nA. I, II\nB. II, III\nC. III, I\nD. III, II\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "A test for heartworm in dogs shows a positive result in 96% of dogs that actually have heartworm, and shows a negative result in 98% of dogs with no heartworm. If heartworm actually occurs in 10% of dogs, what is the probability that a randomly selected dog that tested positive for heartworm actually has heartworm?\nA. 11%\nB. 18%\nC. 84%\nD. 88%\nAnswer: \n"
+            }
+        ],
+        "prediction": "A. 11%\nB. 18%\nC. 84%\nD. 88%\nAnswer:",
+        "gold": "C"
+    }
+}

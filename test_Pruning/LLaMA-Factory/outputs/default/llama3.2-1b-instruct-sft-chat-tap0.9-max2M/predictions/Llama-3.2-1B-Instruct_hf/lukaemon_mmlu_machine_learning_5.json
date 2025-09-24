@@ -1,0 +1,802 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about machine learning.\nA 6-sided die is rolled 15 times and the results are: side 1 comes up 0 times; side 2: 1 time; side 3: 2 times; side 4: 3 times; side 5: 4 times; side 6: 5 times. Based on these results, what is the probability of side 3 coming up when using Add-1 Smoothing?\nA. 2.0/15\nB. 1.0/7\nC. 3.0/16\nD. 1.0/5\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which image data augmentation is most common for natural images?\nA. random crop and horizontal flip\nB. random crop and vertical flip\nC. posterization\nD. dithering\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "A\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting? \nA. My method achieves a training error lower than all previous methods!\nB. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise test error.)\nC. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nD. My method achieves a cross-validation error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "To achieve an 0/1 loss estimate that is less than 1 percent of the true 0/1 loss (with probability 95%), according to Hoeffding's inequality the IID test set must have how many examples?\nA. around 10 examples\nB. around 100 examples\nC. between 100 and 500 examples\nD. more than 1000 examples\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Traditionally, when we have a real-valued input attribute during decision-tree learning we consider a binary split according to whether the attribute is above or below some threshold. Pat suggests that instead we should just have a multiway split with one branch for each of the distinct values of the attribute. From the list below choose the single biggest problem with Pat’s suggestion:\nA. It is too computationally expensive.\nB. It would probably result in a decision tree that scores badly on the training set and a testset.\nC. It would probably result in a decision tree that scores well on the training set but badly on a testset.\nD. It would probably result in a decision tree that scores well on a testset but badly on a training set.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Statement 1| Besides EM, gradient descent can be used to perform inference or learning on Gaussian mixture model. Statement 2 | Assuming a fixed number of attributes, a Gaussian-based Bayes optimal classifier can be learned in time linear in the number of records in the dataset.\nA. True, True\nB. False, False\nC. True, False\nD. False, True\nAnswer: \n"
+            }
+        ],
+        "prediction": "A\nThe final answer is: $\\boxed{A}$",
+        "gold": "A"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about machine learning.\nA 6-sided die is rolled 15 times and the results are: side 1 comes up 0 times; side 2: 1 time; side 3: 2 times; side 4: 3 times; side 5: 4 times; side 6: 5 times. Based on these results, what is the probability of side 3 coming up when using Add-1 Smoothing?\nA. 2.0/15\nB. 1.0/7\nC. 3.0/16\nD. 1.0/5\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which image data augmentation is most common for natural images?\nA. random crop and horizontal flip\nB. random crop and vertical flip\nC. posterization\nD. dithering\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "A\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting? \nA. My method achieves a training error lower than all previous methods!\nB. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise test error.)\nC. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nD. My method achieves a cross-validation error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "To achieve an 0/1 loss estimate that is less than 1 percent of the true 0/1 loss (with probability 95%), according to Hoeffding's inequality the IID test set must have how many examples?\nA. around 10 examples\nB. around 100 examples\nC. between 100 and 500 examples\nD. more than 1000 examples\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Traditionally, when we have a real-valued input attribute during decision-tree learning we consider a binary split according to whether the attribute is above or below some threshold. Pat suggests that instead we should just have a multiway split with one branch for each of the distinct values of the attribute. From the list below choose the single biggest problem with Pat’s suggestion:\nA. It is too computationally expensive.\nB. It would probably result in a decision tree that scores badly on the training set and a testset.\nC. It would probably result in a decision tree that scores well on the training set but badly on a testset.\nD. It would probably result in a decision tree that scores well on a testset but badly on a training set.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Statement 1| In a Bayesian network, the inference results of the junction tree algorithm are the same as the inference results of variable elimination. Statement 2| If two random variable X and Y are conditionally independent given another random variable Z, then in the corresponding Bayesian network, the nodes for X and Y are d-separated given Z.\nA. True, True\nB. False, False\nC. True, False\nD. False, True\nAnswer: \n"
+            }
+        ],
+        "prediction": "A\nThe statement is true. In a Bayesian network, the inference results of the junction tree algorithm are the same as the inference results of variable elimination. This is because the Bayesian network is a generalization of the variable elimination algorithm, and the nodes for X and Y are d-separated given Z.\n\nThe answer is:\n\\[ \\boxed{\\text{A}} \\]",
+        "gold": "C"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about machine learning.\nA 6-sided die is rolled 15 times and the results are: side 1 comes up 0 times; side 2: 1 time; side 3: 2 times; side 4: 3 times; side 5: 4 times; side 6: 5 times. Based on these results, what is the probability of side 3 coming up when using Add-1 Smoothing?\nA. 2.0/15\nB. 1.0/7\nC. 3.0/16\nD. 1.0/5\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which image data augmentation is most common for natural images?\nA. random crop and horizontal flip\nB. random crop and vertical flip\nC. posterization\nD. dithering\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "A\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting? \nA. My method achieves a training error lower than all previous methods!\nB. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise test error.)\nC. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nD. My method achieves a cross-validation error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "To achieve an 0/1 loss estimate that is less than 1 percent of the true 0/1 loss (with probability 95%), according to Hoeffding's inequality the IID test set must have how many examples?\nA. around 10 examples\nB. around 100 examples\nC. between 100 and 500 examples\nD. more than 1000 examples\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Traditionally, when we have a real-valued input attribute during decision-tree learning we consider a binary split according to whether the attribute is above or below some threshold. Pat suggests that instead we should just have a multiway split with one branch for each of the distinct values of the attribute. From the list below choose the single biggest problem with Pat’s suggestion:\nA. It is too computationally expensive.\nB. It would probably result in a decision tree that scores badly on the training set and a testset.\nC. It would probably result in a decision tree that scores well on the training set but badly on a testset.\nD. It would probably result in a decision tree that scores well on a testset but badly on a training set.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Given a large dataset of medical records from patients suffering from heart disease, try to learn whether there might be different clusters of such patients for which we might tailor separate treatments. What kind of learning problem is this?\nA. Supervised learning\nB. Unsupervised learning\nC. Both (a) and (b)\nD. Neither (a) nor (b)\nAnswer: \n"
+            }
+        ],
+        "prediction": "A",
+        "gold": "B"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about machine learning.\nA 6-sided die is rolled 15 times and the results are: side 1 comes up 0 times; side 2: 1 time; side 3: 2 times; side 4: 3 times; side 5: 4 times; side 6: 5 times. Based on these results, what is the probability of side 3 coming up when using Add-1 Smoothing?\nA. 2.0/15\nB. 1.0/7\nC. 3.0/16\nD. 1.0/5\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which image data augmentation is most common for natural images?\nA. random crop and horizontal flip\nB. random crop and vertical flip\nC. posterization\nD. dithering\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "A\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting? \nA. My method achieves a training error lower than all previous methods!\nB. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise test error.)\nC. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nD. My method achieves a cross-validation error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "To achieve an 0/1 loss estimate that is less than 1 percent of the true 0/1 loss (with probability 95%), according to Hoeffding's inequality the IID test set must have how many examples?\nA. around 10 examples\nB. around 100 examples\nC. between 100 and 500 examples\nD. more than 1000 examples\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Traditionally, when we have a real-valued input attribute during decision-tree learning we consider a binary split according to whether the attribute is above or below some threshold. Pat suggests that instead we should just have a multiway split with one branch for each of the distinct values of the attribute. From the list below choose the single biggest problem with Pat’s suggestion:\nA. It is too computationally expensive.\nB. It would probably result in a decision tree that scores badly on the training set and a testset.\nC. It would probably result in a decision tree that scores well on the training set but badly on a testset.\nD. It would probably result in a decision tree that scores well on a testset but badly on a training set.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "What would you do in PCA to get the same projection as SVD?\nA. Transform data to zero mean\nB. Transform data to zero median\nC. Not possible\nD. None of these\nAnswer: \n"
+            }
+        ],
+        "prediction": "A",
+        "gold": "A"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about machine learning.\nA 6-sided die is rolled 15 times and the results are: side 1 comes up 0 times; side 2: 1 time; side 3: 2 times; side 4: 3 times; side 5: 4 times; side 6: 5 times. Based on these results, what is the probability of side 3 coming up when using Add-1 Smoothing?\nA. 2.0/15\nB. 1.0/7\nC. 3.0/16\nD. 1.0/5\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which image data augmentation is most common for natural images?\nA. random crop and horizontal flip\nB. random crop and vertical flip\nC. posterization\nD. dithering\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "A\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting? \nA. My method achieves a training error lower than all previous methods!\nB. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise test error.)\nC. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nD. My method achieves a cross-validation error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "To achieve an 0/1 loss estimate that is less than 1 percent of the true 0/1 loss (with probability 95%), according to Hoeffding's inequality the IID test set must have how many examples?\nA. around 10 examples\nB. around 100 examples\nC. between 100 and 500 examples\nD. more than 1000 examples\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Traditionally, when we have a real-valued input attribute during decision-tree learning we consider a binary split according to whether the attribute is above or below some threshold. Pat suggests that instead we should just have a multiway split with one branch for each of the distinct values of the attribute. From the list below choose the single biggest problem with Pat’s suggestion:\nA. It is too computationally expensive.\nB. It would probably result in a decision tree that scores badly on the training set and a testset.\nC. It would probably result in a decision tree that scores well on the training set but badly on a testset.\nD. It would probably result in a decision tree that scores well on a testset but badly on a training set.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Statement 1| The training error of 1-nearest neighbor classifier is 0. Statement 2| As the number of data points grows to infinity, the MAP estimate approaches the MLE estimate for all possible priors. In other words, given enough data, the choice of prior is irrelevant.\nA. True, True\nB. False, False\nC. True, False\nD. False, True\nAnswer: \n"
+            }
+        ],
+        "prediction": "A",
+        "gold": "C"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about machine learning.\nA 6-sided die is rolled 15 times and the results are: side 1 comes up 0 times; side 2: 1 time; side 3: 2 times; side 4: 3 times; side 5: 4 times; side 6: 5 times. Based on these results, what is the probability of side 3 coming up when using Add-1 Smoothing?\nA. 2.0/15\nB. 1.0/7\nC. 3.0/16\nD. 1.0/5\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which image data augmentation is most common for natural images?\nA. random crop and horizontal flip\nB. random crop and vertical flip\nC. posterization\nD. dithering\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "A\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting? \nA. My method achieves a training error lower than all previous methods!\nB. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise test error.)\nC. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nD. My method achieves a cross-validation error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "To achieve an 0/1 loss estimate that is less than 1 percent of the true 0/1 loss (with probability 95%), according to Hoeffding's inequality the IID test set must have how many examples?\nA. around 10 examples\nB. around 100 examples\nC. between 100 and 500 examples\nD. more than 1000 examples\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Traditionally, when we have a real-valued input attribute during decision-tree learning we consider a binary split according to whether the attribute is above or below some threshold. Pat suggests that instead we should just have a multiway split with one branch for each of the distinct values of the attribute. From the list below choose the single biggest problem with Pat’s suggestion:\nA. It is too computationally expensive.\nB. It would probably result in a decision tree that scores badly on the training set and a testset.\nC. It would probably result in a decision tree that scores well on the training set but badly on a testset.\nD. It would probably result in a decision tree that scores well on a testset but badly on a training set.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "When doing least-squares regression with regularisation (assuming that the optimisation can be done exactly), increasing the value of the regularisation parameter λ the testing error.\nA. will never decrease the training error.\nB. will never increase the training error.\nC. will never decrease the testing error.\nD. will never increase\nAnswer: \n"
+            }
+        ],
+        "prediction": "A",
+        "gold": "A"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about machine learning.\nA 6-sided die is rolled 15 times and the results are: side 1 comes up 0 times; side 2: 1 time; side 3: 2 times; side 4: 3 times; side 5: 4 times; side 6: 5 times. Based on these results, what is the probability of side 3 coming up when using Add-1 Smoothing?\nA. 2.0/15\nB. 1.0/7\nC. 3.0/16\nD. 1.0/5\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which image data augmentation is most common for natural images?\nA. random crop and horizontal flip\nB. random crop and vertical flip\nC. posterization\nD. dithering\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "A\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting? \nA. My method achieves a training error lower than all previous methods!\nB. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise test error.)\nC. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nD. My method achieves a cross-validation error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "To achieve an 0/1 loss estimate that is less than 1 percent of the true 0/1 loss (with probability 95%), according to Hoeffding's inequality the IID test set must have how many examples?\nA. around 10 examples\nB. around 100 examples\nC. between 100 and 500 examples\nD. more than 1000 examples\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Traditionally, when we have a real-valued input attribute during decision-tree learning we consider a binary split according to whether the attribute is above or below some threshold. Pat suggests that instead we should just have a multiway split with one branch for each of the distinct values of the attribute. From the list below choose the single biggest problem with Pat’s suggestion:\nA. It is too computationally expensive.\nB. It would probably result in a decision tree that scores badly on the training set and a testset.\nC. It would probably result in a decision tree that scores well on the training set but badly on a testset.\nD. It would probably result in a decision tree that scores well on a testset but badly on a training set.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following best describes what discriminative approaches try to model? (w are the parameters in the model)\nA. p(y|x, w)\nB. p(y, x)\nC. p(w|x, w)\nD. None of the above\nAnswer: \n"
+            }
+        ],
+        "prediction": "A",
+        "gold": "A"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about machine learning.\nA 6-sided die is rolled 15 times and the results are: side 1 comes up 0 times; side 2: 1 time; side 3: 2 times; side 4: 3 times; side 5: 4 times; side 6: 5 times. Based on these results, what is the probability of side 3 coming up when using Add-1 Smoothing?\nA. 2.0/15\nB. 1.0/7\nC. 3.0/16\nD. 1.0/5\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which image data augmentation is most common for natural images?\nA. random crop and horizontal flip\nB. random crop and vertical flip\nC. posterization\nD. dithering\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "A\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting? \nA. My method achieves a training error lower than all previous methods!\nB. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise test error.)\nC. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nD. My method achieves a cross-validation error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "To achieve an 0/1 loss estimate that is less than 1 percent of the true 0/1 loss (with probability 95%), according to Hoeffding's inequality the IID test set must have how many examples?\nA. around 10 examples\nB. around 100 examples\nC. between 100 and 500 examples\nD. more than 1000 examples\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Traditionally, when we have a real-valued input attribute during decision-tree learning we consider a binary split according to whether the attribute is above or below some threshold. Pat suggests that instead we should just have a multiway split with one branch for each of the distinct values of the attribute. From the list below choose the single biggest problem with Pat’s suggestion:\nA. It is too computationally expensive.\nB. It would probably result in a decision tree that scores badly on the training set and a testset.\nC. It would probably result in a decision tree that scores well on the training set but badly on a testset.\nD. It would probably result in a decision tree that scores well on a testset but badly on a training set.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Statement 1| CIFAR-10 classification performance for convolution neural networks can exceed 95%. Statement 2| Ensembles of neural networks do not improve classification accuracy since the representations they learn are highly correlated.\nA. True, True\nB. False, False\nC. True, False\nD. False, True\nAnswer: \n"
+            }
+        ],
+        "prediction": "A\nThe statement that the convolution neural network does not improve classification accuracy is true. This is because the representations of the convolution neural network are highly correlated, meaning that the neural network learns the same features as the convolution neural network, but these features are not highly correlated, so the convolution neural network does not improve classification accuracy.\n\nThe answer is:\n\\[ \\boxed{\\text{A}} \\]",
+        "gold": "C"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about machine learning.\nA 6-sided die is rolled 15 times and the results are: side 1 comes up 0 times; side 2: 1 time; side 3: 2 times; side 4: 3 times; side 5: 4 times; side 6: 5 times. Based on these results, what is the probability of side 3 coming up when using Add-1 Smoothing?\nA. 2.0/15\nB. 1.0/7\nC. 3.0/16\nD. 1.0/5\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which image data augmentation is most common for natural images?\nA. random crop and horizontal flip\nB. random crop and vertical flip\nC. posterization\nD. dithering\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "A\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting? \nA. My method achieves a training error lower than all previous methods!\nB. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise test error.)\nC. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nD. My method achieves a cross-validation error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "To achieve an 0/1 loss estimate that is less than 1 percent of the true 0/1 loss (with probability 95%), according to Hoeffding's inequality the IID test set must have how many examples?\nA. around 10 examples\nB. around 100 examples\nC. between 100 and 500 examples\nD. more than 1000 examples\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Traditionally, when we have a real-valued input attribute during decision-tree learning we consider a binary split according to whether the attribute is above or below some threshold. Pat suggests that instead we should just have a multiway split with one branch for each of the distinct values of the attribute. From the list below choose the single biggest problem with Pat’s suggestion:\nA. It is too computationally expensive.\nB. It would probably result in a decision tree that scores badly on the training set and a testset.\nC. It would probably result in a decision tree that scores well on the training set but badly on a testset.\nD. It would probably result in a decision tree that scores well on a testset but badly on a training set.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following points would Bayesians and frequentists disagree on?\nA. The use of a non-Gaussian noise model in probabilistic regression.\nB. The use of probabilistic modelling for regression.\nC. The use of prior distributions on the parameters in a probabilistic model.\nD. The use of class priors in Gaussian Discriminant Analysis.\nAnswer: \n"
+            }
+        ],
+        "prediction": "A\nB\nC\nD\n\nAnswer:",
+        "gold": "C"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about machine learning.\nA 6-sided die is rolled 15 times and the results are: side 1 comes up 0 times; side 2: 1 time; side 3: 2 times; side 4: 3 times; side 5: 4 times; side 6: 5 times. Based on these results, what is the probability of side 3 coming up when using Add-1 Smoothing?\nA. 2.0/15\nB. 1.0/7\nC. 3.0/16\nD. 1.0/5\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which image data augmentation is most common for natural images?\nA. random crop and horizontal flip\nB. random crop and vertical flip\nC. posterization\nD. dithering\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "A\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting? \nA. My method achieves a training error lower than all previous methods!\nB. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise test error.)\nC. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nD. My method achieves a cross-validation error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "To achieve an 0/1 loss estimate that is less than 1 percent of the true 0/1 loss (with probability 95%), according to Hoeffding's inequality the IID test set must have how many examples?\nA. around 10 examples\nB. around 100 examples\nC. between 100 and 500 examples\nD. more than 1000 examples\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Traditionally, when we have a real-valued input attribute during decision-tree learning we consider a binary split according to whether the attribute is above or below some threshold. Pat suggests that instead we should just have a multiway split with one branch for each of the distinct values of the attribute. From the list below choose the single biggest problem with Pat’s suggestion:\nA. It is too computationally expensive.\nB. It would probably result in a decision tree that scores badly on the training set and a testset.\nC. It would probably result in a decision tree that scores well on the training set but badly on a testset.\nD. It would probably result in a decision tree that scores well on a testset but badly on a training set.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Statement 1| The BLEU metric uses precision, while the ROGUE metric uses recall. Statement 2| Hidden markov models were frequently used to model English sentences.\nA. True, True\nB. False, False\nC. True, False\nD. False, True\nAnswer: \n"
+            }
+        ],
+        "prediction": "A\nThe BLEU metric is a measure of the degree of similarity between two strings, while the ROGUE metric is a measure of the degree of similarity between two strings, but with a different formula. The ROGUE metric is a generalization of the BLEU metric, and it is used to model English sentences. Therefore, Statement 1 is true, Statement 2 is false, Statement 3 is true, and Statement 4 is false. The answer is:\n\\[ \\boxed{A} \\]",
+        "gold": "A"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about machine learning.\nA 6-sided die is rolled 15 times and the results are: side 1 comes up 0 times; side 2: 1 time; side 3: 2 times; side 4: 3 times; side 5: 4 times; side 6: 5 times. Based on these results, what is the probability of side 3 coming up when using Add-1 Smoothing?\nA. 2.0/15\nB. 1.0/7\nC. 3.0/16\nD. 1.0/5\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which image data augmentation is most common for natural images?\nA. random crop and horizontal flip\nB. random crop and vertical flip\nC. posterization\nD. dithering\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "A\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting? \nA. My method achieves a training error lower than all previous methods!\nB. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise test error.)\nC. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nD. My method achieves a cross-validation error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "To achieve an 0/1 loss estimate that is less than 1 percent of the true 0/1 loss (with probability 95%), according to Hoeffding's inequality the IID test set must have how many examples?\nA. around 10 examples\nB. around 100 examples\nC. between 100 and 500 examples\nD. more than 1000 examples\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Traditionally, when we have a real-valued input attribute during decision-tree learning we consider a binary split according to whether the attribute is above or below some threshold. Pat suggests that instead we should just have a multiway split with one branch for each of the distinct values of the attribute. From the list below choose the single biggest problem with Pat’s suggestion:\nA. It is too computationally expensive.\nB. It would probably result in a decision tree that scores badly on the training set and a testset.\nC. It would probably result in a decision tree that scores well on the training set but badly on a testset.\nD. It would probably result in a decision tree that scores well on a testset but badly on a training set.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Statement 1| ImageNet has images of various resolutions. Statement 2| Caltech-101 has more images than ImageNet.\nA. True, True\nB. False, False\nC. True, False\nD. False, True\nAnswer: \n"
+            }
+        ],
+        "prediction": "A\nThe statement that ImageNet has images of various resolutions is true. Statement 2 is false, since ImageNet has images of various resolutions, while Caltech-101 has more images than ImageNet. Statement 3 is true, since ImageNet has images of various resolutions, while Caltech-101 has more images than ImageNet. Statement 4 is false, since ImageNet has images of various resolutions, while Caltech-101 has more images than ImageNet. Statement 5 is true, since ImageNet has images of various resolutions, while Caltech-101 has more images than ImageNet.\n\nAnswer: A\nThe answer is A.",
+        "gold": "C"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about machine learning.\nA 6-sided die is rolled 15 times and the results are: side 1 comes up 0 times; side 2: 1 time; side 3: 2 times; side 4: 3 times; side 5: 4 times; side 6: 5 times. Based on these results, what is the probability of side 3 coming up when using Add-1 Smoothing?\nA. 2.0/15\nB. 1.0/7\nC. 3.0/16\nD. 1.0/5\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which image data augmentation is most common for natural images?\nA. random crop and horizontal flip\nB. random crop and vertical flip\nC. posterization\nD. dithering\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "A\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting? \nA. My method achieves a training error lower than all previous methods!\nB. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise test error.)\nC. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nD. My method achieves a cross-validation error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "To achieve an 0/1 loss estimate that is less than 1 percent of the true 0/1 loss (with probability 95%), according to Hoeffding's inequality the IID test set must have how many examples?\nA. around 10 examples\nB. around 100 examples\nC. between 100 and 500 examples\nD. more than 1000 examples\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Traditionally, when we have a real-valued input attribute during decision-tree learning we consider a binary split according to whether the attribute is above or below some threshold. Pat suggests that instead we should just have a multiway split with one branch for each of the distinct values of the attribute. From the list below choose the single biggest problem with Pat’s suggestion:\nA. It is too computationally expensive.\nB. It would probably result in a decision tree that scores badly on the training set and a testset.\nC. It would probably result in a decision tree that scores well on the training set but badly on a testset.\nD. It would probably result in a decision tree that scores well on a testset but badly on a training set.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following is more appropriate to do feature selection?\nA. Ridge\nB. Lasso\nC. both (a) and (b)\nD. neither (a) nor (b)\nAnswer: \n"
+            }
+        ],
+        "prediction": "A\nB\nC\nD\n\nAnswer: C",
+        "gold": "B"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about machine learning.\nA 6-sided die is rolled 15 times and the results are: side 1 comes up 0 times; side 2: 1 time; side 3: 2 times; side 4: 3 times; side 5: 4 times; side 6: 5 times. Based on these results, what is the probability of side 3 coming up when using Add-1 Smoothing?\nA. 2.0/15\nB. 1.0/7\nC. 3.0/16\nD. 1.0/5\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which image data augmentation is most common for natural images?\nA. random crop and horizontal flip\nB. random crop and vertical flip\nC. posterization\nD. dithering\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "A\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting? \nA. My method achieves a training error lower than all previous methods!\nB. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise test error.)\nC. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nD. My method achieves a cross-validation error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "To achieve an 0/1 loss estimate that is less than 1 percent of the true 0/1 loss (with probability 95%), according to Hoeffding's inequality the IID test set must have how many examples?\nA. around 10 examples\nB. around 100 examples\nC. between 100 and 500 examples\nD. more than 1000 examples\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Traditionally, when we have a real-valued input attribute during decision-tree learning we consider a binary split according to whether the attribute is above or below some threshold. Pat suggests that instead we should just have a multiway split with one branch for each of the distinct values of the attribute. From the list below choose the single biggest problem with Pat’s suggestion:\nA. It is too computationally expensive.\nB. It would probably result in a decision tree that scores badly on the training set and a testset.\nC. It would probably result in a decision tree that scores well on the training set but badly on a testset.\nD. It would probably result in a decision tree that scores well on a testset but badly on a training set.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Suppose you are given an EM algorithm that finds maximum likelihood estimates for a model with latent variables. You are asked to modify the algorithm so that it finds MAP estimates instead. Which step or steps do you need to modify?\nA. Expectation\nB. Maximization\nC. No modification necessary\nD. Both\nAnswer: \n"
+            }
+        ],
+        "prediction": "B",
+        "gold": "B"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about machine learning.\nA 6-sided die is rolled 15 times and the results are: side 1 comes up 0 times; side 2: 1 time; side 3: 2 times; side 4: 3 times; side 5: 4 times; side 6: 5 times. Based on these results, what is the probability of side 3 coming up when using Add-1 Smoothing?\nA. 2.0/15\nB. 1.0/7\nC. 3.0/16\nD. 1.0/5\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which image data augmentation is most common for natural images?\nA. random crop and horizontal flip\nB. random crop and vertical flip\nC. posterization\nD. dithering\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "A\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting? \nA. My method achieves a training error lower than all previous methods!\nB. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise test error.)\nC. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nD. My method achieves a cross-validation error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "To achieve an 0/1 loss estimate that is less than 1 percent of the true 0/1 loss (with probability 95%), according to Hoeffding's inequality the IID test set must have how many examples?\nA. around 10 examples\nB. around 100 examples\nC. between 100 and 500 examples\nD. more than 1000 examples\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Traditionally, when we have a real-valued input attribute during decision-tree learning we consider a binary split according to whether the attribute is above or below some threshold. Pat suggests that instead we should just have a multiway split with one branch for each of the distinct values of the attribute. From the list below choose the single biggest problem with Pat’s suggestion:\nA. It is too computationally expensive.\nB. It would probably result in a decision tree that scores badly on the training set and a testset.\nC. It would probably result in a decision tree that scores well on the training set but badly on a testset.\nD. It would probably result in a decision tree that scores well on a testset but badly on a training set.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "For a Gaussian Bayes classifier, which one of these structural assumptions is the one that most affects the trade-off between underfitting and overfitting:\nA. Whether we learn the class centers by Maximum Likelihood or Gradient Descent\nB. Whether we assume full class covariance matrices or diagonal class covariance matrices\nC. Whether we have equal class priors or priors estimated from the data\nD. Whether we allow classes to have different mean vectors or we force them to share the same mean vector\nAnswer: \n"
+            }
+        ],
+        "prediction": "A",
+        "gold": "B"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about machine learning.\nA 6-sided die is rolled 15 times and the results are: side 1 comes up 0 times; side 2: 1 time; side 3: 2 times; side 4: 3 times; side 5: 4 times; side 6: 5 times. Based on these results, what is the probability of side 3 coming up when using Add-1 Smoothing?\nA. 2.0/15\nB. 1.0/7\nC. 3.0/16\nD. 1.0/5\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which image data augmentation is most common for natural images?\nA. random crop and horizontal flip\nB. random crop and vertical flip\nC. posterization\nD. dithering\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "A\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting? \nA. My method achieves a training error lower than all previous methods!\nB. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise test error.)\nC. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nD. My method achieves a cross-validation error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "To achieve an 0/1 loss estimate that is less than 1 percent of the true 0/1 loss (with probability 95%), according to Hoeffding's inequality the IID test set must have how many examples?\nA. around 10 examples\nB. around 100 examples\nC. between 100 and 500 examples\nD. more than 1000 examples\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Traditionally, when we have a real-valued input attribute during decision-tree learning we consider a binary split according to whether the attribute is above or below some threshold. Pat suggests that instead we should just have a multiway split with one branch for each of the distinct values of the attribute. From the list below choose the single biggest problem with Pat’s suggestion:\nA. It is too computationally expensive.\nB. It would probably result in a decision tree that scores badly on the training set and a testset.\nC. It would probably result in a decision tree that scores well on the training set but badly on a testset.\nD. It would probably result in a decision tree that scores well on a testset but badly on a training set.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Statement 1| For any two variables x and y having joint distribution p(x, y), we always have H[x, y] ≥ H[x] + H[y] where H is entropy function. Statement 2| For some directed graphs, moralization decreases the number of edges present in the graph.\nA. True, True\nB. False, False\nC. True, False\nD. False, True\nAnswer: \n"
+            }
+        ],
+        "prediction": "A\nThe entropy function H(x, y) is defined as H(x, y) = ∑[p(x) * p(y)] * log(p(x) + 1) * log(p(y) + 1) where p(x) and p(y) are the probabilities of x and y occurring.\n\nSince the problem doesn't specify the distribution of x and y, we can't determine the exact value of H(x, y). However, we can say that H(x, y) ≥ H(x) + H(y) because the entropy function is a convex function.\n\nTherefore, Statement 1 is true.\n\nThe answer is:\n\\[ \\boxed{\\text{A}} \\]",
+        "gold": "B"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "The following are multiple choice questions (with answers) about machine learning.\nA 6-sided die is rolled 15 times and the results are: side 1 comes up 0 times; side 2: 1 time; side 3: 2 times; side 4: 3 times; side 5: 4 times; side 6: 5 times. Based on these results, what is the probability of side 3 coming up when using Add-1 Smoothing?\nA. 2.0/15\nB. 1.0/7\nC. 3.0/16\nD. 1.0/5\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "B\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which image data augmentation is most common for natural images?\nA. random crop and horizontal flip\nB. random crop and vertical flip\nC. posterization\nD. dithering\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "A\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting? \nA. My method achieves a training error lower than all previous methods!\nB. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise test error.)\nC. My method achieves a test error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nD. My method achieves a cross-validation error lower than all previous methods! (Footnote: When regularisation parameter λ is chosen so as to minimise cross-validaton error.)\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "To achieve an 0/1 loss estimate that is less than 1 percent of the true 0/1 loss (with probability 95%), according to Hoeffding's inequality the IID test set must have how many examples?\nA. around 10 examples\nB. around 100 examples\nC. between 100 and 500 examples\nD. more than 1000 examples\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "D\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Traditionally, when we have a real-valued input attribute during decision-tree learning we consider a binary split according to whether the attribute is above or below some threshold. Pat suggests that instead we should just have a multiway split with one branch for each of the distinct values of the attribute. From the list below choose the single biggest problem with Pat’s suggestion:\nA. It is too computationally expensive.\nB. It would probably result in a decision tree that scores badly on the training set and a testset.\nC. It would probably result in a decision tree that scores well on the training set but badly on a testset.\nD. It would probably result in a decision tree that scores well on a testset but badly on a training set.\nAnswer: \n"
+            },
+            {
+                "role": "BOT",
+                "prompt": "C\n"
+            },
+            {
+                "role": "HUMAN",
+                "prompt": "Which of the following is NOT supervised learning?\nA. PCA\nB. Decision Tree\nC. Linear Regression\nD. Naive Bayesian\nAnswer: \n"
+            }
+        ],
+        "prediction": "A\nB\nC\nD\n\nSupervised learning is the process of training a model on a set of data where each data point is used to determine the model's parameters. In contrast, unsupervised learning is the process of training a model on a set of data where each data point is used independently to determine the model's parameters.\n\nThe answer is:\n\\[ \\boxed{A} \\]",
+        "gold": "A"
+    }
+}

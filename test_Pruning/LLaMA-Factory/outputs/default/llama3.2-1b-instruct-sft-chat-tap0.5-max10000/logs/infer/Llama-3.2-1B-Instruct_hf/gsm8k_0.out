@@ -1,0 +1,951 @@
+cfg: Config (path: /deltadisk/guestnju/qianxuzhen/Pruning-LLMs/LLaMA-Factory/tmp/240c0cbc-17b3-4c91-8c68-a053280c72ce_params.py): {'datasets': [[{'abbr': 'gsm8k_0', 'eval_cfg': {'dataset_postprocessor': {'type': 'opencompass.datasets.gsm8k_dataset_postprocess'}, 'evaluator': {'type': 'opencompass.datasets.MATHEvaluator', 'version': 'v2'}, 'pred_postprocessor': {'type': 'opencompass.datasets.math_postprocess_v2'}}, 'infer_cfg': {'inferencer': {'type': 'opencompass.openicl.icl_inferencer.GenInferencer'}, 'prompt_template': {'template': {'round': [{'prompt': '{question}\nPlease reason step by step, and put your final answer within \\boxed{}.', 'role': 'HUMAN'}]}, 'type': 'opencompass.openicl.icl_prompt_template.PromptTemplate'}, 'retriever': {'type': 'opencompass.openicl.icl_retriever.ZeroRetriever'}}, 'path': 'opencompass/gsm8k', 'reader_cfg': {'input_columns': ['question'], 'output_column': 'answer', 'test_range': '[0:660]'}, 'type': 'opencompass.datasets.GSM8KDataset'}, {'abbr': 'math_0', 'eval_cfg': {'evaluator': {'type': 'opencompass.datasets.MATHEvaluator', 'version': 'v2'}, 'pred_postprocessor': {'type': 'opencompass.datasets.math_postprocess_v2'}}, 'infer_cfg': {'inferencer': {'type': 'opencompass.openicl.icl_inferencer.GenInferencer'}, 'prompt_template': {'template': {'round': [{'prompt': '{problem}\nPlease reason step by step, and put your final answer within \\boxed{}.', 'role': 'HUMAN'}]}, 'type': 'opencompass.openicl.icl_prompt_template.PromptTemplate'}, 'retriever': {'type': 'opencompass.openicl.icl_retriever.ZeroRetriever'}}, 'path': 'opencompass/math', 'reader_cfg': {'input_columns': ['problem'], 'output_column': 'solution', 'test_range': '[0:2500]'}, 'type': 'opencompass.datasets.MATHDataset'}, {'abbr': 'svamp_0', 'eval_cfg': {'evaluator': {'type': 'opencompass.datasets.Gsm8kEvaluator'}, 'pred_postprocessor': {'type': 'opencompass.datasets.gsm8k_postprocess'}}, 'infer_cfg': {'inferencer': {'max_out_len': 512, 'type': 'opencompass.openicl.icl_inferencer.GenInferencer'}, 'prompt_template': {'template': {'round': [{'prompt': "Question: There are 87 oranges and 290 bananas in Philip's collection. If the bananas are organized into 2 groups and oranges are organized into 93 groups How big is each group of bananas?\nLet's think step by step\nAnswer:", 'role': 'HUMAN'}, {'prompt': 'To find the size of each group of bananas, we divide the total number of bananas (290) by the number of groups (2): 290 / 2 = 145. Therefore, each group of bananas contains 145 bananas. The answer is 145.\n', 'role': 'BOT'}, {'prompt': "Question: Marco and his dad went strawberry picking. Marco's dad's strawberries weighed 11 pounds. If together their strawberries weighed 30 pounds. How much did Marco's strawberries weigh?\nLet's think step by step\nAnswer:", 'role': 'HUMAN'}, {'prompt': "To find Marco's strawberries' weight, we subtract his dad's strawberries' weight (11 pounds) from the total weight of their strawberries (30 pounds): 30 - 11 = 19. Therefore, Marco's strawberries weighed 19 pounds. The answer is 19.\n", 'role': 'BOT'}, {'prompt': "Question: Edward spent $ 6 to buy 2 books each book costing him the same amount of money. Now he has $ 12. How much did each book cost?\nLet's think step by step\nAnswer:", 'role': 'HUMAN'}, {'prompt': 'To find the cost of each book, we subtract the initial amount of money Edward had ($6) from the current amount of money he has ($12) and divide it by the number of books (2): (12 - 6) / 2 = 6 / 2 = 3 Therefore, each book cost $3. The answer is 3.\n', 'role': 'BOT'}, {'prompt': "Question: Frank was reading through his favorite book. The book had 3 chapters, each with the same number of pages. It has a total of 594 pages. It took Frank 607 days to finish the book. How many pages are in each chapter?\nLet's think step by step\nAnswer:", 'role': 'HUMAN'}, {'prompt': 'To find the number of pages in each chapter, we divide the total number of pages in the book (594) by the number of chapters (3): 594 / 3 = 198. Therefore, each chapter has 198 pages. The answer is 198.\n', 'role': 'BOT'}, {'prompt': "Question: {question}\nLet's think step by step\nAnswer:", 'role': 'HUMAN'}]}, 'type': 'opencompass.openicl.icl_prompt_template.PromptTemplate'}, 'retriever': {'type': 'opencompass.openicl.icl_retriever.ZeroRetriever'}}, 'path': './data/svamp/test.jsonl', 'reader_cfg': {'input_columns': ['question'], 'output_column': 'answer', 'test_range': '[0:500]'}, 'type': 'opencompass.datasets.SVAMPDataset'}]], 'models': [{'abbr': 'Llama-3.2-1B-Instruct_hf', 'batch_size': 8, 'generation_kwargs': {}, 'max_out_len': 512, 'max_seq_len': None, 'model_kwargs': {}, 'pad_token_id': None, 'path': '/deltadisk/shared_data/models/Llama-3.2-1B-Instruct', 'peft_kwargs': {}, 'peft_path': '/deltadisk/guestnju/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-1B-Instruct-tap0.5-learnable-interm/lora/sft/max_samples_10000', 'run_cfg': {'num_gpus': 1}, 'stop_words': [], 'tokenizer_kwargs': {}, 'tokenizer_path': None, 'type': 'opencompass.models.huggingface_above_v4_33.HuggingFacewithChatTemplate'}], 'work_dir': 'outputs/default/20250608_223717'}
+06/08 22:37:22 - OpenCompass - INFO - Task [Llama-3.2-1B-Instruct_hf/gsm8k_0,Llama-3.2-1B-Instruct_hf/math_0,Llama-3.2-1B-Instruct_hf/svamp_0]
+06/08 22:37:25 - OpenCompass - WARNING - pad_token_id is not set for the tokenizer.
+06/08 22:37:25 - OpenCompass - WARNING - Using eos_token_id 128009 as pad_token_id.
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /deltadisk/shared_data/models/Llama-3.2-1B-Instruct and are newly initialized: ['model.HIO_A_Emb', 'model.HIO_B_Emb', 'model.HSM_mask_proxy', 'model.layers.0.HIO_A_Attn', 'model.layers.0.HIO_A_MLP', 'model.layers.0.HIO_B_Attn', 'model.layers.0.HIO_B_MLP', 'model.layers.0.mlp.HIO_A_down_proj', 'model.layers.0.mlp.HIO_B_down_proj', 'model.layers.0.mlp.HSM_mask_proxy', 'model.layers.1.HIO_A_Attn', 'model.layers.1.HIO_A_MLP', 'model.layers.1.HIO_B_Attn', 'model.layers.1.HIO_B_MLP', 'model.layers.1.mlp.HIO_A_down_proj', 'model.layers.1.mlp.HIO_B_down_proj', 'model.layers.1.mlp.HSM_mask_proxy', 'model.layers.10.HIO_A_Attn', 'model.layers.10.HIO_A_MLP', 'model.layers.10.HIO_B_Attn', 'model.layers.10.HIO_B_MLP', 'model.layers.10.mlp.HIO_A_down_proj', 'model.layers.10.mlp.HIO_B_down_proj', 'model.layers.10.mlp.HSM_mask_proxy', 'model.layers.11.HIO_A_Attn', 'model.layers.11.HIO_A_MLP', 'model.layers.11.HIO_B_Attn', 'model.layers.11.HIO_B_MLP', 'model.layers.11.mlp.HIO_A_down_proj', 'model.layers.11.mlp.HIO_B_down_proj', 'model.layers.11.mlp.HSM_mask_proxy', 'model.layers.12.HIO_A_Attn', 'model.layers.12.HIO_A_MLP', 'model.layers.12.HIO_B_Attn', 'model.layers.12.HIO_B_MLP', 'model.layers.12.mlp.HIO_A_down_proj', 'model.layers.12.mlp.HIO_B_down_proj', 'model.layers.12.mlp.HSM_mask_proxy', 'model.layers.13.HIO_A_Attn', 'model.layers.13.HIO_A_MLP', 'model.layers.13.HIO_B_Attn', 'model.layers.13.HIO_B_MLP', 'model.layers.13.mlp.HIO_A_down_proj', 'model.layers.13.mlp.HIO_B_down_proj', 'model.layers.13.mlp.HSM_mask_proxy', 'model.layers.14.HIO_A_Attn', 'model.layers.14.HIO_A_MLP', 'model.layers.14.HIO_B_Attn', 'model.layers.14.HIO_B_MLP', 'model.layers.14.mlp.HIO_A_down_proj', 'model.layers.14.mlp.HIO_B_down_proj', 'model.layers.14.mlp.HSM_mask_proxy', 'model.layers.15.HIO_A_Attn', 'model.layers.15.HIO_A_MLP', 'model.layers.15.HIO_B_Attn', 'model.layers.15.HIO_B_MLP', 'model.layers.15.mlp.HIO_A_down_proj', 'model.layers.15.mlp.HIO_B_down_proj', 'model.layers.15.mlp.HSM_mask_proxy', 'model.layers.2.HIO_A_Attn', 'model.layers.2.HIO_A_MLP', 'model.layers.2.HIO_B_Attn', 'model.layers.2.HIO_B_MLP', 'model.layers.2.mlp.HIO_A_down_proj', 'model.layers.2.mlp.HIO_B_down_proj', 'model.layers.2.mlp.HSM_mask_proxy', 'model.layers.3.HIO_A_Attn', 'model.layers.3.HIO_A_MLP', 'model.layers.3.HIO_B_Attn', 'model.layers.3.HIO_B_MLP', 'model.layers.3.mlp.HIO_A_down_proj', 'model.layers.3.mlp.HIO_B_down_proj', 'model.layers.3.mlp.HSM_mask_proxy', 'model.layers.4.HIO_A_Attn', 'model.layers.4.HIO_A_MLP', 'model.layers.4.HIO_B_Attn', 'model.layers.4.HIO_B_MLP', 'model.layers.4.mlp.HIO_A_down_proj', 'model.layers.4.mlp.HIO_B_down_proj', 'model.layers.4.mlp.HSM_mask_proxy', 'model.layers.5.HIO_A_Attn', 'model.layers.5.HIO_A_MLP', 'model.layers.5.HIO_B_Attn', 'model.layers.5.HIO_B_MLP', 'model.layers.5.mlp.HIO_A_down_proj', 'model.layers.5.mlp.HIO_B_down_proj', 'model.layers.5.mlp.HSM_mask_proxy', 'model.layers.6.HIO_A_Attn', 'model.layers.6.HIO_A_MLP', 'model.layers.6.HIO_B_Attn', 'model.layers.6.HIO_B_MLP', 'model.layers.6.mlp.HIO_A_down_proj', 'model.layers.6.mlp.HIO_B_down_proj', 'model.layers.6.mlp.HSM_mask_proxy', 'model.layers.7.HIO_A_Attn', 'model.layers.7.HIO_A_MLP', 'model.layers.7.HIO_B_Attn', 'model.layers.7.HIO_B_MLP', 'model.layers.7.mlp.HIO_A_down_proj', 'model.layers.7.mlp.HIO_B_down_proj', 'model.layers.7.mlp.HSM_mask_proxy', 'model.layers.8.HIO_A_Attn', 'model.layers.8.HIO_A_MLP', 'model.layers.8.HIO_B_Attn', 'model.layers.8.HIO_B_MLP', 'model.layers.8.mlp.HIO_A_down_proj', 'model.layers.8.mlp.HIO_B_down_proj', 'model.layers.8.mlp.HSM_mask_proxy', 'model.layers.9.HIO_A_Attn', 'model.layers.9.HIO_A_MLP', 'model.layers.9.HIO_B_Attn', 'model.layers.9.HIO_B_MLP', 'model.layers.9.mlp.HIO_A_down_proj', 'model.layers.9.mlp.HIO_B_down_proj', 'model.layers.9.mlp.HSM_mask_proxy']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+06/08 22:37:28 - OpenCompass - INFO - using stop words: ['<|eot_id|>', '<|end_of_text|>', '<|eom_id|>']
+popenargs: (['uname', '-p'],)
+kwargs: {'stdout': -1, 'stderr': -3, 'text': True}
+06/08 22:37:29 - OpenCompass - INFO - Try to load the data from /deltadisk/shared_data/datasets/opencompass_evaluation/./data/gsm8k/
+gsm8k_0 train 7473
+gsm8k_0 test 1319
+06/08 22:37:29 - OpenCompass - INFO - Start inferencing [Llama-3.2-1B-Instruct_hf/gsm8k_0]
+[2025-06-08 22:37:29,377] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2025-06-08 22:37:29,377] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/83 [00:00<?, ?it/s]06/08 22:37:29 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:37:29 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd97b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+/deltadisk/guestnju/qianxuzhen/Pruning-LLMs/thirdparty/transformers-4.51.1/src/transformers/generation/configuration_utils.py:631: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/deltadisk/guestnju/qianxuzhen/Pruning-LLMs/thirdparty/transformers-4.51.1/src/transformers/generation/configuration_utils.py:636: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+  1%|          | 1/83 [00:53<1:12:50, 53.29s/it]06/08 22:38:22 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:38:22 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9cf0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  2%|▏         | 2/83 [01:45<1:11:24, 52.90s/it]06/08 22:39:15 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:39:15 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9de0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  4%|▎         | 3/83 [02:38<1:10:20, 52.75s/it]06/08 22:40:07 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:40:07 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9d50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  5%|▍         | 4/83 [03:30<1:09:19, 52.65s/it]06/08 22:41:00 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:41:00 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9e70>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  6%|▌         | 5/83 [04:23<1:08:29, 52.69s/it]06/08 22:41:53 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:41:53 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9720>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  7%|▋         | 6/83 [05:16<1:07:35, 52.67s/it]06/08 22:42:45 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:42:45 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de13f10>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  8%|▊         | 7/83 [06:09<1:06:42, 52.67s/it]06/08 22:43:38 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:43:38 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de686d0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 10%|▉         | 8/83 [07:01<1:05:54, 52.73s/it]06/08 22:44:31 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:44:31 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68730>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 11%|█         | 9/83 [07:54<1:04:49, 52.56s/it]06/08 22:45:23 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:45:23 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68ca0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 12%|█▏        | 10/83 [08:46<1:04:02, 52.64s/it]06/08 22:46:16 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:46:16 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de69360>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 13%|█▎        | 11/83 [09:39<1:03:11, 52.65s/it]06/08 22:47:08 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:47:08 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de697e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 14%|█▍        | 12/83 [10:32<1:02:20, 52.68s/it]06/08 22:48:01 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:48:01 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a45b3e80>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 16%|█▌        | 13/83 [11:24<1:01:24, 52.64s/it]06/08 22:48:54 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:48:54 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9a80>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 17%|█▋        | 14/83 [12:16<1:00:05, 52.25s/it]06/08 22:49:45 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:49:45 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9d50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 18%|█▊        | 15/83 [13:07<58:50, 51.92s/it]  06/08 22:50:36 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:50:36 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de69a50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 19%|█▉        | 16/83 [13:58<57:42, 51.67s/it]06/08 22:51:27 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:51:27 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de69c90>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 20%|██        | 17/83 [14:51<57:12, 52.01s/it]06/08 22:52:20 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:52:20 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de69de0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 22%|██▏       | 18/83 [15:44<56:36, 52.25s/it]06/08 22:53:13 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:53:13 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68bb0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 23%|██▎       | 19/83 [16:37<55:57, 52.46s/it]06/08 22:54:06 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:54:06 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68a30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 24%|██▍       | 20/83 [17:29<55:13, 52.59s/it]06/08 22:54:59 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:54:59 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9900>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 25%|██▌       | 21/83 [18:22<54:28, 52.71s/it]06/08 22:55:52 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:55:52 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9c30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 27%|██▋       | 22/83 [19:15<53:31, 52.64s/it]06/08 22:56:44 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:56:44 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de13ac0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 28%|██▊       | 23/83 [20:08<52:45, 52.76s/it]06/08 22:57:37 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:57:37 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de694e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 29%|██▉       | 24/83 [21:01<51:51, 52.74s/it]06/08 22:58:30 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:58:30 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de682b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 30%|███       | 25/83 [21:54<51:10, 52.94s/it]06/08 22:59:23 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 22:59:23 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de685b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 31%|███▏      | 26/83 [22:47<50:24, 53.05s/it]06/08 23:00:17 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:00:17 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de691e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 33%|███▎      | 27/83 [23:41<49:32, 53.08s/it]06/08 23:01:10 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:01:10 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de69b10>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 34%|███▎      | 28/83 [24:33<48:32, 52.96s/it]06/08 23:02:03 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:02:03 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a45b3e80>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 35%|███▍      | 29/83 [25:26<47:38, 52.94s/it]06/08 23:02:55 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:02:55 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9870>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 36%|███▌      | 30/83 [26:19<46:43, 52.89s/it]06/08 23:03:48 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:03:48 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9e10>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 37%|███▋      | 31/83 [27:11<45:44, 52.79s/it]06/08 23:04:41 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:04:41 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de687c0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 39%|███▊      | 32/83 [28:04<44:46, 52.67s/it]06/08 23:05:33 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:05:33 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de697b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 40%|███▉      | 33/83 [28:56<43:51, 52.64s/it]06/08 23:06:26 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:06:26 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de69630>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 41%|████      | 34/83 [29:50<43:16, 52.99s/it]06/08 23:07:20 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:07:20 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68b80>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 42%|████▏     | 35/83 [30:43<42:18, 52.88s/it]06/08 23:08:12 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:08:12 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68f10>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 43%|████▎     | 36/83 [31:36<41:30, 53.00s/it]06/08 23:09:05 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:09:05 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9b70>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 45%|████▍     | 37/83 [32:29<40:35, 52.95s/it]06/08 23:09:58 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:09:58 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9de0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 46%|████▌     | 38/83 [33:21<39:37, 52.84s/it]06/08 23:10:51 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:10:51 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de13f10>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 47%|████▋     | 39/83 [34:14<38:45, 52.86s/it]06/08 23:11:44 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:11:44 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68c40>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 48%|████▊     | 40/83 [35:07<37:53, 52.88s/it]06/08 23:12:37 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:12:37 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68a30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 49%|████▉     | 41/83 [36:00<37:02, 52.93s/it]06/08 23:13:30 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:13:30 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68700>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 51%|█████     | 42/83 [36:53<36:09, 52.92s/it]06/08 23:14:23 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:14:23 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68a00>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 52%|█████▏    | 43/83 [37:46<35:20, 53.01s/it]06/08 23:15:16 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:15:16 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de69540>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 53%|█████▎    | 44/83 [38:39<34:26, 53.00s/it]06/08 23:16:09 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:16:09 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a45b3d00>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 54%|█████▍    | 45/83 [39:33<33:37, 53.09s/it]06/08 23:17:02 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:17:02 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9810>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 55%|█████▌    | 46/83 [40:26<32:44, 53.08s/it]06/08 23:17:55 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:17:55 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9660>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 57%|█████▋    | 47/83 [41:19<31:51, 53.10s/it]06/08 23:18:48 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:18:48 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de69900>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 58%|█████▊    | 48/83 [42:12<30:55, 53.01s/it]06/08 23:19:41 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:19:41 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de684c0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 59%|█████▉    | 49/83 [43:05<30:01, 52.98s/it]06/08 23:20:34 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:20:34 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de69ed0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 60%|██████    | 50/83 [43:57<29:06, 52.92s/it]06/08 23:21:27 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:21:27 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68e50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 61%|██████▏   | 51/83 [44:51<28:16, 53.01s/it]06/08 23:22:20 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:22:20 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de69ff0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 63%|██████▎   | 52/83 [45:44<27:26, 53.10s/it]06/08 23:23:13 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:23:13 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd98a0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 64%|██████▍   | 53/83 [46:37<26:35, 53.18s/it]06/08 23:24:07 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:24:07 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9c60>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 65%|██████▌   | 54/83 [47:30<25:41, 53.17s/it]06/08 23:25:00 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:25:00 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de13bb0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 66%|██████▋   | 55/83 [48:23<24:46, 53.08s/it]06/08 23:25:53 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:25:53 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68b20>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 67%|██████▋   | 56/83 [49:16<23:50, 52.97s/it]06/08 23:26:45 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:26:45 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de692a0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 69%|██████▊   | 57/83 [50:09<22:53, 52.84s/it]06/08 23:27:38 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:27:38 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de698a0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 70%|██████▉   | 58/83 [51:01<22:01, 52.85s/it]06/08 23:28:31 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:28:31 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68040>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 71%|███████   | 59/83 [51:54<21:05, 52.74s/it]06/08 23:29:23 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:29:23 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de6a170>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 72%|███████▏  | 60/83 [52:46<20:10, 52.64s/it]06/08 23:30:16 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:30:16 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a45b3e80>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 73%|███████▎  | 61/83 [53:39<19:17, 52.59s/it]06/08 23:31:08 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:31:08 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9ae0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 75%|███████▍  | 62/83 [54:31<18:24, 52.59s/it]06/08 23:32:01 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:32:01 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9de0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 76%|███████▌  | 63/83 [55:24<17:32, 52.63s/it]06/08 23:32:54 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:32:54 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68e80>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 77%|███████▋  | 64/83 [56:17<16:39, 52.61s/it]06/08 23:33:46 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:33:46 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68b50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 78%|███████▊  | 65/83 [57:09<15:46, 52.57s/it]06/08 23:34:39 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:34:39 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de6a050>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 80%|███████▉  | 66/83 [58:02<14:53, 52.59s/it]06/08 23:35:31 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:35:31 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68040>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 81%|████████  | 67/83 [58:54<14:01, 52.58s/it]06/08 23:36:24 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:36:24 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de698a0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 82%|████████▏ | 68/83 [59:47<13:10, 52.69s/it]06/08 23:37:17 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:37:17 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9e70>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 83%|████████▎ | 69/83 [1:00:40<12:17, 52.69s/it]06/08 23:38:09 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:38:09 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9d50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 84%|████████▍ | 70/83 [1:01:33<11:24, 52.65s/it]06/08 23:39:02 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:39:02 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de13e50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 86%|████████▌ | 71/83 [1:02:25<10:31, 52.64s/it]06/08 23:39:55 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:39:55 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de697e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 87%|████████▋ | 72/83 [1:03:18<09:38, 52.62s/it]06/08 23:40:47 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:40:47 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de689a0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 88%|████████▊ | 73/83 [1:04:10<08:46, 52.64s/it]06/08 23:41:40 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:41:40 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de6a4a0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 89%|████████▉ | 74/83 [1:05:03<07:53, 52.67s/it]06/08 23:42:33 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:42:33 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68130>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 90%|█████████ | 75/83 [1:05:56<07:00, 52.62s/it]06/08 23:43:25 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:43:25 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de69f90>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 92%|█████████▏| 76/83 [1:06:48<06:08, 52.65s/it]06/08 23:44:18 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:44:18 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a45b3d00>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 93%|█████████▎| 77/83 [1:07:41<05:15, 52.53s/it]06/08 23:45:10 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:45:10 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd96f0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 94%|█████████▍| 78/83 [1:08:33<04:22, 52.58s/it]06/08 23:46:03 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:46:03 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549dfd9960>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 95%|█████████▌| 79/83 [1:09:26<03:30, 52.58s/it]06/08 23:46:55 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:46:55 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68400>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 96%|█████████▋| 80/83 [1:10:18<02:37, 52.57s/it]06/08 23:47:48 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:47:48 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de69e40>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 98%|█████████▊| 81/83 [1:11:11<01:45, 52.62s/it]06/08 23:48:41 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:48:41 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de68e80>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 99%|█████████▉| 82/83 [1:12:04<00:52, 52.62s/it]06/08 23:49:33 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:49:33 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x75549de680d0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+100%|██████████| 83/83 [1:12:56<00:00, 52.45s/it]100%|██████████| 83/83 [1:12:56<00:00, 52.73s/it]
+06/08 23:50:25 - OpenCompass - INFO - Try to load the data from /deltadisk/shared_data/datasets/opencompass_evaluation/./data/math/
+math_0 test 5000
+math_0 train 5000
+06/08 23:50:26 - OpenCompass - INFO - Start inferencing [Llama-3.2-1B-Instruct_hf/math_0]
+[2025-06-08 23:50:26,199] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2025-06-08 23:50:26,199] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/313 [00:00<?, ?it/s]06/08 23:50:26 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:50:26 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281570>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  0%|          | 1/313 [00:52<4:31:14, 52.16s/it]06/08 23:51:18 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:51:18 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281de0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  1%|          | 2/313 [01:45<4:34:58, 53.05s/it]06/08 23:52:12 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:52:12 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281810>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  1%|          | 3/313 [02:39<4:34:27, 53.12s/it]06/08 23:53:05 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:53:05 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281960>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  1%|▏         | 4/313 [03:31<4:33:02, 53.02s/it]06/08 23:53:58 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:53:58 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282380>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  2%|▏         | 5/313 [04:24<4:31:52, 52.96s/it]06/08 23:54:50 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:54:50 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282a40>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  2%|▏         | 6/313 [05:17<4:30:48, 52.93s/it]06/08 23:55:43 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:55:43 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282ec0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  2%|▏         | 7/313 [06:10<4:30:05, 52.96s/it]06/08 23:56:36 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:56:36 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283340>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  3%|▎         | 8/313 [07:04<4:29:58, 53.11s/it]06/08 23:57:30 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:57:30 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42837c0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  3%|▎         | 9/313 [07:57<4:28:56, 53.08s/it]06/08 23:58:23 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:58:23 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283af0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  3%|▎         | 10/313 [08:50<4:29:10, 53.30s/it]06/08 23:59:17 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/08 23:59:17 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283b80>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  4%|▎         | 11/313 [09:44<4:28:16, 53.30s/it]06/09 00:00:10 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:00:10 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283040>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  4%|▍         | 12/313 [10:37<4:26:53, 53.20s/it]06/09 00:01:03 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:01:03 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282ad0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  4%|▍         | 13/313 [11:30<4:26:05, 53.22s/it]06/09 00:01:56 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:01:56 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42827d0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  4%|▍         | 14/313 [12:23<4:25:07, 53.20s/it]06/09 00:02:49 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:02:49 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281ff0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  5%|▍         | 15/313 [13:17<4:24:47, 53.31s/it]06/09 00:03:43 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:03:43 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281ea0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  5%|▌         | 16/313 [14:09<4:23:06, 53.15s/it]06/09 00:04:36 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:04:36 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281f00>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  5%|▌         | 17/313 [15:02<4:21:48, 53.07s/it]06/09 00:05:29 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:05:29 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281480>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  6%|▌         | 18/313 [15:55<4:20:39, 53.02s/it]06/09 00:06:21 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:06:21 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42826b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  6%|▌         | 19/313 [16:49<4:20:17, 53.12s/it]06/09 00:07:15 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:07:15 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281d80>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  6%|▋         | 20/313 [17:42<4:19:25, 53.12s/it]06/09 00:08:08 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:08:08 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282020>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  7%|▋         | 21/313 [18:35<4:18:15, 53.07s/it]06/09 00:09:01 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:09:01 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283fd0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  7%|▋         | 22/313 [19:28<4:17:28, 53.09s/it]06/09 00:09:54 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:09:54 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283df0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  7%|▋         | 23/313 [20:20<4:15:54, 52.95s/it]06/09 00:10:47 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:10:47 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282830>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  8%|▊         | 24/313 [21:13<4:14:37, 52.86s/it]06/09 00:11:39 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:11:39 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283520>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  8%|▊         | 25/313 [22:06<4:13:12, 52.75s/it]06/09 00:12:32 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:12:32 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42831f0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  8%|▊         | 26/313 [22:58<4:12:17, 52.74s/it]06/09 00:13:24 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:13:24 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282bc0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  9%|▊         | 27/313 [23:51<4:11:24, 52.74s/it]06/09 00:14:17 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:14:17 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42833a0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  9%|▉         | 28/313 [24:44<4:10:30, 52.74s/it]06/09 00:15:10 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:15:10 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282290>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  9%|▉         | 29/313 [25:37<4:09:40, 52.75s/it]06/09 00:16:03 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:16:03 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281ea0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 10%|▉         | 30/313 [26:30<4:09:20, 52.86s/it]06/09 00:16:56 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:16:56 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282590>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 10%|▉         | 31/313 [27:22<4:07:07, 52.58s/it]06/09 00:17:48 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:17:48 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281db0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 10%|█         | 32/313 [28:14<4:05:55, 52.51s/it]06/09 00:18:40 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:18:40 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281e70>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 11%|█         | 33/313 [29:06<4:05:05, 52.52s/it]06/09 00:19:33 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:19:33 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282e30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 11%|█         | 34/313 [29:59<4:04:27, 52.57s/it]06/09 00:20:25 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:20:25 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281db0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 11%|█         | 35/313 [30:52<4:04:11, 52.70s/it]06/09 00:21:18 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:21:18 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283b20>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 12%|█▏        | 36/313 [31:46<4:04:14, 52.91s/it]06/09 00:22:12 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:22:12 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282a70>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 12%|█▏        | 37/313 [32:38<4:03:20, 52.90s/it]06/09 00:23:05 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:23:05 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283610>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 12%|█▏        | 38/313 [33:31<4:02:18, 52.87s/it]06/09 00:23:57 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:23:57 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42833a0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 12%|█▏        | 39/313 [34:24<4:01:21, 52.85s/it]06/09 00:24:50 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:24:50 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282ad0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 13%|█▎        | 40/313 [35:17<4:00:18, 52.82s/it]06/09 00:25:43 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:25:43 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42837c0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 13%|█▎        | 41/313 [36:10<3:59:25, 52.81s/it]06/09 00:26:36 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:26:36 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42838e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 13%|█▎        | 42/313 [37:02<3:58:22, 52.78s/it]06/09 00:27:28 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:27:28 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42822f0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 14%|█▎        | 43/313 [37:55<3:58:02, 52.90s/it]06/09 00:28:22 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:28:22 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283130>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 14%|█▍        | 44/313 [38:49<3:57:55, 53.07s/it]06/09 00:29:15 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:29:15 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42828f0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 14%|█▍        | 45/313 [39:42<3:56:27, 52.94s/it]06/09 00:30:08 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:30:08 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281ed0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 15%|█▍        | 46/313 [40:35<3:55:48, 52.99s/it]06/09 00:31:01 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:31:01 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282b60>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 15%|█▌        | 47/313 [41:28<3:55:07, 53.04s/it]06/09 00:31:54 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:31:54 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282a40>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 15%|█▌        | 48/313 [42:21<3:54:14, 53.04s/it]06/09 00:32:47 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:32:47 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282050>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 16%|█▌        | 49/313 [43:14<3:53:15, 53.02s/it]06/09 00:33:40 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:33:40 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42817e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 16%|█▌        | 50/313 [44:07<3:52:36, 53.07s/it]06/09 00:34:33 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:34:33 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281a20>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 16%|█▋        | 51/313 [45:00<3:51:52, 53.10s/it]06/09 00:35:26 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:35:26 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281990>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 17%|█▋        | 52/313 [45:53<3:50:33, 53.00s/it]06/09 00:36:19 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:36:19 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42830d0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 17%|█▋        | 53/313 [46:46<3:50:09, 53.11s/it]06/09 00:37:13 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:37:13 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42820e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 17%|█▋        | 54/313 [47:40<3:50:11, 53.33s/it]06/09 00:38:06 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:38:06 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282830>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 18%|█▊        | 55/313 [48:33<3:48:32, 53.15s/it]06/09 00:38:59 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:38:59 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281bd0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 18%|█▊        | 56/313 [49:26<3:47:48, 53.19s/it]06/09 00:39:52 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:39:52 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281a50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 18%|█▊        | 57/313 [50:19<3:46:34, 53.10s/it]06/09 00:40:45 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:40:45 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282b00>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 19%|█▊        | 58/313 [51:12<3:45:50, 53.14s/it]06/09 00:41:38 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:41:38 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42838b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 19%|█▉        | 59/313 [52:05<3:44:31, 53.04s/it]06/09 00:42:31 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:42:31 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42836a0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 19%|█▉        | 60/313 [52:58<3:43:41, 53.05s/it]06/09 00:43:24 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:43:24 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283790>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 19%|█▉        | 61/313 [53:51<3:43:06, 53.12s/it]06/09 00:44:18 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:44:18 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282470>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 20%|█▉        | 62/313 [54:45<3:42:13, 53.12s/it]06/09 00:45:11 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:45:11 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42812d0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 20%|██        | 63/313 [55:37<3:40:57, 53.03s/it]06/09 00:46:04 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:46:04 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282770>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 20%|██        | 64/313 [56:30<3:39:57, 53.00s/it]06/09 00:46:57 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:46:57 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42812a0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 21%|██        | 65/313 [57:23<3:38:50, 52.95s/it]06/09 00:47:49 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:47:49 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282cb0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 21%|██        | 66/313 [58:16<3:37:53, 52.93s/it]06/09 00:48:42 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:48:42 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281e40>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 21%|██▏       | 67/313 [59:09<3:36:59, 52.92s/it]06/09 00:49:35 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:49:35 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281450>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 22%|██▏       | 68/313 [1:00:03<3:37:28, 53.26s/it]06/09 00:50:29 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:50:29 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282950>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 22%|██▏       | 69/313 [1:00:56<3:36:37, 53.27s/it]06/09 00:51:22 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:51:22 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42815d0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 22%|██▏       | 70/313 [1:01:50<3:36:00, 53.33s/it]06/09 00:52:16 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:52:16 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283700>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 23%|██▎       | 71/313 [1:02:43<3:35:27, 53.42s/it]06/09 00:53:10 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:53:10 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282110>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 23%|██▎       | 72/313 [1:03:37<3:35:25, 53.63s/it]06/09 00:54:04 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:54:04 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282dd0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 23%|██▎       | 73/313 [1:04:31<3:34:05, 53.52s/it]06/09 00:54:57 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:54:57 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42823b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 24%|██▎       | 74/313 [1:05:24<3:33:05, 53.49s/it]06/09 00:55:50 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:55:50 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282740>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 24%|██▍       | 75/313 [1:06:17<3:31:52, 53.41s/it]06/09 00:56:44 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:56:44 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283880>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 24%|██▍       | 76/313 [1:07:11<3:31:39, 53.58s/it]06/09 00:57:38 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:57:38 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282d70>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 25%|██▍       | 77/313 [1:08:05<3:30:36, 53.54s/it]06/09 00:58:31 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:58:31 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281840>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 25%|██▍       | 78/313 [1:08:58<3:28:58, 53.36s/it]06/09 00:59:24 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 00:59:24 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281960>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 25%|██▌       | 79/313 [1:09:51<3:27:37, 53.24s/it]06/09 01:00:17 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:00:17 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42814e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 26%|██▌       | 80/313 [1:10:44<3:26:47, 53.25s/it]06/09 01:01:10 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:01:10 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281360>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 26%|██▌       | 81/313 [1:11:37<3:25:41, 53.20s/it]06/09 01:02:03 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:02:03 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282e60>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 26%|██▌       | 82/313 [1:12:30<3:24:43, 53.17s/it]06/09 01:02:56 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:02:56 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283580>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 27%|██▋       | 83/313 [1:13:24<3:24:15, 53.28s/it]06/09 01:03:50 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:03:50 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281e70>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 27%|██▋       | 84/313 [1:14:17<3:22:48, 53.14s/it]06/09 01:04:43 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:04:43 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282a70>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 27%|██▋       | 85/313 [1:15:10<3:22:13, 53.22s/it]06/09 01:05:36 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:05:36 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281b10>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 27%|██▋       | 86/313 [1:16:03<3:21:33, 53.28s/it]06/09 01:06:30 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:06:30 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283430>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 28%|██▊       | 87/313 [1:16:57<3:20:46, 53.30s/it]06/09 01:07:23 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:07:23 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282530>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 28%|██▊       | 88/313 [1:17:51<3:20:33, 53.48s/it]06/09 01:08:17 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:08:17 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42821d0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 28%|██▊       | 89/313 [1:18:43<3:18:52, 53.27s/it]06/09 01:09:10 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:09:10 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283ee0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 29%|██▉       | 90/313 [1:19:36<3:17:05, 53.03s/it]06/09 01:10:02 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:10:02 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282500>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 29%|██▉       | 91/313 [1:20:30<3:16:58, 53.24s/it]06/09 01:10:56 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:10:56 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281fc0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 29%|██▉       | 92/313 [1:21:23<3:16:04, 53.23s/it]06/09 01:11:49 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:11:49 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283dc0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 30%|██▉       | 93/313 [1:22:16<3:15:01, 53.19s/it]06/09 01:12:42 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:12:42 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281540>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 30%|███       | 94/313 [1:23:09<3:14:19, 53.24s/it]06/09 01:13:35 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:13:35 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282bf0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 30%|███       | 95/313 [1:24:03<3:13:51, 53.36s/it]06/09 01:14:29 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:14:29 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283fa0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 31%|███       | 96/313 [1:24:56<3:12:41, 53.28s/it]06/09 01:15:22 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:15:22 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281ab0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 31%|███       | 97/313 [1:25:50<3:12:26, 53.46s/it]06/09 01:16:16 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:16:16 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281360>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 31%|███▏      | 98/313 [1:26:43<3:11:26, 53.43s/it]06/09 01:17:09 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:17:09 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282bf0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 32%|███▏      | 99/313 [1:27:36<3:10:21, 53.37s/it]06/09 01:18:03 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:18:03 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283280>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 32%|███▏      | 100/313 [1:28:29<3:09:00, 53.24s/it]06/09 01:18:56 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:18:56 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283e50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 32%|███▏      | 101/313 [1:29:23<3:08:48, 53.44s/it]06/09 01:19:49 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:19:49 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281ae0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 33%|███▎      | 102/313 [1:30:16<3:07:12, 53.23s/it]06/09 01:20:42 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:20:42 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281a20>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 33%|███▎      | 103/313 [1:31:09<3:06:02, 53.16s/it]06/09 01:21:35 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:21:35 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281d20>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 33%|███▎      | 104/313 [1:32:03<3:05:49, 53.35s/it]06/09 01:22:29 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:22:29 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283010>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 34%|███▎      | 105/313 [1:32:56<3:05:05, 53.39s/it]06/09 01:23:23 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:23:23 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281f60>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 34%|███▍      | 106/313 [1:33:51<3:05:26, 53.75s/it]06/09 01:24:17 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:24:17 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283700>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 34%|███▍      | 107/313 [1:34:46<3:05:32, 54.04s/it]06/09 01:25:12 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:25:12 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42832b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 35%|███▍      | 108/313 [1:35:40<3:04:47, 54.08s/it]06/09 01:26:06 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:26:06 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282140>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 35%|███▍      | 109/313 [1:36:32<3:02:24, 53.65s/it]06/09 01:26:59 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:26:59 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281ba0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 35%|███▌      | 110/313 [1:37:28<3:03:06, 54.12s/it]06/09 01:27:54 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:27:54 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281150>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 35%|███▌      | 111/313 [1:38:21<3:01:31, 53.92s/it]06/09 01:28:47 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:28:47 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281900>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 36%|███▌      | 112/313 [1:39:14<3:00:05, 53.76s/it]06/09 01:29:41 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:29:41 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281750>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 36%|███▌      | 113/313 [1:40:08<2:59:04, 53.72s/it]06/09 01:30:34 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:30:34 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282c80>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 36%|███▋      | 114/313 [1:41:01<2:57:24, 53.49s/it]06/09 01:31:27 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:31:27 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281a80>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 37%|███▋      | 115/313 [1:41:54<2:55:55, 53.31s/it]06/09 01:32:20 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:32:20 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42825c0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 37%|███▋      | 116/313 [1:42:47<2:54:46, 53.23s/it]06/09 01:33:13 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:33:13 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283580>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 37%|███▋      | 117/313 [1:43:39<2:53:08, 53.00s/it]06/09 01:34:06 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:34:06 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281990>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 38%|███▊      | 118/313 [1:44:32<2:52:08, 52.97s/it]06/09 01:34:59 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:34:59 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283df0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 38%|███▊      | 119/313 [1:45:29<2:54:53, 54.09s/it]06/09 01:35:55 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:35:55 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42829e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 38%|███▊      | 120/313 [1:46:22<2:52:38, 53.67s/it]06/09 01:36:48 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:36:48 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42828c0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 39%|███▊      | 121/313 [1:47:15<2:51:32, 53.60s/it]06/09 01:37:41 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:37:41 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283a60>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 39%|███▉      | 122/313 [1:48:08<2:49:56, 53.38s/it]06/09 01:38:34 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:38:34 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42811b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 39%|███▉      | 123/313 [1:49:01<2:48:33, 53.23s/it]06/09 01:39:27 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:39:27 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283760>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 40%|███▉      | 124/313 [1:49:54<2:47:17, 53.11s/it]06/09 01:40:20 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:40:20 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283e50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 40%|███▉      | 125/313 [1:50:46<2:45:55, 52.95s/it]06/09 01:41:13 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:41:13 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282410>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 40%|████      | 126/313 [1:51:40<2:45:45, 53.19s/it]06/09 01:42:06 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:42:06 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282c50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 41%|████      | 127/313 [1:52:33<2:45:03, 53.25s/it]06/09 01:43:00 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:43:00 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282260>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 41%|████      | 128/313 [1:53:27<2:44:13, 53.26s/it]06/09 01:43:53 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:43:53 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282380>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 41%|████      | 129/313 [1:54:19<2:42:40, 53.05s/it]06/09 01:44:46 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:44:46 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282020>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 42%|████▏     | 130/313 [1:55:12<2:41:13, 52.86s/it]06/09 01:45:38 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:45:38 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42825c0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 42%|████▏     | 131/313 [1:56:04<2:40:13, 52.82s/it]06/09 01:46:31 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:46:31 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282410>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 42%|████▏     | 132/313 [1:56:57<2:39:27, 52.86s/it]06/09 01:47:24 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:47:24 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282350>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 42%|████▏     | 133/313 [1:57:52<2:40:18, 53.43s/it]06/09 01:48:18 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:48:18 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282b30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 43%|████▎     | 134/313 [1:58:45<2:38:53, 53.26s/it]06/09 01:49:11 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:49:11 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281b40>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 43%|████▎     | 135/313 [1:59:38<2:37:24, 53.06s/it]06/09 01:50:04 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:50:04 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42834f0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 43%|████▎     | 136/313 [2:00:31<2:36:59, 53.22s/it]06/09 01:50:57 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:50:57 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282ad0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 44%|████▍     | 137/313 [2:01:24<2:35:42, 53.08s/it]06/09 01:51:50 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:51:50 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283190>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 44%|████▍     | 138/313 [2:02:17<2:34:48, 53.08s/it]06/09 01:52:43 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:52:43 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42827a0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 44%|████▍     | 139/313 [2:03:13<2:36:01, 53.80s/it]06/09 01:53:39 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:53:39 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283be0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 45%|████▍     | 140/313 [2:04:05<2:34:20, 53.53s/it]06/09 01:54:32 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:54:32 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282470>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 45%|████▌     | 141/313 [2:04:58<2:32:40, 53.26s/it]06/09 01:55:24 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:55:24 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42829b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 45%|████▌     | 142/313 [2:05:51<2:31:24, 53.12s/it]06/09 01:56:17 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:56:17 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282770>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 46%|████▌     | 143/313 [2:06:43<2:30:00, 52.95s/it]06/09 01:57:10 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:57:10 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283520>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 46%|████▌     | 144/313 [2:07:36<2:28:39, 52.78s/it]06/09 01:58:02 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:58:02 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281c00>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 46%|████▋     | 145/313 [2:08:28<2:27:40, 52.74s/it]06/09 01:58:55 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:58:55 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281810>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 47%|████▋     | 146/313 [2:09:22<2:27:23, 52.96s/it]06/09 01:59:48 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 01:59:48 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283e50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 47%|████▋     | 147/313 [2:10:15<2:26:52, 53.08s/it]06/09 02:00:41 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:00:41 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283730>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 47%|████▋     | 148/313 [2:11:08<2:25:29, 52.91s/it]06/09 02:01:34 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:01:34 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281fc0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 48%|████▊     | 149/313 [2:12:03<2:26:27, 53.58s/it]06/09 02:02:29 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:02:29 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283430>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 48%|████▊     | 150/313 [2:12:55<2:24:16, 53.11s/it]06/09 02:03:21 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:03:21 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42831f0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 48%|████▊     | 151/313 [2:13:48<2:23:28, 53.14s/it]06/09 02:04:14 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:04:14 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282b90>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 49%|████▊     | 152/313 [2:14:41<2:22:21, 53.05s/it]06/09 02:05:07 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:05:07 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281990>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 49%|████▉     | 153/313 [2:15:34<2:21:23, 53.02s/it]06/09 02:06:00 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:06:00 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282530>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 49%|████▉     | 154/313 [2:16:27<2:20:27, 53.01s/it]06/09 02:06:53 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:06:53 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283400>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 50%|████▉     | 155/313 [2:17:20<2:19:52, 53.12s/it]06/09 02:07:46 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:07:46 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282d40>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 50%|████▉     | 156/313 [2:18:14<2:19:09, 53.18s/it]06/09 02:08:40 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:08:40 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283850>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 50%|█████     | 157/313 [2:19:06<2:17:52, 53.03s/it]06/09 02:09:32 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:09:32 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282b00>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 50%|█████     | 158/313 [2:19:59<2:16:33, 52.86s/it]06/09 02:10:25 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:10:25 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281420>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 51%|█████     | 159/313 [2:20:54<2:17:36, 53.61s/it]06/09 02:11:20 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:11:20 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283940>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 51%|█████     | 160/313 [2:21:47<2:15:59, 53.33s/it]06/09 02:12:13 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:12:13 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281ff0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 51%|█████▏    | 161/313 [2:22:40<2:14:42, 53.17s/it]06/09 02:13:06 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:13:06 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281360>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 52%|█████▏    | 162/313 [2:23:32<2:13:34, 53.08s/it]06/09 02:13:59 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:13:59 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42814e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 52%|█████▏    | 163/313 [2:24:27<2:13:26, 53.37s/it]06/09 02:14:53 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:14:53 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42838e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 52%|█████▏    | 164/313 [2:25:20<2:12:25, 53.32s/it]06/09 02:15:46 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:15:46 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283f70>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 53%|█████▎    | 165/313 [2:26:13<2:11:28, 53.30s/it]06/09 02:16:39 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:16:39 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282e30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 53%|█████▎    | 166/313 [2:27:06<2:10:18, 53.19s/it]06/09 02:17:32 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:17:32 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42821a0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 53%|█████▎    | 167/313 [2:27:59<2:09:13, 53.10s/it]06/09 02:18:25 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:18:25 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283700>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 54%|█████▎    | 168/313 [2:28:52<2:08:37, 53.22s/it]06/09 02:19:19 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:19:19 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282e90>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 54%|█████▍    | 169/313 [2:29:45<2:07:20, 53.06s/it]06/09 02:20:11 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:20:11 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281d50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 54%|█████▍    | 170/313 [2:30:38<2:06:06, 52.91s/it]06/09 02:21:04 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:21:04 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283310>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 55%|█████▍    | 171/313 [2:31:30<2:05:10, 52.89s/it]06/09 02:21:57 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:21:57 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283a30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 55%|█████▍    | 172/313 [2:32:25<2:05:10, 53.27s/it]06/09 02:22:51 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:22:51 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42822f0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 55%|█████▌    | 173/313 [2:33:18<2:04:16, 53.26s/it]06/09 02:23:44 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:23:44 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42838e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 56%|█████▌    | 174/313 [2:34:11<2:03:25, 53.28s/it]06/09 02:24:37 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:24:37 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42818d0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 56%|█████▌    | 175/313 [2:35:04<2:02:34, 53.29s/it]06/09 02:25:31 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:25:31 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282410>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 56%|█████▌    | 176/313 [2:35:57<2:01:25, 53.18s/it]06/09 02:26:24 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:26:24 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42834c0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 57%|█████▋    | 177/313 [2:36:51<2:00:36, 53.21s/it]06/09 02:27:17 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:27:17 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283460>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 57%|█████▋    | 178/313 [2:37:43<1:59:19, 53.03s/it]06/09 02:28:09 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:28:09 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42820b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 57%|█████▋    | 179/313 [2:38:36<1:58:33, 53.09s/it]06/09 02:29:03 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:29:03 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282950>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 58%|█████▊    | 180/313 [2:39:29<1:57:31, 53.02s/it]06/09 02:29:56 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:29:56 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282320>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 58%|█████▊    | 181/313 [2:40:22<1:56:26, 52.93s/it]06/09 02:30:48 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:30:48 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281fc0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 58%|█████▊    | 182/313 [2:41:16<1:56:03, 53.16s/it]06/09 02:31:42 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:31:42 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42816c0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 58%|█████▊    | 183/313 [2:42:09<1:55:07, 53.14s/it]06/09 02:32:35 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:32:35 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42819f0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 59%|█████▉    | 184/313 [2:43:02<1:54:15, 53.14s/it]06/09 02:33:28 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:33:28 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281f30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 59%|█████▉    | 185/313 [2:43:55<1:53:23, 53.15s/it]06/09 02:34:21 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:34:21 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282a40>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 59%|█████▉    | 186/313 [2:44:48<1:52:21, 53.08s/it]06/09 02:35:14 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:35:14 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283be0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 60%|█████▉    | 187/313 [2:45:41<1:51:25, 53.06s/it]06/09 02:36:07 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:36:07 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282a70>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 60%|██████    | 188/313 [2:46:34<1:50:34, 53.08s/it]06/09 02:37:00 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:37:00 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282b90>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 60%|██████    | 189/313 [2:47:28<1:50:20, 53.39s/it]06/09 02:37:55 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:37:55 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42828c0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 61%|██████    | 190/313 [2:48:22<1:49:22, 53.36s/it]06/09 02:38:48 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:38:48 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283490>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 61%|██████    | 191/313 [2:49:15<1:48:16, 53.25s/it]06/09 02:39:41 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:39:41 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42812d0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 61%|██████▏   | 192/313 [2:50:07<1:47:10, 53.14s/it]06/09 02:40:34 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:40:34 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283c10>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 62%|██████▏   | 193/313 [2:51:01<1:46:14, 53.12s/it]06/09 02:41:27 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:41:27 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281570>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 62%|██████▏   | 194/313 [2:51:54<1:45:17, 53.09s/it]06/09 02:42:20 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:42:20 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282c80>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 62%|██████▏   | 195/313 [2:52:47<1:44:26, 53.11s/it]06/09 02:43:13 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:43:13 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281420>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 63%|██████▎   | 196/313 [2:53:40<1:43:34, 53.11s/it]06/09 02:44:06 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:44:06 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281690>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 63%|██████▎   | 197/313 [2:54:33<1:42:38, 53.09s/it]06/09 02:44:59 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:44:59 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282d10>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 63%|██████▎   | 198/313 [2:55:26<1:41:49, 53.12s/it]06/09 02:45:52 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:45:52 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42832b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 64%|██████▎   | 199/313 [2:56:19<1:41:00, 53.17s/it]06/09 02:46:46 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:46:46 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282920>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 64%|██████▍   | 200/313 [2:57:12<1:40:01, 53.11s/it]06/09 02:47:39 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:47:39 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281f30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 64%|██████▍   | 201/313 [2:58:06<1:39:29, 53.30s/it]06/09 02:48:32 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:48:32 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281870>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 65%|██████▍   | 202/313 [2:58:59<1:38:27, 53.22s/it]06/09 02:49:25 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:49:25 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281a80>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 65%|██████▍   | 203/313 [2:59:52<1:37:38, 53.26s/it]06/09 02:50:19 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:50:19 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281a20>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 65%|██████▌   | 204/313 [3:00:45<1:36:35, 53.17s/it]06/09 02:51:12 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:51:12 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283400>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 65%|██████▌   | 205/313 [3:01:39<1:35:43, 53.18s/it]06/09 02:52:05 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:52:05 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282080>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 66%|██████▌   | 206/313 [3:02:33<1:35:14, 53.41s/it]06/09 02:52:59 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:52:59 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42838b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 66%|██████▌   | 207/313 [3:03:26<1:34:27, 53.46s/it]06/09 02:53:52 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:53:52 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281810>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 66%|██████▋   | 208/313 [3:04:20<1:33:45, 53.58s/it]06/09 02:54:46 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:54:46 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283d60>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 67%|██████▋   | 209/313 [3:05:14<1:32:58, 53.64s/it]06/09 02:55:40 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:55:40 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283160>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 67%|██████▋   | 210/313 [3:06:08<1:32:08, 53.68s/it]06/09 02:56:34 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:56:34 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283c40>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 67%|██████▋   | 211/313 [3:07:01<1:31:16, 53.69s/it]06/09 02:57:27 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:57:27 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42826e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 68%|██████▊   | 212/313 [3:07:55<1:30:18, 53.65s/it]06/09 02:58:21 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:58:21 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282c20>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 68%|██████▊   | 213/313 [3:08:48<1:29:18, 53.59s/it]06/09 02:59:14 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 02:59:14 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283100>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 68%|██████▊   | 214/313 [3:09:42<1:28:28, 53.62s/it]06/09 03:00:08 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:00:08 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283af0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 69%|██████▊   | 215/313 [3:10:35<1:27:24, 53.52s/it]06/09 03:01:01 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:01:01 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282e30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 69%|██████▉   | 216/313 [3:11:29<1:26:33, 53.54s/it]06/09 03:01:55 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:01:55 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283700>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 69%|██████▉   | 217/313 [3:12:23<1:25:51, 53.66s/it]06/09 03:02:49 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:02:49 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42821d0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 70%|██████▉   | 218/313 [3:13:17<1:25:08, 53.78s/it]06/09 03:03:43 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:03:43 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282290>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 70%|██████▉   | 219/313 [3:14:10<1:24:09, 53.72s/it]06/09 03:04:37 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:04:37 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42829b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 70%|███████   | 220/313 [3:15:04<1:23:21, 53.78s/it]06/09 03:05:31 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:05:31 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282140>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 71%|███████   | 221/313 [3:15:58<1:22:14, 53.63s/it]06/09 03:06:24 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:06:24 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283e20>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 71%|███████   | 222/313 [3:16:52<1:21:39, 53.84s/it]06/09 03:07:18 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:07:18 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281d50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 71%|███████   | 223/313 [3:17:46<1:20:44, 53.83s/it]06/09 03:08:12 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:08:12 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283010>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 72%|███████▏  | 224/313 [3:18:39<1:19:34, 53.65s/it]06/09 03:09:05 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:09:05 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283e50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 72%|███████▏  | 225/313 [3:19:32<1:18:17, 53.38s/it]06/09 03:09:58 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:09:58 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283d30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 72%|███████▏  | 226/313 [3:20:25<1:17:18, 53.32s/it]06/09 03:10:51 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:10:51 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282800>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 73%|███████▎  | 227/313 [3:21:18<1:16:17, 53.22s/it]06/09 03:11:44 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:11:44 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42833a0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 73%|███████▎  | 228/313 [3:22:11<1:15:08, 53.04s/it]06/09 03:12:37 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:12:37 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282260>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 73%|███████▎  | 229/313 [3:23:03<1:14:05, 52.92s/it]06/09 03:13:29 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:13:29 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282a70>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 73%|███████▎  | 230/313 [3:23:56<1:13:12, 52.92s/it]06/09 03:14:22 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:14:22 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42832e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 74%|███████▍  | 231/313 [3:24:49<1:12:28, 53.03s/it]06/09 03:15:16 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:15:16 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283130>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 74%|███████▍  | 232/313 [3:25:43<1:11:50, 53.21s/it]06/09 03:16:09 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:16:09 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42816f0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 74%|███████▍  | 233/313 [3:26:36<1:10:48, 53.10s/it]06/09 03:17:02 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:17:02 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282890>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 75%|███████▍  | 234/313 [3:27:30<1:10:21, 53.44s/it]06/09 03:17:56 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:17:56 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281720>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 75%|███████▌  | 235/313 [3:28:23<1:09:10, 53.21s/it]06/09 03:18:49 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:18:49 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42835b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 75%|███████▌  | 236/313 [3:29:16<1:08:11, 53.14s/it]06/09 03:19:42 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:19:42 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282da0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 76%|███████▌  | 237/313 [3:30:08<1:07:06, 52.98s/it]06/09 03:20:35 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:20:35 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283850>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 76%|███████▌  | 238/313 [3:31:01<1:06:06, 52.88s/it]06/09 03:21:27 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:21:27 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282410>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 76%|███████▋  | 239/313 [3:31:54<1:05:12, 52.87s/it]06/09 03:22:20 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:22:20 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282350>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 77%|███████▋  | 240/313 [3:32:47<1:04:16, 52.83s/it]06/09 03:23:13 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:23:13 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42831f0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 77%|███████▋  | 241/313 [3:33:39<1:03:13, 52.69s/it]06/09 03:24:05 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:24:05 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282c80>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 77%|███████▋  | 242/313 [3:34:31<1:02:12, 52.56s/it]06/09 03:24:57 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:24:57 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42816c0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 78%|███████▊  | 243/313 [3:35:24<1:01:19, 52.57s/it]06/09 03:25:50 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:25:50 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283370>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 78%|███████▊  | 244/313 [3:36:16<1:00:28, 52.59s/it]06/09 03:26:43 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:26:43 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42814e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 78%|███████▊  | 245/313 [3:37:09<59:33, 52.55s/it]  06/09 03:27:35 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:27:35 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283c70>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 79%|███████▊  | 246/313 [3:38:02<58:58, 52.82s/it]06/09 03:28:29 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:28:29 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282080>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 79%|███████▉  | 247/313 [3:38:55<58:01, 52.75s/it]06/09 03:29:21 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:29:21 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283190>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 79%|███████▉  | 248/313 [3:39:48<57:06, 52.72s/it]06/09 03:30:14 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:30:14 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281ba0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 80%|███████▉  | 249/313 [3:40:41<56:29, 52.97s/it]06/09 03:31:07 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:31:07 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282ef0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 80%|███████▉  | 250/313 [3:41:35<55:55, 53.26s/it]06/09 03:32:01 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:32:01 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42819f0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 80%|████████  | 251/313 [3:42:28<54:50, 53.07s/it]06/09 03:32:54 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:32:54 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282fe0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 81%|████████  | 252/313 [3:43:20<53:47, 52.91s/it]06/09 03:33:46 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:33:46 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42833d0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 81%|████████  | 253/313 [3:44:13<52:48, 52.80s/it]06/09 03:34:39 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:34:39 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283ee0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 81%|████████  | 254/313 [3:45:05<51:49, 52.70s/it]06/09 03:35:31 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:35:31 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282e30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 81%|████████▏ | 255/313 [3:45:58<50:55, 52.68s/it]06/09 03:36:24 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:36:24 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282f20>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 82%|████████▏ | 256/313 [3:46:50<50:01, 52.66s/it]06/09 03:37:17 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:37:17 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282f50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 82%|████████▏ | 257/313 [3:47:43<49:14, 52.77s/it]06/09 03:38:10 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:38:10 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283c10>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 82%|████████▏ | 258/313 [3:48:36<48:22, 52.77s/it]06/09 03:39:02 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:39:02 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282b00>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 83%|████████▎ | 259/313 [3:49:29<47:25, 52.69s/it]06/09 03:39:55 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:39:55 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281930>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 83%|████████▎ | 260/313 [3:50:21<46:27, 52.59s/it]06/09 03:40:47 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:40:47 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42824d0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 83%|████████▎ | 261/313 [3:51:14<45:40, 52.70s/it]06/09 03:41:40 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:41:40 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42813c0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 84%|████████▎ | 262/313 [3:52:07<44:45, 52.65s/it]06/09 03:42:33 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:42:33 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283c70>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 84%|████████▍ | 263/313 [3:52:59<43:54, 52.69s/it]06/09 03:43:26 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:43:26 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281c30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 84%|████████▍ | 264/313 [3:53:52<43:01, 52.69s/it]06/09 03:44:18 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:44:18 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281b40>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 85%|████████▍ | 265/313 [3:54:45<42:13, 52.79s/it]06/09 03:45:11 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:45:11 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282bf0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 85%|████████▍ | 266/313 [3:55:38<41:18, 52.74s/it]06/09 03:46:04 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:46:04 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42832b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 85%|████████▌ | 267/313 [3:56:31<40:26, 52.76s/it]06/09 03:46:57 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:46:57 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282110>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 86%|████████▌ | 268/313 [3:57:23<39:27, 52.61s/it]06/09 03:47:49 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:47:49 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283160>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 86%|████████▌ | 269/313 [3:58:15<38:29, 52.49s/it]06/09 03:48:41 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:48:41 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281960>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 86%|████████▋ | 270/313 [3:59:08<37:38, 52.53s/it]06/09 03:49:34 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:49:34 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281450>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 87%|████████▋ | 271/313 [4:00:00<36:46, 52.53s/it]06/09 03:50:26 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:50:26 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282710>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 87%|████████▋ | 272/313 [4:00:53<35:55, 52.58s/it]06/09 03:51:19 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:51:19 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283580>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 87%|████████▋ | 273/313 [4:01:45<35:03, 52.59s/it]06/09 03:52:12 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:52:12 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283400>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 88%|████████▊ | 274/313 [4:02:39<34:16, 52.73s/it]06/09 03:53:05 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:53:05 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283f10>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 88%|████████▊ | 275/313 [4:03:31<33:21, 52.68s/it]06/09 03:53:57 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:53:57 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282980>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 88%|████████▊ | 276/313 [4:04:24<32:27, 52.63s/it]06/09 03:54:50 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:54:50 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42833a0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 88%|████████▊ | 277/313 [4:05:16<31:34, 52.62s/it]06/09 03:55:42 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:55:42 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42834c0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 89%|████████▉ | 278/313 [4:06:09<30:38, 52.54s/it]06/09 03:56:35 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:56:35 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282b30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 89%|████████▉ | 279/313 [4:07:01<29:44, 52.47s/it]06/09 03:57:27 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:57:27 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282920>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 89%|████████▉ | 280/313 [4:07:55<29:05, 52.89s/it]06/09 03:58:21 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:58:21 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281330>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 90%|████████▉ | 281/313 [4:08:48<28:17, 53.04s/it]06/09 03:59:14 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 03:59:14 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283610>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 90%|█████████ | 282/313 [4:09:41<27:26, 53.10s/it]06/09 04:00:08 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:00:08 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282e30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 90%|█████████ | 283/313 [4:10:35<26:33, 53.13s/it]06/09 04:01:01 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:01:01 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281ba0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 91%|█████████ | 284/313 [4:11:28<25:40, 53.13s/it]06/09 04:01:54 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:01:54 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281e70>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 91%|█████████ | 285/313 [4:12:21<24:49, 53.20s/it]06/09 04:02:47 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:02:47 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282800>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 91%|█████████▏| 286/313 [4:13:15<24:00, 53.34s/it]06/09 04:03:41 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:03:41 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281fc0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 92%|█████████▏| 287/313 [4:14:08<23:03, 53.21s/it]06/09 04:04:34 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:04:34 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281990>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 92%|█████████▏| 288/313 [4:15:01<22:11, 53.26s/it]06/09 04:05:27 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:05:27 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283340>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 92%|█████████▏| 289/313 [4:15:54<21:16, 53.17s/it]06/09 04:06:20 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:06:20 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282680>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 93%|█████████▎| 290/313 [4:16:48<20:32, 53.57s/it]06/09 04:07:15 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:07:15 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282830>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 93%|█████████▎| 291/313 [4:17:42<19:38, 53.59s/it]06/09 04:08:08 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:08:08 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283fd0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 93%|█████████▎| 292/313 [4:18:35<18:43, 53.49s/it]06/09 04:09:02 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:09:02 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281210>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 94%|█████████▎| 293/313 [4:19:29<17:48, 53.42s/it]06/09 04:09:55 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:09:55 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281ea0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 94%|█████████▍| 294/313 [4:20:22<16:57, 53.53s/it]06/09 04:10:49 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:10:49 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283cd0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 94%|█████████▍| 295/313 [4:21:15<16:01, 53.41s/it]06/09 04:11:42 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:11:42 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281a50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 95%|█████████▍| 296/313 [4:22:08<15:04, 53.18s/it]06/09 04:12:34 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:12:34 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281330>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 95%|█████████▍| 297/313 [4:23:01<14:08, 53.05s/it]06/09 04:13:27 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:13:27 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283010>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 95%|█████████▌| 298/313 [4:23:54<13:15, 53.01s/it]06/09 04:14:20 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:14:20 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4281360>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 96%|█████████▌| 299/313 [4:24:49<12:30, 53.59s/it]06/09 04:15:15 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:15:15 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282020>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 96%|█████████▌| 300/313 [4:25:42<11:35, 53.49s/it]06/09 04:16:08 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:16:08 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42823b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 96%|█████████▌| 301/313 [4:26:35<10:39, 53.30s/it]06/09 04:17:01 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:17:01 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42830a0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 96%|█████████▋| 302/313 [4:27:28<09:44, 53.11s/it]06/09 04:17:54 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:17:54 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282fe0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 97%|█████████▋| 303/313 [4:28:20<08:50, 53.05s/it]06/09 04:18:47 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:18:47 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4283640>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 97%|█████████▋| 304/313 [4:29:13<07:56, 52.95s/it]06/09 04:19:39 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:19:39 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42820b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 97%|█████████▋| 305/313 [4:30:06<07:03, 52.90s/it]06/09 04:20:32 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:20:32 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42839a0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 98%|█████████▊| 306/313 [4:30:58<06:09, 52.78s/it]06/09 04:21:25 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:21:25 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42822c0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 98%|█████████▊| 307/313 [4:31:51<05:16, 52.73s/it]06/09 04:22:17 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:22:17 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282e90>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 98%|█████████▊| 308/313 [4:32:44<04:23, 52.79s/it]06/09 04:23:10 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:23:10 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282da0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 99%|█████████▊| 309/313 [4:33:37<03:31, 52.77s/it]06/09 04:24:03 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:24:03 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282a40>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 99%|█████████▉| 310/313 [4:34:30<02:38, 52.85s/it]06/09 04:24:56 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:24:56 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282440>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 99%|█████████▉| 311/313 [4:35:23<01:45, 52.92s/it]06/09 04:25:49 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:25:49 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a42826b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+100%|█████████▉| 312/313 [4:36:15<00:52, 52.80s/it]06/09 04:26:42 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:26:42 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a4282d70>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+100%|██████████| 313/313 [4:37:07<00:00, 52.60s/it]100%|██████████| 313/313 [4:37:07<00:00, 53.12s/it]
+06/09 04:27:34 - OpenCompass - INFO - Try to load the data from /deltadisk/shared_data/datasets/opencompass_evaluation/./data/svamp/test.jsonl
+06/09 04:27:34 - OpenCompass - INFO - Start inferencing [Llama-3.2-1B-Instruct_hf/svamp_0]
+[2025-06-09 04:27:34,334] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2025-06-09 04:27:34,334] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/63 [00:00<?, ?it/s]06/09 04:27:34 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:27:34 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd060>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  2%|▏         | 1/63 [00:53<55:21, 53.57s/it]06/09 04:28:27 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:28:27 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd8d0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  3%|▎         | 2/63 [01:47<54:50, 53.95s/it]06/09 04:29:22 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:29:22 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd300>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  5%|▍         | 3/63 [02:42<54:06, 54.11s/it]06/09 04:30:16 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:30:16 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd450>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  6%|▋         | 4/63 [03:35<53:07, 54.02s/it]06/09 04:31:10 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:31:10 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43ddc60>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+  8%|▊         | 5/63 [04:30<52:16, 54.07s/it]06/09 04:32:04 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:32:04 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43de2f0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 10%|▉         | 6/63 [05:24<51:27, 54.17s/it]06/09 04:32:58 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:32:58 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43de710>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 11%|█         | 7/63 [06:18<50:32, 54.15s/it]06/09 04:33:52 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:33:52 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd990>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 13%|█▎        | 8/63 [07:13<49:42, 54.23s/it]06/09 04:34:47 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:34:47 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dda20>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 14%|█▍        | 9/63 [08:07<48:50, 54.27s/it]06/09 04:35:41 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:35:41 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43de9e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 16%|█▌        | 10/63 [09:01<47:53, 54.22s/it]06/09 04:36:35 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:36:35 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43ddd50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 17%|█▋        | 11/63 [09:55<46:53, 54.10s/it]06/09 04:37:29 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:37:29 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd7b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 19%|█▉        | 12/63 [10:49<46:06, 54.24s/it]06/09 04:38:24 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:38:24 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43de0e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 21%|██        | 13/63 [11:43<45:06, 54.14s/it]06/09 04:39:18 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:39:18 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd750>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 22%|██▏       | 14/63 [12:37<44:12, 54.13s/it]06/09 04:40:12 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:40:12 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43ddd50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 24%|██▍       | 15/63 [13:31<43:17, 54.11s/it]06/09 04:41:06 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:41:06 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43de800>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 25%|██▌       | 16/63 [14:26<42:27, 54.20s/it]06/09 04:42:00 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:42:00 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dcd00>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 27%|██▋       | 17/63 [15:20<41:34, 54.22s/it]06/09 04:42:54 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:42:54 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd5d0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 29%|██▊       | 18/63 [16:15<40:42, 54.28s/it]06/09 04:43:49 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:43:49 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43ddd50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 30%|███       | 19/63 [17:09<39:44, 54.19s/it]06/09 04:44:43 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:44:43 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43ddff0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 32%|███▏      | 20/63 [18:03<38:51, 54.23s/it]06/09 04:45:37 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:45:37 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43de020>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 33%|███▎      | 21/63 [18:57<37:59, 54.27s/it]06/09 04:46:32 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:46:32 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dce80>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 35%|███▍      | 22/63 [19:51<37:05, 54.28s/it]06/09 04:47:26 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:47:26 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43ddd50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 37%|███▋      | 23/63 [20:46<36:09, 54.25s/it]06/09 04:48:20 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:48:20 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43de770>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 38%|███▊      | 24/63 [21:40<35:14, 54.23s/it]06/09 04:49:14 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:49:14 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd9c0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 40%|███▉      | 25/63 [22:34<34:21, 54.25s/it]06/09 04:50:08 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:50:08 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd330>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 41%|████▏     | 26/63 [23:28<33:27, 54.27s/it]06/09 04:51:03 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:51:03 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43ddd50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 43%|████▎     | 27/63 [24:22<32:30, 54.18s/it]06/09 04:51:57 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:51:57 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dde10>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 44%|████▍     | 28/63 [25:17<31:38, 54.25s/it]06/09 04:52:51 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:52:51 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43de650>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 46%|████▌     | 29/63 [26:11<30:45, 54.28s/it]06/09 04:53:46 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:53:46 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd150>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 48%|████▊     | 30/63 [27:05<29:51, 54.27s/it]06/09 04:54:40 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:54:40 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43deb30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 49%|████▉     | 31/63 [28:00<28:57, 54.29s/it]06/09 04:55:34 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:55:34 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43de260>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 51%|█████     | 32/63 [28:54<28:04, 54.35s/it]06/09 04:56:29 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:56:29 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dcfd0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 52%|█████▏    | 33/63 [29:49<27:10, 54.34s/it]06/09 04:57:23 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:57:23 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dcc40>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 54%|█████▍    | 34/63 [30:43<26:16, 54.36s/it]06/09 04:58:17 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:58:17 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43deb30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 56%|█████▌    | 35/63 [31:37<25:21, 54.35s/it]06/09 04:59:12 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 04:59:12 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd420>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 57%|█████▋    | 36/63 [32:32<24:28, 54.37s/it]06/09 05:00:06 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:00:06 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd990>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 59%|█████▊    | 37/63 [33:26<23:34, 54.39s/it]06/09 05:01:01 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:01:01 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43ddf90>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 60%|██████    | 38/63 [34:20<22:38, 54.35s/it]06/09 05:01:55 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:01:55 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43deb30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 62%|██████▏   | 39/63 [35:15<21:42, 54.28s/it]06/09 05:02:49 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:02:49 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd480>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 63%|██████▎   | 40/63 [36:08<20:44, 54.11s/it]06/09 05:03:43 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:03:43 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dce50>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 65%|██████▌   | 41/63 [37:02<19:50, 54.12s/it]06/09 05:04:37 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:04:37 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd3f0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 67%|██████▋   | 42/63 [37:57<18:57, 54.18s/it]06/09 05:05:31 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:05:31 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43deb30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 68%|██████▊   | 43/63 [38:51<18:03, 54.17s/it]06/09 05:06:25 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:06:25 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43de920>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 70%|██████▉   | 44/63 [39:45<17:07, 54.07s/it]06/09 05:07:19 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:07:19 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43de0e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 71%|███████▏  | 45/63 [40:39<16:15, 54.21s/it]06/09 05:08:14 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:08:14 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43de440>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 73%|███████▎  | 46/63 [41:33<15:18, 54.04s/it]06/09 05:09:07 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:09:07 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43deb30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 75%|███████▍  | 47/63 [42:26<14:20, 53.80s/it]06/09 05:10:00 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:10:00 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43ddc00>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 76%|███████▌  | 48/63 [43:19<13:24, 53.62s/it]06/09 05:10:54 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:10:54 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43de710>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 78%|███████▊  | 49/63 [44:13<12:30, 53.61s/it]06/09 05:11:47 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:11:47 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd180>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 79%|███████▉  | 50/63 [45:06<11:36, 53.55s/it]06/09 05:12:41 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:12:41 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43deb30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 81%|████████  | 51/63 [45:59<10:40, 53.38s/it]06/09 05:13:34 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:13:34 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd210>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 83%|████████▎ | 52/63 [46:52<09:44, 53.18s/it]06/09 05:14:26 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:14:26 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43de6b0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 84%|████████▍ | 53/63 [47:45<08:50, 53.05s/it]06/09 05:15:19 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:15:19 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd1e0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 86%|████████▌ | 54/63 [48:38<07:57, 53.01s/it]06/09 05:16:12 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:16:12 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43deb30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 87%|████████▋ | 55/63 [49:31<07:05, 53.20s/it]06/09 05:17:06 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:17:06 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd6c0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 89%|████████▉ | 56/63 [50:26<06:14, 53.51s/it]06/09 05:18:00 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:18:00 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43de530>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 90%|█████████ | 57/63 [51:20<05:22, 53.75s/it]06/09 05:18:54 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:18:54 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd300>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 92%|█████████▏| 58/63 [52:14<04:29, 53.92s/it]06/09 05:19:49 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:19:49 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43deb30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 94%|█████████▎| 59/63 [53:08<03:36, 54.02s/it]06/09 05:20:43 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:20:43 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43dd690>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 95%|█████████▌| 60/63 [54:03<02:42, 54.09s/it]06/09 05:21:37 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:21:37 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43de650>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 97%|█████████▋| 61/63 [54:57<01:48, 54.09s/it]06/09 05:22:31 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:22:31 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43ddcf0>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+ 98%|█████████▊| 62/63 [55:51<00:54, 54.12s/it]06/09 05:23:25 - OpenCompass - INFO - Generation Args of Huggingface: 
+06/09 05:23:25 - OpenCompass - INFO - {'stopping_criteria': [<opencompass.models.huggingface_above_v4_33._get_stopping_criteria.<locals>.MultiTokenEOSCriteria object at 0x7554a43deb30>], 'max_new_tokens': 512, 'pad_token_id': 128009}
+100%|██████████| 63/63 [56:44<00:00, 53.68s/it]100%|██████████| 63/63 [56:44<00:00, 54.03s/it]
+06/09 05:24:18 - OpenCompass - INFO - time elapsed: 24415.51s

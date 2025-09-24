@@ -1,0 +1,15 @@
+INFO 06-26 12:48:41 [importing.py:53] Triton module has been replaced with a placeholder.
+INFO 06-26 12:48:42 [__init__.py:239] Automatically detected platform cuda.
+06/26 12:48:43 - OpenCompass - INFO - Try to load the data from /data/kris/shared_data/datasets/NLP/opencompass/./data/mmlu/
+lukaemon_mmlu_conceptual_physics dev 5
+lukaemon_mmlu_conceptual_physics test 235
+Traceback (most recent call last):
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/tasks/openicl_eval.py", line 481, in <module>
+    inferencer.run()
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/tasks/openicl_eval.py", line 86, in run
+    self._score()
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/tasks/openicl_eval.py", line 245, in _score
+    result = icl_evaluator.evaluate(k, n, copy.deepcopy(test_set),
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/openicl/icl_evaluator/icl_base_evaluator.py", line 97, in evaluate
+    raise ValueError(
+ValueError: Predictions and references must have the same length

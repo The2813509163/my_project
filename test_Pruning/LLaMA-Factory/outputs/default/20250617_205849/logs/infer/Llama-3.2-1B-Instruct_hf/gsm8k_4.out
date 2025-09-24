@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/tasks/openicl_infer.py", line 14, in <module>
+    from opencompass.tasks.base import BaseTask
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/tasks/__init__.py", line 1, in <module>
+    from .openicl_attack import *  # noqa: F401, F403
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/tasks/openicl_attack.py", line 12, in <module>
+    from opencompass.tasks.base import BaseTask
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/tasks/base.py", line 9, in <module>
+    from opencompass.utils import get_infer_output_path, task_abbr_from_cfg
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/utils/__init__.py", line 4, in <module>
+    from .collect_env import *  # noqa
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/utils/collect_env.py", line 2, in <module>
+    from mmengine.utils.dl_utils import collect_env as collect_base_env
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/mmengine/utils/dl_utils/__init__.py", line 3, in <module>
+    from .collect_env import collect_env
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/mmengine/utils/dl_utils/collect_env.py", line 13, in <module>
+    from mmengine.device import is_cuda_available, is_musa_available
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/mmengine/device/__init__.py", line 2, in <module>
+    from .utils import (get_device, get_max_cuda_memory, get_max_musa_memory,
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/mmengine/device/utils.py", line 126, in <module>
+    elif is_cuda_available():
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/mmengine/device/utils.py", line 63, in is_cuda_available
+    return torch.cuda.is_available()
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/torch/cuda/__init__.py", line 129, in is_available
+    return torch._C._cuda_getDeviceCount() > 0
+KeyboardInterrupt
